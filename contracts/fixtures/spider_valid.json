@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.1",
+  "plot_id": "fixture_spider_001",
+  "revision": 1,
+  "chart_type": "spider",
+  "layers": [
+    {
+      "layer_id": "ce5_literature",
+      "label": "CE5 literature",
+      "selection_id": "sel_ce5",
+      "visible": true,
+      "aggregation": "none",
+      "style": {
+        "marker_shape": "square",
+        "marker_fill": "solid",
+        "marker_fill_color": "#0072B2",
+        "marker_edge_color": "#0072B2",
+        "marker_size_pt": 3.0,
+        "marker_edge_width_pt": 0.35,
+        "marker_alpha": 1.0,
+        "line_color": "#0072B2",
+        "line_width_pt": 0.8,
+        "line_dash": "solid",
+        "line_alpha": 1.0,
+        "connect": true
+      },
+      "analysis_style_overrides": {}
+    }
+  ],
+  "variables": {
+    "x": null,
+    "y": null,
+    "elements": ["Cs", "Rb", "Ba", "Th", "U", "Nb", "Ta", "La", "Ce", "Pb", "Pr", "Sr", "Nd", "Zr", "Hf", "Sm", "Eu", "Ti", "Gd", "Tb", "Dy", "Y", "Ho", "Er", "Tm", "Yb", "Lu"],
+    "value_mode": "normalized",
+    "reference_id": "PM_SM89",
+    "reference_version": "1"
+  },
+  "quality_policy": {
+    "censored": "exclude",
+    "nonpositive_log": "exclude",
+    "missing_spider": "gap",
+    "unconfirmed_unit": "exclude"
+  },
+  "axes": {
+    "x": {
+      "scale": "category",
+      "range_mode": "auto",
+      "min": null,
+      "max": null,
+      "reversed": false,
+      "tick_mode": "auto",
+      "tick_step": null,
+      "log_exponent_step": 1,
+      "number_format": "auto",
+      "decimal_places": 2,
+      "significant_digits": 3,
+      "title_override": null,
+      "title_font_size_pt": 7.0,
+      "tick_font_size_pt": 6.0,
+      "major_grid": false,
+      "minor_ticks": false,
+      "tick_direction": "out",
+      "category_order": ["Cs", "Rb", "Ba", "Th", "U", "Nb", "Ta", "La", "Ce", "Pb", "Pr", "Sr", "Nd", "Zr", "Hf", "Sm", "Eu", "Ti", "Gd", "Tb", "Dy", "Y", "Ho", "Er", "Tm", "Yb", "Lu"],
+      "visible_categories": ["Cs", "Rb", "Ba", "Th", "U", "Nb", "Ta", "La", "Ce", "Pb", "Pr", "Sr", "Nd", "Zr", "Hf", "Sm", "Eu", "Ti", "Gd", "Tb", "Dy", "Y", "Ho", "Er", "Tm", "Yb", "Lu"]
+    },
+    "y": {
+      "scale": "log10",
+      "range_mode": "auto",
+      "min": null,
+      "max": null,
+      "reversed": false,
+      "tick_mode": "auto",
+      "tick_step": null,
+      "log_exponent_step": 1,
+      "number_format": "auto",
+      "decimal_places": 2,
+      "significant_digits": 3,
+      "title_override": null,
+      "title_font_size_pt": 7.0,
+      "tick_font_size_pt": 6.0,
+      "major_grid": false,
+      "minor_ticks": false,
+      "tick_direction": "out",
+      "category_order": null,
+      "visible_categories": null
+    }
+  },
+  "layout": {
+    "width_mm": 183.0,
+    "height_mm": 110.0,
+    "preset": "nature_main_2026",
+    "font_family": "Arial",
+    "font_size_pt": 7.0,
+    "tick_font_size_pt": 6.0,
+    "legend": {"position": "right", "anchor_x": null, "anchor_y": null},
+    "legend_show_counts": true,
+    "annotations": []
+  },
+  "diagram": null,
+  "channel_policy_id": null
+}

@@ -1,0 +1,95 @@
+{
+  "model_id": "tas_LeMaitre",
+  "model_version": "pyrolite_official_2026-10-29",
+  "description": "TAS classification after Le Maitre et al. (2002). Official polygon boundaries from pyrolite library config_lemaitre.json.",
+  "source_url": "https://raw.githubusercontent.com/morganjwilliams/pyrolite/main/pyrolite/data/models/TAS/config_lemaitre.json",
+  "source_hash": "sha256:placeholder_computed_at_runtime",
+  "axes": {
+    "x": {"label": "SiO2 (wt%)", "range": [35, 85]},
+    "y": {"label": "Na2O + K2O (wt%)", "range": [0, 18]}
+  },
+  "fields": {
+    "Ba": {
+      "label": "Alkalic Basalt / Alkalic Gabbro",
+      "boundary": [[45, 5], [52, 5], [45, 2]]
+    },
+    "Bs": {
+      "label": "Subalkalic Basalt / Subalkalic Gabbro",
+      "boundary": [[45, 2], [52, 5], [52, 0], [45, 0]]
+    },
+    "F": {
+      "label": "Foidite / Foidolite",
+      "boundary": [[35, 9], [37, 14], [52.5, 18], [52.5, 14], [48.4, 11.5], [45, 9.4], [41, 7], [41, 3], [37, 3]]
+    },
+    "O1": {
+      "label": "Basaltic Andesite / Gabbroic Diorite",
+      "boundary": [[52, 0], [52, 5], [57, 5.9], [57, 0]]
+    },
+    "O2": {
+      "label": "Andesite / Diorite",
+      "boundary": [[57, 0], [57, 5.9], [63, 7], [63, 0]]
+    },
+    "O3": {
+      "label": "Dacite / Granodiorite",
+      "boundary": [[63, 0], [63, 7], [69, 8], [77.3, 0]]
+    },
+    "Pc": {
+      "label": "Picrite / Peridot-gabbro",
+      "boundary": [[41, 3], [45, 3], [45, 2], [45, 0], [41, 0]]
+    },
+    "Ph": {
+      "label": "Phonolite / Foid Syenite",
+      "boundary": [[52.5, 14], [52.5, 18], [57, 18], [63, 16.2], [61, 13.5], [57.6, 11.7]]
+    },
+    "R": {
+      "label": "Rhyolite / Granite",
+      "boundary": [[69, 8], [69, 13], [85.9, 6.8], [87.5, 4.7], [77.3, 0]]
+    },
+    "S1": {
+      "label": "Trachybasalt / Monzogabbro",
+      "boundary": [[45, 5], [49.4, 7.3], [52, 5]]
+    },
+    "S2": {
+      "label": "Basaltic Trachyandesite / Monzodiorite",
+      "boundary": [[49.4, 7.3], [53, 9.3], [57, 5.9], [52, 5]]
+    },
+    "S3": {
+      "label": "Trachyandesite / Monzonite",
+      "boundary": [[53, 9.3], [57.6, 11.7], [61, 8.6], [63, 7], [57, 5.9]]
+    },
+    "T1": {
+      "label": "Trachyte / Syenite",
+      "boundary": [[57.6, 11.7], [61, 13.5], [63, 16.2], [69, 13], [61, 8.6]]
+    },
+    "T2": {
+      "label": "Trachydacite / Quartz Monzonite",
+      "boundary": [[61, 8.6], [69, 13], [69, 8], [63, 7]]
+    },
+    "U1": {
+      "label": "Tephrite / Foid Gabbro",
+      "boundary": [[41, 3], [41, 7], [45, 9.4], [49.4, 7.3], [45, 5], [45, 3]]
+    },
+    "U2": {
+      "label": "Phonotephrite / Foid Monzodiorite",
+      "boundary": [[45, 9.4], [48.4, 11.5], [53, 9.3], [49.4, 7.3]]
+    },
+    "U3": {
+      "label": "Tephriphonolite / Foid Monzosyenite",
+      "boundary": [[48.4, 11.5], [52.5, 14], [57.6, 11.7], [53, 9.3]]
+    }
+  },
+  "empty_fields": {
+    "nan": {"name": "N/A", "poly": []},
+    "none": {"name": "N/A", "poly": []}
+  },
+  "verification": {
+    "source": "Le Maitre et al. (2002) Igneous Rocks: A Classification and Glossary of Terms, 2nd ed. via pyrolite library",
+    "boundary_coordinates_verified": false,
+    "notes": "Coordinates from official pyrolite GitHub repository. NOT pixel-matched to published figures. Must be validated with test points before claiming verified=true.",
+    "synthetic_tests": [
+      {"SiO2": 50, "Na2O": 2, "K2O": 2, "expected_field": "Bs", "expected_label": "Subalkalic Basalt"},
+      {"SiO2": 65, "Na2O": 3, "K2O": 2, "expected_field": "O3", "expected_label": "Dacite"},
+      {"SiO2": 72, "Na2O": 2, "K2O": 1.5, "expected_field": "O3", "expected_label": "Dacite"}
+    ]
+  }
+}

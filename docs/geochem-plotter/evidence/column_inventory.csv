@@ -1,0 +1,602 @@
+﻿sheet,column,header_raw,formula_count,cached_error_count
+原始实验数据_合并,A,sample,0,0
+原始实验数据_合并,B,phase,0,0
+原始实验数据_合并,C,Li7_ppm_mean,0,0
+原始实验数据_合并,D,Li7_ppm_2SE(int),0,0
+原始实验数据_合并,E,Li7_ppm_LOD_Longerich,0,0
+原始实验数据_合并,F,Li7_ppm_LOD_Howell,0,0
+原始实验数据_合并,G,Na23_ppm_mean,0,0
+原始实验数据_合并,H,Na23_ppm_2SE(int),0,0
+原始实验数据_合并,I,Na23_ppm_LOD_Longerich,0,0
+原始实验数据_合并,J,Na23_ppm_LOD_Howell,0,0
+原始实验数据_合并,K,Mg25_ppm_mean,0,0
+原始实验数据_合并,L,Mg25_ppm_2SE(int),0,0
+原始实验数据_合并,M,Mg25_ppm_LOD_Longerich,0,0
+原始实验数据_合并,N,Mg25_ppm_LOD_Howell,0,0
+原始实验数据_合并,O,Al27_ppm_mean,0,0
+原始实验数据_合并,P,Al27_ppm_2SE(int),0,0
+原始实验数据_合并,Q,Al27_ppm_LOD_Longerich,0,0
+原始实验数据_合并,R,Al27_ppm_LOD_Howell,0,0
+原始实验数据_合并,S,Si29_ppm_mean,0,0
+原始实验数据_合并,T,Si29_ppm_2SE(int),0,0
+原始实验数据_合并,U,Si29_ppm_LOD_Longerich,0,0
+原始实验数据_合并,V,Si29_ppm_LOD_Howell,0,0
+原始实验数据_合并,W,P31_ppm_mean,0,0
+原始实验数据_合并,X,P31_ppm_2SE(int),0,0
+原始实验数据_合并,Y,P31_ppm_LOD_Longerich,0,0
+原始实验数据_合并,Z,P31_ppm_LOD_Howell,0,0
+原始实验数据_合并,AA,K39_ppm_mean,0,0
+原始实验数据_合并,AB,K39_ppm_2SE(int),0,0
+原始实验数据_合并,AC,K39_ppm_LOD_Longerich,0,0
+原始实验数据_合并,AD,K39_ppm_LOD_Howell,0,0
+原始实验数据_合并,AE,Ca43_ppm_mean,0,0
+原始实验数据_合并,AF,Ca43_ppm_2SE(int),0,0
+原始实验数据_合并,AG,Ca43_ppm_LOD_Longerich,0,0
+原始实验数据_合并,AH,Ca43_ppm_LOD_Howell,0,0
+原始实验数据_合并,AI,Sc45_ppm_mean,0,0
+原始实验数据_合并,AJ,Sc45_ppm_2SE(int),0,0
+原始实验数据_合并,AK,Sc45_ppm_LOD_Longerich,0,0
+原始实验数据_合并,AL,Sc45_ppm_LOD_Howell,0,0
+原始实验数据_合并,AM,Ti49_ppm_mean,0,0
+原始实验数据_合并,AN,Ti49_ppm_2SE(int),0,0
+原始实验数据_合并,AO,Ti49_ppm_LOD_Longerich,0,0
+原始实验数据_合并,AP,Ti49_ppm_LOD_Howell,0,0
+原始实验数据_合并,AQ,V51_ppm_mean,0,0
+原始实验数据_合并,AR,V51_ppm_2SE(int),0,0
+原始实验数据_合并,AS,V51_ppm_LOD_Longerich,0,0
+原始实验数据_合并,AT,V51_ppm_LOD_Howell,0,0
+原始实验数据_合并,AU,Cr53_ppm_mean,0,0
+原始实验数据_合并,AV,Cr53_ppm_2SE(int),0,0
+原始实验数据_合并,AW,Cr53_ppm_LOD_Longerich,0,0
+原始实验数据_合并,AX,Cr53_ppm_LOD_Howell,0,0
+原始实验数据_合并,AY,Mn55_ppm_mean,0,0
+原始实验数据_合并,AZ,Mn55_ppm_2SE(int),0,0
+原始实验数据_合并,BA,Mn55_ppm_LOD_Longerich,0,0
+原始实验数据_合并,BB,Mn55_ppm_LOD_Howell,0,0
+原始实验数据_合并,BC,Fe57_ppm_mean,0,0
+原始实验数据_合并,BD,Fe57_ppm_2SE(int),0,0
+原始实验数据_合并,BE,Fe57_ppm_LOD_Longerich,0,0
+原始实验数据_合并,BF,Fe57_ppm_LOD_Howell,0,0
+原始实验数据_合并,BG,Co59_ppm_mean,0,0
+原始实验数据_合并,BH,Co59_ppm_2SE(int),0,0
+原始实验数据_合并,BI,Co59_ppm_LOD_Longerich,0,0
+原始实验数据_合并,BJ,Co59_ppm_LOD_Howell,0,0
+原始实验数据_合并,BK,Ni60_ppm_mean,0,0
+原始实验数据_合并,BL,Ni60_ppm_2SE(int),0,0
+原始实验数据_合并,BM,Ni60_ppm_LOD_Longerich,0,0
+原始实验数据_合并,BN,Ni60_ppm_LOD_Howell,0,0
+原始实验数据_合并,BO,Cu63_ppm_mean,0,0
+原始实验数据_合并,BP,Cu63_ppm_2SE(int),0,0
+原始实验数据_合并,BQ,Cu63_ppm_LOD_Longerich,0,0
+原始实验数据_合并,BR,Cu63_ppm_LOD_Howell,0,0
+原始实验数据_合并,BS,Zn66_ppm_mean,0,0
+原始实验数据_合并,BT,Zn66_ppm_2SE(int),0,0
+原始实验数据_合并,BU,Zn66_ppm_LOD_Longerich,0,0
+原始实验数据_合并,BV,Zn66_ppm_LOD_Howell,0,0
+原始实验数据_合并,BW,Zn67_ppm_mean,0,0
+原始实验数据_合并,BX,Zn67_ppm_2SE(int),0,0
+原始实验数据_合并,BY,Zn67_ppm_LOD_Longerich,0,0
+原始实验数据_合并,BZ,Zn67_ppm_LOD_Howell,0,0
+原始实验数据_合并,CA,Ga71_ppm_mean,0,0
+原始实验数据_合并,CB,Ga71_ppm_2SE(int),0,0
+原始实验数据_合并,CC,Ga71_ppm_LOD_Longerich,0,0
+原始实验数据_合并,CD,Ga71_ppm_LOD_Howell,0,0
+原始实验数据_合并,CE,Ge73_ppm_mean,0,0
+原始实验数据_合并,CF,Ge73_ppm_2SE(int),0,0
+原始实验数据_合并,CG,Ge73_ppm_LOD_Longerich,0,0
+原始实验数据_合并,CH,Ge73_ppm_LOD_Howell,0,0
+原始实验数据_合并,CI,As75_ppm_mean,0,0
+原始实验数据_合并,CJ,As75_ppm_2SE(int),0,0
+原始实验数据_合并,CK,As75_ppm_LOD_Longerich,0,0
+原始实验数据_合并,CL,As75_ppm_LOD_Howell,0,0
+原始实验数据_合并,CM,Se77_ppm_mean,0,0
+原始实验数据_合并,CN,Se77_ppm_2SE(int),0,0
+原始实验数据_合并,CO,Se77_ppm_LOD_Longerich,0,0
+原始实验数据_合并,CP,Se77_ppm_LOD_Howell,0,0
+原始实验数据_合并,CQ,Se78_ppm_mean,0,0
+原始实验数据_合并,CR,Se78_ppm_2SE(int),0,0
+原始实验数据_合并,CS,Se78_ppm_LOD_Longerich,0,0
+原始实验数据_合并,CT,Se78_ppm_LOD_Howell,0,0
+原始实验数据_合并,CU,Se82_ppm_mean,0,0
+原始实验数据_合并,CV,Se82_ppm_2SE(int),0,0
+原始实验数据_合并,CW,Se82_ppm_LOD_Longerich,0,0
+原始实验数据_合并,CX,Se82_ppm_LOD_Howell,0,0
+原始实验数据_合并,CY,Rb85_ppm_mean,0,0
+原始实验数据_合并,CZ,Rb85_ppm_2SE(int),0,0
+原始实验数据_合并,DA,Rb85_ppm_LOD_Longerich,0,0
+原始实验数据_合并,DB,Rb85_ppm_LOD_Howell,0,0
+原始实验数据_合并,DC,Sr88_ppm_mean,0,0
+原始实验数据_合并,DD,Sr88_ppm_2SE(int),0,0
+原始实验数据_合并,DE,Sr88_ppm_LOD_Longerich,0,0
+原始实验数据_合并,DF,Sr88_ppm_LOD_Howell,0,0
+原始实验数据_合并,DG,Y89_ppm_mean,0,0
+原始实验数据_合并,DH,Y89_ppm_2SE(int),0,0
+原始实验数据_合并,DI,Y89_ppm_LOD_Longerich,0,0
+原始实验数据_合并,DJ,Y89_ppm_LOD_Howell,0,0
+原始实验数据_合并,DK,Zr90_ppm_mean,0,0
+原始实验数据_合并,DL,Zr90_ppm_2SE(int),0,0
+原始实验数据_合并,DM,Zr90_ppm_LOD_Longerich,0,0
+原始实验数据_合并,DN,Zr90_ppm_LOD_Howell,0,0
+原始实验数据_合并,DO,Nb93_ppm_mean,0,0
+原始实验数据_合并,DP,Nb93_ppm_2SE(int),0,0
+原始实验数据_合并,DQ,Nb93_ppm_LOD_Longerich,0,0
+原始实验数据_合并,DR,Nb93_ppm_LOD_Howell,0,0
+原始实验数据_合并,DS,Mo95_ppm_mean,0,0
+原始实验数据_合并,DT,Mo95_ppm_2SE(int),0,0
+原始实验数据_合并,DU,Mo95_ppm_LOD_Longerich,0,0
+原始实验数据_合并,DV,Mo95_ppm_LOD_Howell,0,0
+原始实验数据_合并,DW,Ag107_ppm_mean,0,0
+原始实验数据_合并,DX,Ag107_ppm_2SE(int),0,0
+原始实验数据_合并,DY,Ag107_ppm_LOD_Longerich,0,0
+原始实验数据_合并,DZ,Ag107_ppm_LOD_Howell,0,0
+原始实验数据_合并,EA,Cd111_ppm_mean,0,0
+原始实验数据_合并,EB,Cd111_ppm_2SE(int),0,0
+原始实验数据_合并,EC,Cd111_ppm_LOD_Longerich,0,0
+原始实验数据_合并,ED,Cd111_ppm_LOD_Howell,0,0
+原始实验数据_合并,EE,Sn118_ppm_mean,0,0
+原始实验数据_合并,EF,Sn118_ppm_2SE(int),0,0
+原始实验数据_合并,EG,Sn118_ppm_LOD_Longerich,0,0
+原始实验数据_合并,EH,Sn118_ppm_LOD_Howell,0,0
+原始实验数据_合并,EI,Sb121_ppm_mean,0,0
+原始实验数据_合并,EJ,Sb121_ppm_2SE(int),0,0
+原始实验数据_合并,EK,Sb121_ppm_LOD_Longerich,0,0
+原始实验数据_合并,EL,Sb121_ppm_LOD_Howell,0,0
+原始实验数据_合并,EM,Cs133_ppm_mean,0,0
+原始实验数据_合并,EN,Cs133_ppm_2SE(int),0,0
+原始实验数据_合并,EO,Cs133_ppm_LOD_Longerich,0,0
+原始实验数据_合并,EP,Cs133_ppm_LOD_Howell,0,0
+原始实验数据_合并,EQ,Ba137_ppm_mean,0,0
+原始实验数据_合并,ER,Ba137_ppm_2SE(int),0,0
+原始实验数据_合并,ES,Ba137_ppm_LOD_Longerich,0,0
+原始实验数据_合并,ET,Ba137_ppm_LOD_Howell,0,0
+原始实验数据_合并,EU,La139_ppm_mean,0,0
+原始实验数据_合并,EV,La139_ppm_2SE(int),0,0
+原始实验数据_合并,EW,La139_ppm_LOD_Longerich,0,0
+原始实验数据_合并,EX,La139_ppm_LOD_Howell,0,0
+原始实验数据_合并,EY,Ce140_ppm_mean,0,0
+原始实验数据_合并,EZ,Ce140_ppm_2SE(int),0,0
+原始实验数据_合并,FA,Ce140_ppm_LOD_Longerich,0,0
+原始实验数据_合并,FB,Ce140_ppm_LOD_Howell,0,0
+原始实验数据_合并,FC,Pr141_ppm_mean,0,0
+原始实验数据_合并,FD,Pr141_ppm_2SE(int),0,0
+原始实验数据_合并,FE,Pr141_ppm_LOD_Longerich,0,0
+原始实验数据_合并,FF,Pr141_ppm_LOD_Howell,0,0
+原始实验数据_合并,FG,Nd146_ppm_mean,0,0
+原始实验数据_合并,FH,Nd146_ppm_2SE(int),0,0
+原始实验数据_合并,FI,Nd146_ppm_LOD_Longerich,0,0
+原始实验数据_合并,FJ,Nd146_ppm_LOD_Howell,0,0
+原始实验数据_合并,FK,Sm147_ppm_mean,0,0
+原始实验数据_合并,FL,Sm147_ppm_2SE(int),0,0
+原始实验数据_合并,FM,Sm147_ppm_LOD_Longerich,0,0
+原始实验数据_合并,FN,Sm147_ppm_LOD_Howell,0,0
+原始实验数据_合并,FO,Eu153_ppm_mean,0,0
+原始实验数据_合并,FP,Eu153_ppm_2SE(int),0,0
+原始实验数据_合并,FQ,Eu153_ppm_LOD_Longerich,0,0
+原始实验数据_合并,FR,Eu153_ppm_LOD_Howell,0,0
+原始实验数据_合并,FS,Gd157_ppm_mean,0,0
+原始实验数据_合并,FT,Gd157_ppm_2SE(int),0,0
+原始实验数据_合并,FU,Gd157_ppm_LOD_Longerich,0,0
+原始实验数据_合并,FV,Gd157_ppm_LOD_Howell,0,0
+原始实验数据_合并,FW,Tb159_ppm_mean,0,0
+原始实验数据_合并,FX,Tb159_ppm_2SE(int),0,0
+原始实验数据_合并,FY,Tb159_ppm_LOD_Longerich,0,0
+原始实验数据_合并,FZ,Tb159_ppm_LOD_Howell,0,0
+原始实验数据_合并,GA,Dy163_ppm_mean,0,0
+原始实验数据_合并,GB,Dy163_ppm_2SE(int),0,0
+原始实验数据_合并,GC,Dy163_ppm_LOD_Longerich,0,0
+原始实验数据_合并,GD,Dy163_ppm_LOD_Howell,0,0
+原始实验数据_合并,GE,Ho165_ppm_mean,0,0
+原始实验数据_合并,GF,Ho165_ppm_2SE(int),0,0
+原始实验数据_合并,GG,Ho165_ppm_LOD_Longerich,0,0
+原始实验数据_合并,GH,Ho165_ppm_LOD_Howell,0,0
+原始实验数据_合并,GI,Er166_ppm_mean,0,0
+原始实验数据_合并,GJ,Er166_ppm_2SE(int),0,0
+原始实验数据_合并,GK,Er166_ppm_LOD_Longerich,0,0
+原始实验数据_合并,GL,Er166_ppm_LOD_Howell,0,0
+原始实验数据_合并,GM,Tm169_ppm_mean,0,0
+原始实验数据_合并,GN,Tm169_ppm_2SE(int),0,0
+原始实验数据_合并,GO,Tm169_ppm_LOD_Longerich,0,0
+原始实验数据_合并,GP,Tm169_ppm_LOD_Howell,0,0
+原始实验数据_合并,GQ,Yb172_ppm_mean,0,0
+原始实验数据_合并,GR,Yb172_ppm_2SE(int),0,0
+原始实验数据_合并,GS,Yb172_ppm_LOD_Longerich,0,0
+原始实验数据_合并,GT,Yb172_ppm_LOD_Howell,0,0
+原始实验数据_合并,GU,Lu175_ppm_mean,0,0
+原始实验数据_合并,GV,Lu175_ppm_2SE(int),0,0
+原始实验数据_合并,GW,Lu175_ppm_LOD_Longerich,0,0
+原始实验数据_合并,GX,Lu175_ppm_LOD_Howell,0,0
+原始实验数据_合并,GY,Hf178_ppm_mean,0,0
+原始实验数据_合并,GZ,Hf178_ppm_2SE(int),0,0
+原始实验数据_合并,HA,Hf178_ppm_LOD_Longerich,0,0
+原始实验数据_合并,HB,Hf178_ppm_LOD_Howell,0,0
+原始实验数据_合并,HC,Ta181_ppm_mean,0,0
+原始实验数据_合并,HD,Ta181_ppm_2SE(int),0,0
+原始实验数据_合并,HE,Ta181_ppm_LOD_Longerich,0,0
+原始实验数据_合并,HF,Ta181_ppm_LOD_Howell,0,0
+原始实验数据_合并,HG,W182_ppm_mean,0,0
+原始实验数据_合并,HH,W182_ppm_2SE(int),0,0
+原始实验数据_合并,HI,W182_ppm_LOD_Longerich,0,0
+原始实验数据_合并,HJ,W182_ppm_LOD_Howell,0,0
+原始实验数据_合并,HK,Hg202_ppm_mean,0,0
+原始实验数据_合并,HL,Hg202_ppm_2SE(int),0,0
+原始实验数据_合并,HM,Hg202_ppm_LOD_Longerich,0,0
+原始实验数据_合并,HN,Hg202_ppm_LOD_Howell,0,0
+原始实验数据_合并,HO,Pb204_ppm_mean,0,0
+原始实验数据_合并,HP,Pb204_ppm_2SE(int),0,0
+原始实验数据_合并,HQ,Pb204_ppm_LOD_Longerich,0,0
+原始实验数据_合并,HR,Pb204_ppm_LOD_Howell,0,0
+原始实验数据_合并,HS,Pb206_ppm_mean,0,0
+原始实验数据_合并,HT,Pb206_ppm_2SE(int),0,0
+原始实验数据_合并,HU,Pb206_ppm_LOD_Longerich,0,0
+原始实验数据_合并,HV,Pb206_ppm_LOD_Howell,0,0
+原始实验数据_合并,HW,Pb207_ppm_mean,0,0
+原始实验数据_合并,HX,Pb207_ppm_2SE(int),0,0
+原始实验数据_合并,HY,Pb207_ppm_LOD_Longerich,0,0
+原始实验数据_合并,HZ,Pb207_ppm_LOD_Howell,0,0
+原始实验数据_合并,IA,Pb208_ppm_mean,0,0
+原始实验数据_合并,IB,Pb208_ppm_2SE(int),0,0
+原始实验数据_合并,IC,Pb208_ppm_LOD_Longerich,0,0
+原始实验数据_合并,ID,Pb208_ppm_LOD_Howell,0,0
+原始实验数据_合并,IE,Th232_ppm_mean,0,0
+原始实验数据_合并,IF,Th232_ppm_2SE(int),0,0
+原始实验数据_合并,IG,Th232_ppm_LOD_Longerich,0,0
+原始实验数据_合并,IH,Th232_ppm_LOD_Howell,0,0
+原始实验数据_合并,II,U238_ppm_mean,0,0
+原始实验数据_合并,IJ,U238_ppm_2SE(int),0,0
+原始实验数据_合并,IK,U238_ppm_LOD_Longerich,0,0
+原始实验数据_合并,IL,U238_ppm_LOD_Howell,0,0
+原始实验数据_合并,IM,PbTotal_ppm_mean,0,0
+原始实验数据_合并,IN,PbTotal_ppm_2SE(int),0,0
+原始实验数据_合并,IO,PbTotal_ppm_LOD_Longerich,0,0
+原始实验数据_合并,IP,PbTotal_ppm_LOD_Howell,0,0
+原始实验数据_合并,IQ,source_file,0,0
+原始实验数据_合并,IR,lable,0,0
+原始实验数据_合并,IS,Li7_ppm_2SD,0,0
+原始实验数据_合并,IT,Na23_ppm_2SD,0,0
+原始实验数据_合并,IU,Mg25_ppm_2SD,0,0
+原始实验数据_合并,IV,Al27_ppm_2SD,0,0
+原始实验数据_合并,IW,Si29_ppm_2SD,0,0
+原始实验数据_合并,IX,K39_ppm_2SD,0,0
+原始实验数据_合并,IY,Ca43_ppm_2SD,0,0
+原始实验数据_合并,IZ,Sc45_ppm_2SD,0,0
+原始实验数据_合并,JA,Ti49_ppm_2SD,0,0
+原始实验数据_合并,JB,V51_ppm_2SD,0,0
+原始实验数据_合并,JC,Cr53_ppm_2SD,0,0
+原始实验数据_合并,JD,Mn55_ppm_2SD,0,0
+原始实验数据_合并,JE,Fe57_ppm_2SD,0,0
+原始实验数据_合并,JF,Co59_ppm_2SD,0,0
+原始实验数据_合并,JG,Ni60_ppm_2SD,0,0
+原始实验数据_合并,JH,Cu63_ppm_2SD,0,0
+原始实验数据_合并,JI,Zn66_ppm_2SD,0,0
+原始实验数据_合并,JJ,Ga71_ppm_2SD,0,0
+原始实验数据_合并,JK,Ge73_ppm_2SD,0,0
+原始实验数据_合并,JL,As75_ppm_2SD,0,0
+原始实验数据_合并,JM,Rb85_ppm_2SD,0,0
+原始实验数据_合并,JN,Sr88_ppm_2SD,0,0
+原始实验数据_合并,JO,Y89_ppm_2SD,0,0
+原始实验数据_合并,JP,Zr90_ppm_2SD,0,0
+原始实验数据_合并,JQ,Nb93_ppm_2SD,0,0
+原始实验数据_合并,JR,Mo95_ppm_2SD,0,0
+原始实验数据_合并,JS,Sn118_ppm_2SD,0,0
+原始实验数据_合并,JT,Cs133_ppm_2SD,0,0
+原始实验数据_合并,JU,Ba137_ppm_2SD,0,0
+原始实验数据_合并,JV,La139_ppm_2SD,0,0
+原始实验数据_合并,JW,Ce140_ppm_2SD,0,0
+原始实验数据_合并,JX,Pr141_ppm_2SD,0,0
+原始实验数据_合并,JY,Nd146_ppm_2SD,0,0
+原始实验数据_合并,JZ,Sm147_ppm_2SD,0,0
+原始实验数据_合并,KA,Eu153_ppm_2SD,0,0
+原始实验数据_合并,KB,Gd157_ppm_2SD,0,0
+原始实验数据_合并,KC,Tb159_ppm_2SD,0,0
+原始实验数据_合并,KD,Dy163_ppm_2SD,0,0
+原始实验数据_合并,KE,Ho165_ppm_2SD,0,0
+原始实验数据_合并,KF,Er166_ppm_2SD,0,0
+原始实验数据_合并,KG,Tm169_ppm_2SD,0,0
+原始实验数据_合并,KH,Yb172_ppm_2SD,0,0
+原始实验数据_合并,KI,Lu175_ppm_2SD,0,0
+原始实验数据_合并,KJ,Hf178_ppm_2SD,0,0
+原始实验数据_合并,KK,Ta181_ppm_2SD,0,0
+原始实验数据_合并,KL,Pb204_ppm_2SD,0,0
+原始实验数据_合并,KM,Pb206_ppm_2SD,0,0
+原始实验数据_合并,KN,Pb207_ppm_2SD,0,0
+原始实验数据_合并,KO,Pb208_ppm_2SD,0,0
+原始实验数据_合并,KP,Th232_ppm_2SD,0,0
+原始实验数据_合并,KQ,U238_ppm_2SD,0,0
+原始实验数据_合并,KR,PbTotal_ppm_2SD,0,0
+原始实验数据_合并,KS,Zn67_ppm_2SD,0,0
+原始实验数据_合并,KT,Sb121_ppm_2SD,0,0
+实验数据汇总,A,task,0,0
+实验数据汇总,B,phase,0,0
+实验数据汇总,C,mineral_group,0,0
+实验数据汇总,D,original_name,0,0
+实验数据汇总,E,source_file,0,0
+实验数据汇总,F,has_full_ree,0,0
+实验数据汇总,G,Si,0,0
+实验数据汇总,H,Ti,0,0
+实验数据汇总,I,Al,0,0
+实验数据汇总,J,Fe,0,0
+实验数据汇总,K,Mn,0,0
+实验数据汇总,L,Mg,0,0
+实验数据汇总,M,Ca,0,0
+实验数据汇总,N,Na,0,0
+实验数据汇总,O,K,0,0
+实验数据汇总,P,La,0,0
+实验数据汇总,Q,Ce,0,0
+实验数据汇总,R,Pr,0,0
+实验数据汇总,S,Nd,0,0
+实验数据汇总,T,Sm,0,0
+实验数据汇总,U,Eu,0,0
+实验数据汇总,V,Gd,0,0
+实验数据汇总,W,Tb,0,0
+实验数据汇总,X,Dy,0,0
+实验数据汇总,Y,Ho,0,0
+实验数据汇总,Z,Er,0,0
+实验数据汇总,AA,Tm,0,0
+实验数据汇总,AB,Yb,0,0
+实验数据汇总,AC,Lu,0,0
+实验数据汇总,AD,Cs,0,0
+实验数据汇总,AE,Rb,0,0
+实验数据汇总,AF,Ba,0,0
+实验数据汇总,AG,Th,0,0
+实验数据汇总,AH,U,0,0
+实验数据汇总,AI,Nb,0,0
+实验数据汇总,AJ,Ta,0,0
+实验数据汇总,AK,Sr,0,0
+实验数据汇总,AL,Zr,0,0
+实验数据汇总,AM,Hf,0,0
+实验数据汇总,AN,Y,0,0
+实验数据汇总,AO,Pb,0,0
+实验数据汇总,AP,Li,0,0
+实验数据汇总,AQ,Sc,0,0
+实验数据汇总,AR,V,0,0
+实验数据汇总,AS,Cr,0,0
+实验数据汇总,AT,Mo,0,0
+实验数据汇总,AU,Co,0,0
+实验数据汇总,AV,Ni,0,0
+实验数据汇总,AW,Cu,0,0
+实验数据汇总,AX,Zn,0,0
+实验数据汇总,AY,Ga,0,0
+实验数据汇总,AZ,(La/Yb)n,229,0
+实验数据汇总,BA,(La/Sm)n,246,0
+实验数据汇总,BB,(La/Yb)n,0,0
+实验数据汇总,BC,(La/Lu)n,220,0
+嫦娥搜集数据,A,序号,0,0
+嫦娥搜集数据,B,DOI,0,0
+嫦娥搜集数据,C,第一作者_年份,0,0
+嫦娥搜集数据,D,期刊,0,0
+嫦娥搜集数据,E,任务(CE5/CE6),0,0
+嫦娥搜集数据,F,样品编号,0,0
+嫦娥搜集数据,G,分析对象,0,0
+嫦娥搜集数据,H,年龄（Ma）,0,0
+嫦娥搜集数据,I,类型,0,0
+嫦娥搜集数据,J,SiO2,0,0
+嫦娥搜集数据,K,TiO2,0,0
+嫦娥搜集数据,L,Al2O3,0,0
+嫦娥搜集数据,M,FeOT,0,0
+嫦娥搜集数据,N,FeO,0,0
+嫦娥搜集数据,O,Fe2O3,0,0
+嫦娥搜集数据,P,MnO,0,0
+嫦娥搜集数据,Q,MgO,0,0
+嫦娥搜集数据,R,CaO,0,0
+嫦娥搜集数据,S,Na2O,0,0
+嫦娥搜集数据,T,K2O,0,0
+嫦娥搜集数据,U,P2O5,0,0
+嫦娥搜集数据,V,Cr2O3,0,0
+嫦娥搜集数据,W,Total,0,0
+嫦娥搜集数据,X,Mg#,8150,1383
+嫦娥搜集数据,Y,An#,8150,1560
+嫦娥搜集数据,Z,La,0,0
+嫦娥搜集数据,AA,Ce,0,0
+嫦娥搜集数据,AB,Pr,0,0
+嫦娥搜集数据,AC,Nd,0,0
+嫦娥搜集数据,AD,Sm,0,0
+嫦娥搜集数据,AE,Eu,0,0
+嫦娥搜集数据,AF,Gd,0,0
+嫦娥搜集数据,AG,Tb,0,0
+嫦娥搜集数据,AH,Dy,0,0
+嫦娥搜集数据,AI,Ho,0,0
+嫦娥搜集数据,AJ,Er,0,0
+嫦娥搜集数据,AK,Tm,0,0
+嫦娥搜集数据,AL,Yb,0,0
+嫦娥搜集数据,AM,Lu,0,0
+嫦娥搜集数据,AN,Cs,0,0
+嫦娥搜集数据,AO,Rb,0,0
+嫦娥搜集数据,AP,Ba,0,0
+嫦娥搜集数据,AQ,Th,0,0
+嫦娥搜集数据,AR,U,0,0
+嫦娥搜集数据,AS,Nb,0,0
+嫦娥搜集数据,AT,Ta,0,0
+嫦娥搜集数据,AU,Sr,0,0
+嫦娥搜集数据,AV,Zr,0,0
+嫦娥搜集数据,AW,Hf,0,0
+嫦娥搜集数据,AX,Y,0,0
+嫦娥搜集数据,AY,Pb,0,0
+嫦娥搜集数据,AZ,Sc,0,0
+嫦娥搜集数据,BA,V,0,0
+嫦娥搜集数据,BB,Cr,0,0
+嫦娥搜集数据,BC,Co,0,0
+嫦娥搜集数据,BD,Ni,0,0
+嫦娥搜集数据,BE,Cu,0,0
+嫦娥搜集数据,BF,Zn,0,0
+嫦娥搜集数据,BG,Ga,0,0
+嫦娥搜集数据,BH,(La/Sm)n,0,0
+嫦娥搜集数据,BI,(Sm/Yb)n,0,0
+嫦娥搜集数据,BJ,(La/Yb)n,0,0
+嫦娥搜集数据,BK,87Sr/86Sr,0,0
+嫦娥搜集数据,BL,2σ,0,0
+嫦娥搜集数据,BM,143Nd/144Nd,0,0
+嫦娥搜集数据,BN,2σ.1,0,0
+嫦娥搜集数据,BO,εNd(t),0,0
+嫦娥搜集数据,BP,TDM(Ga),0,0
+嫦娥搜集数据,BQ,206Pb/204Pb,0,0
+嫦娥搜集数据,BR,207Pb/204Pb,0,0
+嫦娥搜集数据,BS,208Pb/204Pb,0,0
+嫦娥搜集数据,BT,176Hf/177Hf,0,0
+嫦娥搜集数据,BU,εHf(t),0,0
+嫦娥搜集数据,BV,δ56Fe,0,0
+嫦娥搜集数据,BW,δ26Mg,0,0
+嫦娥搜集数据,BX,δ60Ni,0,0
+嫦娥搜集数据,BY,δ66Zn,0,0
+嫦娥搜集数据,BZ,δ65Cu,0,0
+嫦娥搜集数据,CA,δ34S,0,0
+嫦娥搜集数据,CB,δ7Li,0,0
+嫦娥搜集数据,CC,δ18O,0,0
+嫦娥搜集数据,CD,δD,0,0
+嫦娥搜集数据,CE,δ13C,0,0
+嫦娥搜集数据,CF,δ15N,0,0
+嫦娥搜集数据,CG,备注,0,0
+CE with trace ele,A,序号,0,0
+CE with trace ele,B,DOI,0,0
+CE with trace ele,C,第一作者_年份,0,0
+CE with trace ele,D,期刊,0,0
+CE with trace ele,E,任务(CE5/CE6),0,0
+CE with trace ele,F,样品编号,0,0
+CE with trace ele,G,分析对象,0,0
+CE with trace ele,H,年龄（Ma）,0,0
+CE with trace ele,I,类型,0,0
+CE with trace ele,J,SiO2,0,0
+CE with trace ele,K,TiO2,0,0
+CE with trace ele,L,Al2O3,0,0
+CE with trace ele,M,FeOT,0,0
+CE with trace ele,N,FeO,0,0
+CE with trace ele,O,Fe2O3,0,0
+CE with trace ele,P,MnO,0,0
+CE with trace ele,Q,MgO,0,0
+CE with trace ele,R,CaO,0,0
+CE with trace ele,S,Na2O,0,0
+CE with trace ele,T,K2O,0,0
+CE with trace ele,U,P2O5,0,0
+CE with trace ele,V,Cr2O3,0,0
+CE with trace ele,W,Total,0,0
+CE with trace ele,X,Mg#,0,0
+CE with trace ele,Y,An#,0,0
+CE with trace ele,Z,La,0,0
+CE with trace ele,AA,Ce,0,0
+CE with trace ele,AB,Pr,0,0
+CE with trace ele,AC,Nd,0,0
+CE with trace ele,AD,Sm,0,0
+CE with trace ele,AE,Eu,0,0
+CE with trace ele,AF,Gd,0,0
+CE with trace ele,AG,Tb,0,0
+CE with trace ele,AH,Dy,0,0
+CE with trace ele,AI,Ho,0,0
+CE with trace ele,AJ,Er,0,0
+CE with trace ele,AK,Tm,0,0
+CE with trace ele,AL,Yb,0,0
+CE with trace ele,AM,Lu,0,0
+CE with trace ele,AN,Cs,0,0
+CE with trace ele,AO,Rb,0,0
+CE with trace ele,AP,Ba,0,0
+CE with trace ele,AQ,Th,0,0
+CE with trace ele,AR,U,0,0
+CE with trace ele,AS,Nb,0,0
+CE with trace ele,AT,Ta,0,0
+CE with trace ele,AU,Sr,0,0
+CE with trace ele,AV,Zr,0,0
+CE with trace ele,AW,Hf,0,0
+CE with trace ele,AX,Y,0,0
+CE with trace ele,AY,Pb,0,0
+CE with trace ele,AZ,Sc,0,0
+CE with trace ele,BA,V,0,0
+CE with trace ele,BB,Cr,0,0
+CE with trace ele,BC,Co,0,0
+CE with trace ele,BD,Ni,0,0
+CE with trace ele,BE,Cu,0,0
+CE with trace ele,BF,Zn,0,0
+CE with trace ele,BG,Ga,0,0
+CE with trace ele,BH,(La/Sm)n,0,0
+CE with trace ele,BI,(Sm/Yb)n,0,0
+CE with trace ele,BJ,(La/Yb)n,0,0
+CE with trace ele,BK,La,535,0
+CE with trace ele,BL,Ce,535,0
+CE with trace ele,BM,Pr,535,0
+CE with trace ele,BN,Nd,535,0
+CE with trace ele,BO,Sm,535,0
+CE with trace ele,BP,Eu,535,0
+CE with trace ele,BQ,Gd,535,2
+CE with trace ele,BR,Tb,535,4
+CE with trace ele,BS,Dy,535,2
+CE with trace ele,BT,Ho,535,6
+CE with trace ele,BU,Er,535,8
+CE with trace ele,BV,Tm,535,13
+CE with trace ele,BW,Yb,535,9
+CE with trace ele,BX,Lu,535,16
+CE with trace ele,BY,,0,0
+CE with trace ele,BZ,（La/Yb)n,514,0
+CE with trace ele,CA,(La/Sm)n,534,0
+CE with trace ele,CB,,0,0
+CE with trace ele,CC,,0,0
+CE with trace ele,CD,,0,0
+CE with trace ele,CE,,2,0
+CE with trace ele,CF,,0,0
+CE with trace ele,CG,,0,0
+Normalization value,A,,0,0
+Normalization value,B,,0,0
+Normalization value,C,,0,0
+Normalization value,D,,0,0
+Apollo数据,A,Sample Name,0,0
+Apollo数据,B,Citation,0,0
+Apollo数据,C,Sample Collection,0,0
+Apollo数据,D,样品类型,0,0
+Apollo数据,E,Sample SubType,0,0
+Apollo数据,F,矿物类型,0,0
+Apollo数据,G,Analyzed Material,0,0
+Apollo数据,H,方法,0,0
+Apollo数据,I,SiO2,0,0
+Apollo数据,J,TiO2,0,0
+Apollo数据,K,Al2O3,0,0
+Apollo数据,L,FeOT,0,0
+Apollo数据,M,FeO,0,0
+Apollo数据,N,Fe2O3,0,0
+Apollo数据,O,MnO,0,0
+Apollo数据,P,MgO,0,0
+Apollo数据,Q,CaO,0,0
+Apollo数据,R,Na2O,0,0
+Apollo数据,S,K2O,0,0
+Apollo数据,T,P2O5,0,0
+Apollo数据,U,Cr2O3,0,0
+Apollo数据,V,Total,0,0
+Apollo数据,W,La,0,0
+Apollo数据,X,Ce,0,0
+Apollo数据,Y,Pr,0,0
+Apollo数据,Z,Nd,0,0
+Apollo数据,AA,Sm,0,0
+Apollo数据,AB,Eu,0,0
+Apollo数据,AC,Gd,0,0
+Apollo数据,AD,Tb,0,0
+Apollo数据,AE,Dy,0,0
+Apollo数据,AF,Ho,0,0
+Apollo数据,AG,Er,0,0
+Apollo数据,AH,Tm,0,0
+Apollo数据,AI,Yb,0,0
+Apollo数据,AJ,Lu,0,0
+Apollo数据,AK,Cs,0,0
+Apollo数据,AL,Rb,0,0
+Apollo数据,AM,Ba,0,0
+Apollo数据,AN,Th,0,0
+Apollo数据,AO,U,0,0
+Apollo数据,AP,Nb,0,0
+Apollo数据,AQ,Ta,0,0
+Apollo数据,AR,Sr,0,0
+Apollo数据,AS,Zr,0,0
+Apollo数据,AT,Hf,0,0
+Apollo数据,AU,Y,0,0
+Apollo数据,AV,Pb,0,0
+Apollo数据,AW,Sc,0,0
+Apollo数据,AX,V,0,0
+Apollo数据,AY,Cr,0,0
+Apollo数据,AZ,Co,0,0
+Apollo数据,BA,Ni,0,0
+Apollo数据,BB,Cu,0,0
+Apollo数据,BC,Zn,0,0
+Apollo数据,BD,Ga,0,0
+Apollo数据,BE,δ56Fe,0,0
+Apollo数据,BF,δ26Mg,0,0
+Apollo数据,BG,δ66Zn,0,0
+Apollo数据,BH,δ65Cu,0,0
+Apollo数据,BI,δ34S,0,0
+Apollo数据,BJ,δ7Li,0,0
+Apollo数据,BK,δ18O,0,0
+Apollo数据,BL,δD,0,0
+Apollo数据,BM,δ13C,0,0
+Apollo数据,BN,δ15N,0,0

@@ -1,0 +1,1401 @@
+{
+  "$defs": {
+    "AddExpr": {
+      "properties": {
+        "kind": {
+          "const": "add",
+          "default": "add",
+          "title": "Kind",
+          "type": "string"
+        },
+        "operands": {
+          "items": {
+            "discriminator": {
+              "mapping": {
+                "add": "#/$defs/AddExpr",
+                "constant": "#/$defs/ConstantExpr",
+                "measurement": "#/$defs/MeasurementExpr",
+                "normalize": "#/$defs/NormalizeExpr",
+                "ratio": "#/$defs/RatioExpr"
+              },
+              "propertyName": "kind"
+            },
+            "oneOf": [
+              {
+                "$ref": "#/$defs/MeasurementExpr"
+              },
+              {
+                "$ref": "#/$defs/NormalizeExpr"
+              },
+              {
+                "$ref": "#/$defs/RatioExpr"
+              },
+              {
+                "$ref": "#/$defs/AddExpr"
+              },
+              {
+                "$ref": "#/$defs/ConstantExpr"
+              }
+            ]
+          },
+          "minItems": 2,
+          "title": "Operands",
+          "type": "array"
+        }
+      },
+      "required": [
+        "operands"
+      ],
+      "title": "AddExpr",
+      "type": "object"
+    },
+    "Annotation": {
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "text": {
+          "title": "Text",
+          "type": "string"
+        },
+        "anchor_x": {
+          "maximum": 1.0,
+          "minimum": 0.0,
+          "title": "Anchor X",
+          "type": "number"
+        },
+        "anchor_y": {
+          "maximum": 1.0,
+          "minimum": 0.0,
+          "title": "Anchor Y",
+          "type": "number"
+        },
+        "font_size_pt": {
+          "default": 7.0,
+          "maximum": 36.0,
+          "minimum": 4.0,
+          "title": "Font Size Pt",
+          "type": "number"
+        },
+        "color": {
+          "default": "#000000",
+          "pattern": "^#[0-9A-Fa-f]{6}$",
+          "title": "Color",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "text",
+        "anchor_x",
+        "anchor_y"
+      ],
+      "title": "Annotation",
+      "type": "object"
+    },
+    "AxisScene": {
+      "properties": {
+        "label": {
+          "title": "Label",
+          "type": "string"
+        },
+        "unit": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Unit"
+        },
+        "scale": {
+          "title": "Scale",
+          "type": "string"
+        },
+        "range": {
+          "items": {
+            "type": "number"
+          },
+          "maxItems": 2,
+          "minItems": 2,
+          "title": "Range",
+          "type": "array"
+        },
+        "ticks": {
+          "items": {
+            "type": "number"
+          },
+          "title": "Ticks",
+          "type": "array"
+        },
+        "reversed": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reversed"
+        },
+        "number_format": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Number Format"
+        },
+        "decimal_places": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Decimal Places"
+        },
+        "significant_digits": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Significant Digits"
+        },
+        "tick_mode": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Tick Mode"
+        },
+        "tick_step": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Tick Step"
+        },
+        "log_exponent_step": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Log Exponent Step"
+        },
+        "title_font_size_pt": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Title Font Size Pt"
+        },
+        "tick_font_size_pt": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Tick Font Size Pt"
+        },
+        "major_grid": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Major Grid"
+        },
+        "minor_ticks": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Minor Ticks"
+        },
+        "tick_direction": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Tick Direction"
+        },
+        "category_order": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Category Order"
+        },
+        "visible_categories": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Visible Categories"
+        }
+      },
+      "required": [
+        "label",
+        "scale",
+        "range",
+        "ticks"
+      ],
+      "title": "AxisScene",
+      "type": "object"
+    },
+    "ChartType": {
+      "enum": [
+        "scatter",
+        "ree",
+        "spider",
+        "tas"
+      ],
+      "title": "ChartType",
+      "type": "string"
+    },
+    "ConstantExpr": {
+      "properties": {
+        "kind": {
+          "const": "constant",
+          "default": "constant",
+          "title": "Kind",
+          "type": "string"
+        },
+        "value": {
+          "title": "Value",
+          "type": "number"
+        },
+        "unit": {
+          "minLength": 1,
+          "title": "Unit",
+          "type": "string"
+        }
+      },
+      "required": [
+        "value",
+        "unit"
+      ],
+      "title": "ConstantExpr",
+      "type": "object"
+    },
+    "DiagramGeometry": {
+      "description": "Diagram geometry for specialized chart types (TAS, etc.).",
+      "properties": {
+        "model_id": {
+          "title": "Model Id",
+          "type": "string"
+        },
+        "model_version": {
+          "title": "Model Version",
+          "type": "string"
+        },
+        "source_hash": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Hash"
+        },
+        "polygons": {
+          "items": {
+            "$ref": "#/$defs/TASPolygon"
+          },
+          "title": "Polygons",
+          "type": "array"
+        },
+        "labels": {
+          "items": {
+            "$ref": "#/$defs/TASLabel"
+          },
+          "title": "Labels",
+          "type": "array"
+        },
+        "segments": {
+          "items": {
+            "items": {
+              "items": {
+                "type": "number"
+              },
+              "type": "array"
+            },
+            "type": "array"
+          },
+          "title": "Segments",
+          "type": "array"
+        },
+        "boundary_coordinates": {
+          "items": {
+            "items": {
+              "type": "number"
+            },
+            "type": "array"
+          },
+          "title": "Boundary Coordinates",
+          "type": "array"
+        },
+        "region_labels": {
+          "additionalProperties": {
+            "items": {
+              "items": {
+                "type": "number"
+              },
+              "type": "array"
+            },
+            "type": "array"
+          },
+          "title": "Region Labels",
+          "type": "object"
+        }
+      },
+      "required": [
+        "model_id",
+        "model_version"
+      ],
+      "title": "DiagramGeometry",
+      "type": "object"
+    },
+    "Exclusion": {
+      "properties": {
+        "analysis_id": {
+          "title": "Analysis Id",
+          "type": "string"
+        },
+        "analyte": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Analyte"
+        },
+        "reason_code": {
+          "title": "Reason Code",
+          "type": "string"
+        },
+        "source_cells": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Source Cells",
+          "type": "array"
+        }
+      },
+      "required": [
+        "analysis_id",
+        "reason_code"
+      ],
+      "title": "Exclusion",
+      "type": "object"
+    },
+    "FontManifest": {
+      "properties": {
+        "primary": {
+          "title": "Primary",
+          "type": "string"
+        },
+        "fallback": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Fallback",
+          "type": "array"
+        },
+        "available": {
+          "title": "Available",
+          "type": "boolean"
+        },
+        "substituted_with": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Substituted With"
+        }
+      },
+      "required": [
+        "primary",
+        "fallback",
+        "available"
+      ],
+      "title": "FontManifest",
+      "type": "object"
+    },
+    "LayoutConfig": {
+      "properties": {
+        "width_mm": {
+          "default": 183.0,
+          "maximum": 500.0,
+          "minimum": 20.0,
+          "title": "Width Mm",
+          "type": "number"
+        },
+        "height_mm": {
+          "default": 110.0,
+          "maximum": 500.0,
+          "minimum": 20.0,
+          "title": "Height Mm",
+          "type": "number"
+        },
+        "preset": {
+          "default": "nature_main_2026",
+          "description": "nature_main_2026|thesis_cn|custom",
+          "title": "Preset",
+          "type": "string"
+        },
+        "font_family": {
+          "default": "Arial",
+          "title": "Font Family",
+          "type": "string"
+        },
+        "font_size_pt": {
+          "default": 7.0,
+          "maximum": 36.0,
+          "minimum": 4.0,
+          "title": "Font Size Pt",
+          "type": "number"
+        },
+        "tick_font_size_pt": {
+          "default": 6.0,
+          "maximum": 36.0,
+          "minimum": 4.0,
+          "title": "Tick Font Size Pt",
+          "type": "number"
+        },
+        "legend": {
+          "$ref": "#/$defs/LegendConfig"
+        },
+        "legend_show_counts": {
+          "default": true,
+          "title": "Legend Show Counts",
+          "type": "boolean"
+        },
+        "annotations": {
+          "items": {
+            "$ref": "#/$defs/Annotation"
+          },
+          "title": "Annotations",
+          "type": "array"
+        }
+      },
+      "title": "LayoutConfig",
+      "type": "object"
+    },
+    "LegendConfig": {
+      "properties": {
+        "position": {
+          "default": "right",
+          "description": "right|inside|custom",
+          "title": "Position",
+          "type": "string"
+        },
+        "anchor_x": {
+          "anyOf": [
+            {
+              "maximum": 1.0,
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Anchor X"
+        },
+        "anchor_y": {
+          "anyOf": [
+            {
+              "maximum": 1.0,
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Anchor Y"
+        }
+      },
+      "title": "LegendConfig",
+      "type": "object"
+    },
+    "MeasurementExpr": {
+      "properties": {
+        "kind": {
+          "const": "measurement",
+          "default": "measurement",
+          "title": "Kind",
+          "type": "string"
+        },
+        "analyte": {
+          "description": "Element or oxide symbol, e.g. La, SiO2",
+          "minLength": 1,
+          "title": "Analyte",
+          "type": "string"
+        },
+        "chemical_form": {
+          "enum": [
+            "element",
+            "oxide",
+            "isotope_ratio",
+            "index"
+          ],
+          "title": "Chemical Form",
+          "type": "string"
+        },
+        "unit": {
+          "description": "e.g. ppm, ppb, wt%",
+          "minLength": 1,
+          "title": "Unit",
+          "type": "string"
+        },
+        "channel": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Measurement channel, e.g. La139_ppm_mean",
+          "title": "Channel"
+        }
+      },
+      "required": [
+        "analyte",
+        "chemical_form",
+        "unit"
+      ],
+      "title": "MeasurementExpr",
+      "type": "object"
+    },
+    "NormalizeExpr": {
+      "properties": {
+        "kind": {
+          "const": "normalize",
+          "default": "normalize",
+          "title": "Kind",
+          "type": "string"
+        },
+        "value": {
+          "discriminator": {
+            "mapping": {
+              "add": "#/$defs/AddExpr",
+              "constant": "#/$defs/ConstantExpr",
+              "measurement": "#/$defs/MeasurementExpr",
+              "normalize": "#/$defs/NormalizeExpr",
+              "ratio": "#/$defs/RatioExpr"
+            },
+            "propertyName": "kind"
+          },
+          "oneOf": [
+            {
+              "$ref": "#/$defs/MeasurementExpr"
+            },
+            {
+              "$ref": "#/$defs/NormalizeExpr"
+            },
+            {
+              "$ref": "#/$defs/RatioExpr"
+            },
+            {
+              "$ref": "#/$defs/AddExpr"
+            },
+            {
+              "$ref": "#/$defs/ConstantExpr"
+            }
+          ],
+          "title": "Value"
+        },
+        "reference_id": {
+          "minLength": 1,
+          "title": "Reference Id",
+          "type": "string"
+        },
+        "reference_version": {
+          "minLength": 1,
+          "title": "Reference Version",
+          "type": "string"
+        }
+      },
+      "required": [
+        "value",
+        "reference_id",
+        "reference_version"
+      ],
+      "title": "NormalizeExpr",
+      "type": "object"
+    },
+    "RatioExpr": {
+      "properties": {
+        "kind": {
+          "const": "ratio",
+          "default": "ratio",
+          "title": "Kind",
+          "type": "string"
+        },
+        "numerator": {
+          "discriminator": {
+            "mapping": {
+              "add": "#/$defs/AddExpr",
+              "constant": "#/$defs/ConstantExpr",
+              "measurement": "#/$defs/MeasurementExpr",
+              "normalize": "#/$defs/NormalizeExpr",
+              "ratio": "#/$defs/RatioExpr"
+            },
+            "propertyName": "kind"
+          },
+          "oneOf": [
+            {
+              "$ref": "#/$defs/MeasurementExpr"
+            },
+            {
+              "$ref": "#/$defs/NormalizeExpr"
+            },
+            {
+              "$ref": "#/$defs/RatioExpr"
+            },
+            {
+              "$ref": "#/$defs/AddExpr"
+            },
+            {
+              "$ref": "#/$defs/ConstantExpr"
+            }
+          ],
+          "title": "Numerator"
+        },
+        "denominator": {
+          "discriminator": {
+            "mapping": {
+              "add": "#/$defs/AddExpr",
+              "constant": "#/$defs/ConstantExpr",
+              "measurement": "#/$defs/MeasurementExpr",
+              "normalize": "#/$defs/NormalizeExpr",
+              "ratio": "#/$defs/RatioExpr"
+            },
+            "propertyName": "kind"
+          },
+          "oneOf": [
+            {
+              "$ref": "#/$defs/MeasurementExpr"
+            },
+            {
+              "$ref": "#/$defs/NormalizeExpr"
+            },
+            {
+              "$ref": "#/$defs/RatioExpr"
+            },
+            {
+              "$ref": "#/$defs/AddExpr"
+            },
+            {
+              "$ref": "#/$defs/ConstantExpr"
+            }
+          ],
+          "title": "Denominator"
+        }
+      },
+      "required": [
+        "numerator",
+        "denominator"
+      ],
+      "title": "RatioExpr",
+      "type": "object"
+    },
+    "ReferenceSnapshot": {
+      "properties": {
+        "ref_id": {
+          "title": "Ref Id",
+          "type": "string"
+        },
+        "version": {
+          "title": "Version",
+          "type": "string"
+        },
+        "hash": {
+          "title": "Hash",
+          "type": "string"
+        },
+        "values": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "title": "Values",
+          "type": "object"
+        },
+        "units": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "title": "Units",
+          "type": "object"
+        },
+        "citation": {
+          "title": "Citation",
+          "type": "string"
+        },
+        "verification_status": {
+          "title": "Verification Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "ref_id",
+        "version",
+        "hash",
+        "values",
+        "units",
+        "citation",
+        "verification_status"
+      ],
+      "title": "ReferenceSnapshot",
+      "type": "object"
+    },
+    "ResolvedSelection": {
+      "properties": {
+        "selection_id": {
+          "title": "Selection Id",
+          "type": "string"
+        },
+        "selection_hash": {
+          "title": "Selection Hash",
+          "type": "string"
+        },
+        "analysis_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Analysis Ids",
+          "type": "array"
+        },
+        "dataset_versions": {
+          "items": {
+            "additionalProperties": {
+              "type": "string"
+            },
+            "type": "object"
+          },
+          "title": "Dataset Versions",
+          "type": "array"
+        }
+      },
+      "required": [
+        "selection_id",
+        "selection_hash",
+        "analysis_ids",
+        "dataset_versions"
+      ],
+      "title": "ResolvedSelection",
+      "type": "object"
+    },
+    "SceneCounts": {
+      "properties": {
+        "selected_analyses": {
+          "title": "Selected Analyses",
+          "type": "integer"
+        },
+        "valid_analyses": {
+          "title": "Valid Analyses",
+          "type": "integer"
+        },
+        "excluded_analyses": {
+          "title": "Excluded Analyses",
+          "type": "integer"
+        },
+        "distinct_samples": {
+          "title": "Distinct Samples",
+          "type": "integer"
+        },
+        "physical_identity_unknown": {
+          "title": "Physical Identity Unknown",
+          "type": "integer"
+        },
+        "plotted_points": {
+          "title": "Plotted Points",
+          "type": "integer"
+        },
+        "out_of_view": {
+          "title": "Out Of View",
+          "type": "integer"
+        },
+        "hidden_by_style": {
+          "title": "Hidden By Style",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "selected_analyses",
+        "valid_analyses",
+        "excluded_analyses",
+        "distinct_samples",
+        "physical_identity_unknown",
+        "plotted_points",
+        "out_of_view",
+        "hidden_by_style"
+      ],
+      "title": "SceneCounts",
+      "type": "object"
+    },
+    "ScenePoint": {
+      "properties": {
+        "point_id": {
+          "title": "Point Id",
+          "type": "string"
+        },
+        "analysis_id": {
+          "title": "Analysis Id",
+          "type": "string"
+        },
+        "x": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "X"
+        },
+        "y": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Y"
+        },
+        "x_error": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "X Error"
+        },
+        "y_error": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Y Error"
+        },
+        "quality_flags": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Quality Flags",
+          "type": "array"
+        },
+        "provenance": {
+          "additionalProperties": true,
+          "title": "Provenance",
+          "type": "object"
+        },
+        "resolved_style": {
+          "anyOf": [
+            {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Resolved Style"
+        }
+      },
+      "required": [
+        "point_id",
+        "analysis_id"
+      ],
+      "title": "ScenePoint",
+      "type": "object"
+    },
+    "SceneSeries": {
+      "properties": {
+        "series_id": {
+          "title": "Series Id",
+          "type": "string"
+        },
+        "layer_id": {
+          "title": "Layer Id",
+          "type": "string"
+        },
+        "analysis_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Analysis Ids",
+          "type": "array"
+        },
+        "sample_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Sample Ids",
+          "type": "array"
+        },
+        "label": {
+          "title": "Label",
+          "type": "string"
+        },
+        "style": {
+          "additionalProperties": true,
+          "title": "Style",
+          "type": "object"
+        },
+        "points": {
+          "items": {
+            "$ref": "#/$defs/ScenePoint"
+          },
+          "title": "Points",
+          "type": "array"
+        },
+        "break_at_missing": {
+          "default": true,
+          "title": "Break At Missing",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "series_id",
+        "layer_id",
+        "analysis_ids",
+        "sample_ids",
+        "label",
+        "style",
+        "points"
+      ],
+      "title": "SceneSeries",
+      "type": "object"
+    },
+    "TASLabel": {
+      "description": "Label position for TAS field.",
+      "properties": {
+        "field_id": {
+          "title": "Field Id",
+          "type": "string"
+        },
+        "x": {
+          "title": "X",
+          "type": "number"
+        },
+        "y": {
+          "title": "Y",
+          "type": "number"
+        },
+        "text": {
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "field_id",
+        "x",
+        "y",
+        "text"
+      ],
+      "title": "TASLabel",
+      "type": "object"
+    },
+    "TASPolygon": {
+      "description": "Single TAS field polygon.",
+      "properties": {
+        "field_id": {
+          "title": "Field Id",
+          "type": "string"
+        },
+        "label": {
+          "title": "Label",
+          "type": "string"
+        },
+        "vertices": {
+          "items": {
+            "items": {
+              "type": "number"
+            },
+            "type": "array"
+          },
+          "title": "Vertices",
+          "type": "array"
+        }
+      },
+      "required": [
+        "field_id",
+        "label",
+        "vertices"
+      ],
+      "title": "TASPolygon",
+      "type": "object"
+    },
+    "VariablesConfig": {
+      "description": "Variables configuration - differs by chart type.",
+      "properties": {
+        "x": {
+          "anyOf": [
+            {
+              "discriminator": {
+                "mapping": {
+                  "add": "#/$defs/AddExpr",
+                  "constant": "#/$defs/ConstantExpr",
+                  "measurement": "#/$defs/MeasurementExpr",
+                  "normalize": "#/$defs/NormalizeExpr",
+                  "ratio": "#/$defs/RatioExpr"
+                },
+                "propertyName": "kind"
+              },
+              "oneOf": [
+                {
+                  "$ref": "#/$defs/MeasurementExpr"
+                },
+                {
+                  "$ref": "#/$defs/NormalizeExpr"
+                },
+                {
+                  "$ref": "#/$defs/RatioExpr"
+                },
+                {
+                  "$ref": "#/$defs/AddExpr"
+                },
+                {
+                  "$ref": "#/$defs/ConstantExpr"
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "X"
+        },
+        "y": {
+          "anyOf": [
+            {
+              "discriminator": {
+                "mapping": {
+                  "add": "#/$defs/AddExpr",
+                  "constant": "#/$defs/ConstantExpr",
+                  "measurement": "#/$defs/MeasurementExpr",
+                  "normalize": "#/$defs/NormalizeExpr",
+                  "ratio": "#/$defs/RatioExpr"
+                },
+                "propertyName": "kind"
+              },
+              "oneOf": [
+                {
+                  "$ref": "#/$defs/MeasurementExpr"
+                },
+                {
+                  "$ref": "#/$defs/NormalizeExpr"
+                },
+                {
+                  "$ref": "#/$defs/RatioExpr"
+                },
+                {
+                  "$ref": "#/$defs/AddExpr"
+                },
+                {
+                  "$ref": "#/$defs/ConstantExpr"
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Y"
+        },
+        "elements": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Elements"
+        },
+        "value_mode": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "raw|normalized",
+          "title": "Value Mode"
+        },
+        "reference_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reference Id"
+        },
+        "reference_version": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reference Version"
+        }
+      },
+      "title": "VariablesConfig",
+      "type": "object"
+    }
+  },
+  "description": "Frozen computation result - all rendering adapters consume this.\n\nScene hash ignores request_id and creation time; same config+data yields same hash.",
+  "properties": {
+    "scene_id": {
+      "title": "Scene Id",
+      "type": "string"
+    },
+    "schema_version": {
+      "default": "1.2",
+      "enum": [
+        "1.1",
+        "1.2"
+      ],
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "request_id": {
+      "title": "Request Id",
+      "type": "string"
+    },
+    "spec_hash": {
+      "title": "Spec Hash",
+      "type": "string"
+    },
+    "scene_hash": {
+      "title": "Scene Hash",
+      "type": "string"
+    },
+    "plot_revision": {
+      "title": "Plot Revision",
+      "type": "integer"
+    },
+    "chart_type": {
+      "$ref": "#/$defs/ChartType"
+    },
+    "resolved_selections": {
+      "items": {
+        "$ref": "#/$defs/ResolvedSelection"
+      },
+      "title": "Resolved Selections",
+      "type": "array"
+    },
+    "reference_snapshots": {
+      "items": {
+        "$ref": "#/$defs/ReferenceSnapshot"
+      },
+      "title": "Reference Snapshots",
+      "type": "array"
+    },
+    "variables": {
+      "$ref": "#/$defs/VariablesConfig"
+    },
+    "axes": {
+      "additionalProperties": {
+        "$ref": "#/$defs/AxisScene"
+      },
+      "title": "Axes",
+      "type": "object"
+    },
+    "series": {
+      "items": {
+        "$ref": "#/$defs/SceneSeries"
+      },
+      "title": "Series",
+      "type": "array"
+    },
+    "diagram_geometry": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/DiagramGeometry"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "legend": {
+      "additionalProperties": true,
+      "title": "Legend",
+      "type": "object"
+    },
+    "layout": {
+      "$ref": "#/$defs/LayoutConfig"
+    },
+    "font_manifest": {
+      "$ref": "#/$defs/FontManifest"
+    },
+    "warnings": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Warnings",
+      "type": "array"
+    },
+    "counts": {
+      "$ref": "#/$defs/SceneCounts"
+    },
+    "exclusions": {
+      "items": {
+        "$ref": "#/$defs/Exclusion"
+      },
+      "title": "Exclusions",
+      "type": "array"
+    },
+    "software_version": {
+      "title": "Software Version",
+      "type": "string"
+    }
+  },
+  "required": [
+    "scene_id",
+    "request_id",
+    "spec_hash",
+    "scene_hash",
+    "plot_revision",
+    "chart_type",
+    "resolved_selections",
+    "reference_snapshots",
+    "variables",
+    "axes",
+    "series",
+    "layout",
+    "font_manifest",
+    "counts",
+    "software_version"
+  ],
+  "title": "PlotScene",
+  "type": "object"
+}

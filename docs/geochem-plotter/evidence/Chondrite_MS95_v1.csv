@@ -1,0 +1,15 @@
+element,value,unit,source_value,source_unit,reference_id,doi
+La,0.237,ppm,237,ppb,Chondrite_MS95,10.1016/0009-2541(94)00140-4
+Ce,0.613,ppm,613,ppb,Chondrite_MS95,10.1016/0009-2541(94)00140-4
+Pr,0.0928,ppm,92.8,ppb,Chondrite_MS95,10.1016/0009-2541(94)00140-4
+Nd,0.457,ppm,457,ppb,Chondrite_MS95,10.1016/0009-2541(94)00140-4
+Sm,0.148,ppm,148,ppb,Chondrite_MS95,10.1016/0009-2541(94)00140-4
+Eu,0.0563,ppm,56.3,ppb,Chondrite_MS95,10.1016/0009-2541(94)00140-4
+Gd,0.199,ppm,199,ppb,Chondrite_MS95,10.1016/0009-2541(94)00140-4
+Tb,0.0361,ppm,36.1,ppb,Chondrite_MS95,10.1016/0009-2541(94)00140-4
+Dy,0.246,ppm,246,ppb,Chondrite_MS95,10.1016/0009-2541(94)00140-4
+Ho,0.0546,ppm,54.6,ppb,Chondrite_MS95,10.1016/0009-2541(94)00140-4
+Er,0.16,ppm,160,ppb,Chondrite_MS95,10.1016/0009-2541(94)00140-4
+Tm,0.0247,ppm,24.7,ppb,Chondrite_MS95,10.1016/0009-2541(94)00140-4
+Yb,0.161,ppm,161,ppb,Chondrite_MS95,10.1016/0009-2541(94)00140-4
+Lu,0.0246,ppm,24.6,ppb,Chondrite_MS95,10.1016/0009-2541(94)00140-4

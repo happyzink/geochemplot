@@ -1,0 +1,176 @@
+{
+  "scene_id": "scn_9b4a3a2f07ef",
+  "schema_version": "1.2",
+  "request_id": "req_fixture_001",
+  "spec_hash": "cdc920047ec872e47f1ddc511ca8484bc0f362322c67ca3ee40a9d5f437d0d71",
+  "scene_hash": "e24f9da2a94a4675ffc28efd4773c0ca4204b0a5f431851e65049e76f70d3fa9",
+  "plot_revision": 1,
+  "chart_type": "scatter",
+  "resolved_selections": [
+    {
+      "selection_id": "sel_de77c68abb37",
+      "selection_hash": "c79c03850963943be50a693568fcb47010a6c0d928ea52b3233f49c2f58d525f",
+      "analysis_ids": [
+        "a1"
+      ],
+      "dataset_versions": [
+        {
+          "version": "1.0"
+        }
+      ]
+    }
+  ],
+  "reference_snapshots": [],
+  "variables": {
+    "x": {
+      "kind": "measurement",
+      "analyte": "SiO2",
+      "chemical_form": "oxide",
+      "unit": "wt%",
+      "channel": null
+    },
+    "y": {
+      "kind": "measurement",
+      "analyte": "MgO",
+      "chemical_form": "oxide",
+      "unit": "wt%",
+      "channel": null
+    },
+    "elements": null,
+    "value_mode": null,
+    "reference_id": null,
+    "reference_version": null
+  },
+  "axes": {
+    "x": {
+      "label": "X",
+      "unit": null,
+      "scale": "linear",
+      "range": [
+        43.9,
+        46.1
+      ],
+      "ticks": [
+        44.0,
+        44.5,
+        45.0,
+        45.5,
+        46.0
+      ]
+    },
+    "y": {
+      "label": "Y",
+      "unit": null,
+      "scale": "linear",
+      "range": [
+        6.9,
+        9.1
+      ],
+      "ticks": [
+        7.0,
+        7.5,
+        8.0,
+        8.5,
+        9.0
+      ]
+    }
+  },
+  "series": [
+    {
+      "series_id": "ser_L1",
+      "layer_id": "L1",
+      "analysis_ids": [
+        "a1"
+      ],
+      "sample_ids": [
+        "SYN-001"
+      ],
+      "label": "SYNTHETIC Sample",
+      "style": {
+        "marker_shape": "circle",
+        "marker_fill": "solid",
+        "marker_fill_color": "#D55E00",
+        "marker_edge_color": "#D55E00",
+        "marker_size_pt": 3.5,
+        "marker_edge_width_pt": 0.35,
+        "marker_alpha": 1.0,
+        "line_color": "#D55E00",
+        "line_width_pt": 0.8,
+        "line_dash": "solid",
+        "line_alpha": 1.0,
+        "connect": false
+      },
+      "points": [
+        {
+          "point_id": "pt_a1",
+          "analysis_id": "a1",
+          "x": 45.0,
+          "y": 8.0,
+          "x_error": null,
+          "y_error": null,
+          "quality_flags": [],
+          "provenance": {
+            "x_unit": "wt%",
+            "y_unit": "wt%",
+            "x_expression": {
+              "kind": "measurement",
+              "analyte": "SiO2",
+              "chemical_form": "oxide",
+              "unit": "wt%",
+              "channel": null
+            },
+            "y_expression": {
+              "kind": "measurement",
+              "analyte": "MgO",
+              "chemical_form": "oxide",
+              "unit": "wt%",
+              "channel": null
+            }
+          },
+          "resolved_style": null
+        }
+      ],
+      "break_at_missing": true
+    }
+  ],
+  "diagram_geometry": null,
+  "legend": {},
+  "layout": {
+    "width_mm": 183.0,
+    "height_mm": 110.0,
+    "preset": "nature_main_2026",
+    "font_family": "Arial",
+    "font_size_pt": 7.0,
+    "tick_font_size_pt": 6.0,
+    "legend": {
+      "position": "right",
+      "anchor_x": null,
+      "anchor_y": null
+    },
+    "legend_show_counts": true,
+    "annotations": []
+  },
+  "font_manifest": {
+    "primary": "Arial",
+    "fallback": [
+      "Arial",
+      "Helvetica",
+      "sans-serif"
+    ],
+    "available": true,
+    "substituted_with": null
+  },
+  "warnings": [],
+  "counts": {
+    "selected_analyses": 1,
+    "valid_analyses": 1,
+    "excluded_analyses": 0,
+    "distinct_samples": 1,
+    "physical_identity_unknown": 0,
+    "plotted_points": 1,
+    "out_of_view": 0,
+    "hidden_by_style": 0
+  },
+  "exclusions": [],
+  "software_version": "1.0.0"
+}

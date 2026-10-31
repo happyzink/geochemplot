@@ -1,0 +1,137 @@
+{
+  "schema_version": "1.2",
+  "app_version": "1.0.0",
+  "generated_at": "2026-10-29T10:30:00Z",
+  "status": "ready",
+  "contract": {
+    "plots_compute": {
+      "request": {
+        "request_id": "string (client-provided, echoed back)",
+        "spec": "PlotSpec (contains selection_id with frozen dataset versions)"
+      },
+      "response": "PlotScene (direct, not wrapped)",
+      "notes": [
+        "No dataset_versions required in request",
+        "Scene returned directly (not {scene, status})",
+        "request_id echoed for client tracking",
+        "schema_version=1.2 in response"
+      ]
+    }
+  },
+  "endpoints": {
+    "health": [
+      {"method": "GET", "path": "/health", "description": "Health check (legacy)"},
+      {"method": "GET", "path": "/api/v1/health", "description": "Health check v1"},
+      {"method": "GET", "path": "/api/v1/runtime/status", "description": "Runtime status with instance info"}
+    ],
+    "catalog": [
+      {"method": "GET", "path": "/api/v1/catalog/builtin", "description": "Get built-in catalog items and reference compositions"},
+      {"method": "POST", "path": "/api/v1/catalog/attach", "description": "Attach catalog item to project (idempotent)"},
+      {"method": "GET", "path": "/api/v1/catalog/references/{ref_id}", "description": "Get full reference composition details"}
+    ],
+    "datasets": [
+      {"method": "POST", "path": "/api/v1/datasets/query", "description": "Query analyses with filters"},
+      {"method": "POST", "path": "/api/v1/datasets/facets", "description": "Get facet counts for filtering"},
+      {"method": "POST", "path": "/api/v1/datasets/import", "description": "Register imported dataset (idempotent)"}
+    ],
+    "imports": [
+      {"method": "POST", "path": "/api/v1/imports/scan", "description": "Scan uploaded Excel workbook"},
+      {"method": "GET", "path": "/api/v1/imports/{scan_id}/preview", "description": "Get detailed workbook preview"},
+      {"method": "POST", "path": "/api/v1/imports/{scan_id}/commit", "description": "Commit scan to create dataset"}
+    ],
+    "analyses": [
+      {"method": "GET", "path": "/api/v1/analyses/{analysis_id}", "description": "Get analysis detail with measurements"}
+    ],
+    "selections": [
+      {"method": "GET", "path": "/api/v1/selections", "description": "List all selections"},
+      {"method": "POST", "path": "/api/v1/selections", "description": "Create new selection"},
+      {"method": "GET", "path": "/api/v1/selections/{selection_id}", "description": "Get selection detail"},
+      {"method": "DELETE", "path": "/api/v1/selections/{selection_id}/analyses/{analysis_id}", "description": "Remove analysis from selection"}
+    ],
+    "plots": [
+      {"method": "POST", "path": "/api/v1/plots/compute", "description": "Compute PlotScene from PlotSpec (schema 1.2)"},
+      {"method": "POST", "path": "/api/v1/plots/validate", "description": "Validate PlotSpec without computing"}
+    ],
+    "figures": [
+      {"method": "GET", "path": "/api/v1/figures", "description": "List figures (optional project filter)"},
+      {"method": "POST", "path": "/api/v1/figures", "description": "Create new figure (draft)"},
+      {"method": "GET", "path": "/api/v1/figures/{figure_id}", "description": "Get figure metadata"},
+      {"method": "POST", "path": "/api/v1/figures/{figure_id}/revise", "description": "Create figure revision"},
+      {"method": "POST", "path": "/api/v1/figures/{figure_id}/publish", "description": "Publish figure"},
+      {"method": "POST", "path": "/api/v1/figures/{figure_id}/render", "description": "Render figure to PNG/PDF/SVG"},
+      {"method": "DELETE", "path": "/api/v1/figures/{figure_id}", "description": "Delete figure"}
+    ],
+    "projects": [
+      {"method": "POST", "path": "/api/v1/projects/", "description": "Create new project"},
+      {"method": "GET", "path": "/api/v1/projects/{project_id}", "description": "Get project metadata"},
+      {"method": "POST", "path": "/api/v1/projects/export", "description": "Export project to .geoplot package"},
+      {"method": "POST", "path": "/api/v1/projects/restore", "description": "Restore project from package"},
+      {"method": "GET", "path": "/api/v1/projects/{project_id}/check-conflict", "description": "Check version conflict"}
+    ],
+    "exports": [
+      {"method": "GET", "path": "/api/v1/export-roots", "description": "List export root directories"},
+      {"method": "POST", "path": "/api/v1/export-roots", "description": "Register export root"},
+      {"method": "GET", "path": "/api/v1/exports", "description": "List export jobs"},
+      {"method": "POST", "path": "/api/v1/exports", "description": "Create export job"},
+      {"method": "GET", "path": "/api/v1/exports/{export_id}", "description": "Get export job status"}
+    ]
+  },
+  "scene_types": {
+    "scatter": {
+      "description": "X/Y scatter plot with aligned analysis points",
+      "required_variables": ["x", "y"],
+      "point_structure": "one_per_analysis"
+    },
+    "ree": {
+      "description": "REE diagram with fixed element order",
+      "required_variables": ["elements"],
+      "point_structure": "one_per_element_per_analysis",
+      "default_elements": ["La", "Ce", "Pr", "Nd", "Sm", "Eu", "Gd", "Tb", "Dy", "Ho", "Er", "Tm", "Yb", "Lu"],
+      "element_count": 14,
+      "notes": "14 lanthanides, NO Y"
+    },
+    "spider": {
+      "description": "Spider diagram with normalization",
+      "required_variables": ["elements", "reference_id"],
+      "point_structure": "one_per_element_per_analysis",
+      "features": ["unity_line", "incompatibility_order"]
+    },
+    "tas": {
+      "description": "TAS classification diagram",
+      "required_variables": [],
+      "required_oxides": ["SiO2", "Na2O", "K2O"],
+      "point_structure": "one_per_analysis",
+      "model": "LeMaitre (2002)",
+      "fields": 17,
+      "notes": "Official pyrolite LeMaitre model with proper polygon boundaries"
+    }
+  },
+  "fixtures": {
+    "scene-1.2": [
+      "contracts/fixtures/scene-1.2/scatter_synthetic.json",
+      "contracts/fixtures/scene-1.2/ree_synthetic.json"
+    ]
+  },
+  "frontend_ready": true,
+  "integration_status": {
+    "schema_1.2_signed": true,
+    "fixtures_available": true,
+    "health_endpoint_updated": true,
+    "contract_changes": [
+      "POST /plots/compute: request_id required, no dataset_versions",
+      "Response: PlotScene directly (not wrapped)",
+      "schema_version: 1.2",
+      "REE: 14 elements (no Y)"
+    ]
+  },
+  "notes": [
+    "Schema 1.2 contract signed and ready",
+    "POST /plots/compute returns PlotScene directly",
+    "request_id echoed for client tracking",
+    "No dataset_versions required (frozen in selection)",
+    "REE uses 14 lanthanides (no Y)",
+    "TAS uses official LeMaitre model (17 fields)",
+    "139 tests passing",
+    "Fixtures available for frontend integration"
+  ]
+}

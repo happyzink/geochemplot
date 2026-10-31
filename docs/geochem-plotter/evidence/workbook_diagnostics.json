@@ -1,0 +1,2756 @@
+{
+  "bytes": 6754030,
+  "sha256": "1b1e5410e98bcb6983198cfce9303c9c3653070bcccb950876e8e3e81b185386",
+  "sheets": {
+    "原始实验数据_合并": {
+      "cached_errors_count": 0,
+      "cached_errors_examples": [],
+      "duplicate_headers": {},
+      "formula_columns": {},
+      "row2": {
+        "A2": {
+          "header": "sample",
+          "formula_or_value": "1-1 - 1",
+          "cached": "1-1 - 1"
+        },
+        "B2": {
+          "header": "phase",
+          "formula_or_value": "GLASS",
+          "cached": "GLASS"
+        },
+        "C2": {
+          "header": "Li7_ppm_mean",
+          "formula_or_value": 6.4185583450287,
+          "cached": 6.4185583450287
+        },
+        "D2": {
+          "header": "Li7_ppm_2SE(int)",
+          "formula_or_value": 0.392437794357284,
+          "cached": 0.392437794357284
+        },
+        "E2": {
+          "header": "Li7_ppm_LOD_Longerich",
+          "formula_or_value": 0.428557496727857,
+          "cached": 0.428557496727857
+        },
+        "F2": {
+          "header": "Li7_ppm_LOD_Howell",
+          "formula_or_value": 0.428557496727857,
+          "cached": 0.428557496727857
+        },
+        "G2": {
+          "header": "Na23_ppm_mean",
+          "formula_or_value": 2644.83722970805,
+          "cached": 2644.83722970805
+        },
+        "H2": {
+          "header": "Na23_ppm_2SE(int)",
+          "formula_or_value": 33.6719832387246,
+          "cached": 33.6719832387246
+        },
+        "I2": {
+          "header": "Na23_ppm_LOD_Longerich",
+          "formula_or_value": 2.138328874003,
+          "cached": 2.138328874003
+        },
+        "J2": {
+          "header": "Na23_ppm_LOD_Howell",
+          "formula_or_value": 2.138328874003,
+          "cached": 2.138328874003
+        },
+        "K2": {
+          "header": "Mg25_ppm_mean",
+          "formula_or_value": 30188.6939954829,
+          "cached": 30188.6939954829
+        },
+        "L2": {
+          "header": "Mg25_ppm_2SE(int)",
+          "formula_or_value": 437.457163080175,
+          "cached": 437.457163080175
+        },
+        "M2": {
+          "header": "Mg25_ppm_LOD_Longerich",
+          "formula_or_value": 22.5697454410769,
+          "cached": 22.5697454410769
+        },
+        "N2": {
+          "header": "Mg25_ppm_LOD_Howell",
+          "formula_or_value": 22.5697454410769,
+          "cached": 22.5697454410769
+        },
+        "O2": {
+          "header": "Al27_ppm_mean",
+          "formula_or_value": 96306.398109211,
+          "cached": 96306.398109211
+        },
+        "P2": {
+          "header": "Al27_ppm_2SE(int)",
+          "formula_or_value": 2245.78871316095,
+          "cached": 2245.78871316095
+        },
+        "Q2": {
+          "header": "Al27_ppm_LOD_Longerich",
+          "formula_or_value": 19.2659856158741,
+          "cached": 19.2659856158741
+        },
+        "R2": {
+          "header": "Al27_ppm_LOD_Howell",
+          "formula_or_value": 19.2659856158741,
+          "cached": 19.2659856158741
+        },
+        "S2": {
+          "header": "Si29_ppm_mean",
+          "formula_or_value": 229518.728673995,
+          "cached": 229518.728673995
+        },
+        "T2": {
+          "header": "Si29_ppm_2SE(int)",
+          "formula_or_value": 2754.97527352388,
+          "cached": 2754.97527352388
+        },
+        "U2": {
+          "header": "Si29_ppm_LOD_Longerich",
+          "formula_or_value": 984.31958543697,
+          "cached": 984.31958543697
+        },
+        "V2": {
+          "header": "Si29_ppm_LOD_Howell",
+          "formula_or_value": 984.31958543697,
+          "cached": 984.31958543697
+        },
+        "W2": {
+          "header": "P31_ppm_mean",
+          "formula_or_value": 331.037292113962,
+          "cached": 331.037292113962
+        },
+        "X2": {
+          "header": "P31_ppm_2SE(int)",
+          "formula_or_value": 42.5830476952721,
+          "cached": 42.5830476952721
+        },
+        "Y2": {
+          "header": "P31_ppm_LOD_Longerich",
+          "formula_or_value": 30.8229797287131,
+          "cached": 30.8229797287131
+        },
+        "Z2": {
+          "header": "P31_ppm_LOD_Howell",
+          "formula_or_value": 30.8229797287131,
+          "cached": 30.8229797287131
+        },
+        "AA2": {
+          "header": "K39_ppm_mean",
+          "formula_or_value": 560.132522133277,
+          "cached": 560.132522133277
+        },
+        "AB2": {
+          "header": "K39_ppm_2SE(int)",
+          "formula_or_value": 10.2523340846243,
+          "cached": 10.2523340846243
+        },
+        "AC2": {
+          "header": "K39_ppm_LOD_Longerich",
+          "formula_or_value": 6.14058095543438,
+          "cached": 6.14058095543438
+        },
+        "AD2": {
+          "header": "K39_ppm_LOD_Howell",
+          "formula_or_value": 6.14058095543438,
+          "cached": 6.14058095543438
+        },
+        "AE2": {
+          "header": "Ca43_ppm_mean",
+          "formula_or_value": 84603.3020232782,
+          "cached": 84603.3020232782
+        },
+        "AF2": {
+          "header": "Ca43_ppm_2SE(int)",
+          "formula_or_value": 1816.40270195702,
+          "cached": 1816.40270195702
+        },
+        "AG2": {
+          "header": "Ca43_ppm_LOD_Longerich",
+          "formula_or_value": 246.497583690726,
+          "cached": 246.497583690726
+        },
+        "AH2": {
+          "header": "Ca43_ppm_LOD_Howell",
+          "formula_or_value": 246.497583690726,
+          "cached": 246.497583690726
+        },
+        "AI2": {
+          "header": "Sc45_ppm_mean",
+          "formula_or_value": 28.3780931152832,
+          "cached": 28.3780931152832
+        },
+        "AJ2": {
+          "header": "Sc45_ppm_2SE(int)",
+          "formula_or_value": 0.773545700461049,
+          "cached": 0.773545700461049
+        },
+        "AK2": {
+          "header": "Sc45_ppm_LOD_Longerich",
+          "formula_or_value": 0.190087317273514,
+          "cached": 0.190087317273514
+        },
+        "AL2": {
+          "header": "Sc45_ppm_LOD_Howell",
+          "formula_or_value": 0.190087317273514,
+          "cached": 0.190087317273514
+        },
+        "AM2": {
+          "header": "Ti49_ppm_mean",
+          "formula_or_value": 10472.3708821727,
+          "cached": 10472.3708821727
+        },
+        "AN2": {
+          "header": "Ti49_ppm_2SE(int)",
+          "formula_or_value": 138.83808561904,
+          "cached": 138.83808561904
+        },
+        "AO2": {
+          "header": "Ti49_ppm_LOD_Longerich",
+          "formula_or_value": 1.41234315166605,
+          "cached": 1.41234315166605
+        },
+        "AP2": {
+          "header": "Ti49_ppm_LOD_Howell",
+          "formula_or_value": 1.41234315166605,
+          "cached": 1.41234315166605
+        },
+        "AQ2": {
+          "header": "V51_ppm_mean",
+          "formula_or_value": 48.1854769213015,
+          "cached": 48.1854769213015
+        },
+        "AR2": {
+          "header": "V51_ppm_2SE(int)",
+          "formula_or_value": 1.34554509634184,
+          "cached": 1.34554509634184
+        },
+        "AS2": {
+          "header": "V51_ppm_LOD_Longerich",
+          "formula_or_value": 0.160874905943588,
+          "cached": 0.160874905943588
+        },
+        "AT2": {
+          "header": "V51_ppm_LOD_Howell",
+          "formula_or_value": 0.160874905943588,
+          "cached": 0.160874905943588
+        },
+        "AU2": {
+          "header": "Cr53_ppm_mean",
+          "formula_or_value": 1125.8328301889,
+          "cached": 1125.8328301889
+        },
+        "AV2": {
+          "header": "Cr53_ppm_2SE(int)",
+          "formula_or_value": 23.6621502967624,
+          "cached": 23.6621502967624
+        },
+        "AW2": {
+          "header": "Cr53_ppm_LOD_Longerich",
+          "formula_or_value": 2.45155168627716,
+          "cached": 2.45155168627716
+        },
+        "AX2": {
+          "header": "Cr53_ppm_LOD_Howell",
+          "formula_or_value": 2.45155168627716,
+          "cached": 2.45155168627716
+        },
+        "AY2": {
+          "header": "Mn55_ppm_mean",
+          "formula_or_value": 1323.58733609604,
+          "cached": 1323.58733609604
+        },
+        "AZ2": {
+          "header": "Mn55_ppm_2SE(int)",
+          "formula_or_value": 15.743225609789,
+          "cached": 15.743225609789
+        },
+        "BA2": {
+          "header": "Mn55_ppm_LOD_Longerich",
+          "formula_or_value": 3.19760960433557,
+          "cached": 3.19760960433557
+        },
+        "BB2": {
+          "header": "Mn55_ppm_LOD_Howell",
+          "formula_or_value": 3.19760960433557,
+          "cached": 3.19760960433557
+        },
+        "BC2": {
+          "header": "Fe57_ppm_mean",
+          "formula_or_value": 99215.5505410235,
+          "cached": 99215.5505410235
+        },
+        "BD2": {
+          "header": "Fe57_ppm_2SE(int)",
+          "formula_or_value": 1032.37344328557,
+          "cached": 1032.37344328557
+        },
+        "BE2": {
+          "header": "Fe57_ppm_LOD_Longerich",
+          "formula_or_value": 85.7163037288679,
+          "cached": 85.7163037288679
+        },
+        "BF2": {
+          "header": "Fe57_ppm_LOD_Howell",
+          "formula_or_value": 85.7163037288679,
+          "cached": 85.7163037288679
+        },
+        "BG2": {
+          "header": "Co59_ppm_mean",
+          "formula_or_value": 19.2926540590685,
+          "cached": 19.2926540590685
+        },
+        "BH2": {
+          "header": "Co59_ppm_2SE(int)",
+          "formula_or_value": 0.858842471152169,
+          "cached": 0.858842471152169
+        },
+        "BI2": {
+          "header": "Co59_ppm_LOD_Longerich",
+          "formula_or_value": 0,
+          "cached": 0
+        },
+        "BJ2": {
+          "header": "Co59_ppm_LOD_Howell",
+          "formula_or_value": 0.00374553895555661,
+          "cached": 0.00374553895555661
+        },
+        "BK2": {
+          "header": "Ni60_ppm_mean",
+          "formula_or_value": 146.56645844234,
+          "cached": 146.56645844234
+        },
+        "BL2": {
+          "header": "Ni60_ppm_2SE(int)",
+          "formula_or_value": 6.71062848542803,
+          "cached": 6.71062848542803
+        },
+        "BM2": {
+          "header": "Ni60_ppm_LOD_Longerich",
+          "formula_or_value": 0.613679761166531,
+          "cached": 0.613679761166531
+        },
+        "BN2": {
+          "header": "Ni60_ppm_LOD_Howell",
+          "formula_or_value": 0.613679761166531,
+          "cached": 0.613679761166531
+        },
+        "BO2": {
+          "header": "Cu63_ppm_mean",
+          "formula_or_value": 5.92972574942979,
+          "cached": 5.92972574942979
+        },
+        "BP2": {
+          "header": "Cu63_ppm_2SE(int)",
+          "formula_or_value": 0.545192507658799,
+          "cached": 0.545192507658799
+        },
+        "BQ2": {
+          "header": "Cu63_ppm_LOD_Longerich",
+          "formula_or_value": 0.184821085562561,
+          "cached": 0.184821085562561
+        },
+        "BR2": {
+          "header": "Cu63_ppm_LOD_Howell",
+          "formula_or_value": 0.184821085562561,
+          "cached": 0.184821085562561
+        },
+        "BS2": {
+          "header": "Zn66_ppm_mean",
+          "formula_or_value": 5.14081944955753,
+          "cached": 5.14081944955753
+        },
+        "BT2": {
+          "header": "Zn66_ppm_2SE(int)",
+          "formula_or_value": 0.613673189764623,
+          "cached": 0.613673189764623
+        },
+        "BU2": {
+          "header": "Zn66_ppm_LOD_Longerich",
+          "formula_or_value": 0.341504320417554,
+          "cached": 0.341504320417554
+        },
+        "BV2": {
+          "header": "Zn66_ppm_LOD_Howell",
+          "formula_or_value": 0.341504320417554,
+          "cached": 0.341504320417554
+        },
+        "BW2": {
+          "header": "Zn67_ppm_mean",
+          "formula_or_value": 26.5854870993191,
+          "cached": 26.5854870993191
+        },
+        "BX2": {
+          "header": "Zn67_ppm_2SE(int)",
+          "formula_or_value": 2.96626925798439,
+          "cached": 2.96626925798439
+        },
+        "BY2": {
+          "header": "Zn67_ppm_LOD_Longerich",
+          "formula_or_value": 0.543535091794644,
+          "cached": 0.543535091794644
+        },
+        "BZ2": {
+          "header": "Zn67_ppm_LOD_Howell",
+          "formula_or_value": 0.543535091794644,
+          "cached": 0.543535091794644
+        },
+        "CA2": {
+          "header": "Ga71_ppm_mean",
+          "formula_or_value": 3.72651646826705,
+          "cached": 3.72651646826705
+        },
+        "CB2": {
+          "header": "Ga71_ppm_2SE(int)",
+          "formula_or_value": 0.239035709428319,
+          "cached": 0.239035709428319
+        },
+        "CC2": {
+          "header": "Ga71_ppm_LOD_Longerich",
+          "formula_or_value": 0.0404199087585811,
+          "cached": 0.0404199087585811
+        },
+        "CD2": {
+          "header": "Ga71_ppm_LOD_Howell",
+          "formula_or_value": 0.0404199087585811,
+          "cached": 0.0404199087585811
+        },
+        "CE2": {
+          "header": "Ge73_ppm_mean",
+          "formula_or_value": 0.398621908337704,
+          "cached": 0.398621908337704
+        },
+        "CF2": {
+          "header": "Ge73_ppm_2SE(int)",
+          "formula_or_value": 0.194509462094854,
+          "cached": 0.194509462094854
+        },
+        "CG2": {
+          "header": "Ge73_ppm_LOD_Longerich",
+          "formula_or_value": 0.141982861260719,
+          "cached": 0.141982861260719
+        },
+        "CH2": {
+          "header": "Ge73_ppm_LOD_Howell",
+          "formula_or_value": 0.141982861260719,
+          "cached": 0.141982861260719
+        },
+        "CI2": {
+          "header": "As75_ppm_mean",
+          "formula_or_value": 0.0589828229269376,
+          "cached": 0.0589828229269376
+        },
+        "CJ2": {
+          "header": "As75_ppm_2SE(int)",
+          "formula_or_value": 0.10203733471192,
+          "cached": 0.10203733471192
+        },
+        "CK2": {
+          "header": "As75_ppm_LOD_Longerich",
+          "formula_or_value": 0.177579455828261,
+          "cached": 0.177579455828261
+        },
+        "CL2": {
+          "header": "As75_ppm_LOD_Howell",
+          "formula_or_value": 0.177579455828261,
+          "cached": 0.177579455828261
+        },
+        "CM2": {
+          "header": "Se77_ppm_mean",
+          "formula_or_value": -0.336570325320977,
+          "cached": -0.336570325320977
+        },
+        "CN2": {
+          "header": "Se77_ppm_2SE(int)",
+          "formula_or_value": 0.503203111890641,
+          "cached": 0.503203111890641
+        },
+        "CO2": {
+          "header": "Se77_ppm_LOD_Longerich",
+          "formula_or_value": 1.16876221315883,
+          "cached": 1.16876221315883
+        },
+        "CP2": {
+          "header": "Se77_ppm_LOD_Howell",
+          "formula_or_value": 1.16876221315883,
+          "cached": 1.16876221315883
+        },
+        "CQ2": {
+          "header": "Se78_ppm_mean",
+          "formula_or_value": 0.031642261947813,
+          "cached": 0.031642261947813
+        },
+        "CR2": {
+          "header": "Se78_ppm_2SE(int)",
+          "formula_or_value": 0.0348279292618847,
+          "cached": 0.0348279292618847
+        },
+        "CS2": {
+          "header": "Se78_ppm_LOD_Longerich",
+          "formula_or_value": 0.0992705013809518,
+          "cached": 0.0992705013809518
+        },
+        "CT2": {
+          "header": "Se78_ppm_LOD_Howell",
+          "formula_or_value": 0.0992705013809518,
+          "cached": 0.0992705013809518
+        },
+        "CU2": {
+          "header": "Se82_ppm_mean",
+          "formula_or_value": 0.121683680780674,
+          "cached": 0.121683680780674
+        },
+        "CV2": {
+          "header": "Se82_ppm_2SE(int)",
+          "formula_or_value": 0.19989724798229,
+          "cached": 0.19989724798229
+        },
+        "CW2": {
+          "header": "Se82_ppm_LOD_Longerich",
+          "formula_or_value": 0.271828138544737,
+          "cached": 0.271828138544737
+        },
+        "CX2": {
+          "header": "Se82_ppm_LOD_Howell",
+          "formula_or_value": 0.271828138544737,
+          "cached": 0.271828138544737
+        },
+        "CY2": {
+          "header": "Rb85_ppm_mean",
+          "formula_or_value": 1.52294847824594,
+          "cached": 1.52294847824594
+        },
+        "CZ2": {
+          "header": "Rb85_ppm_2SE(int)",
+          "formula_or_value": 0.112589499944983,
+          "cached": 0.112589499944983
+        },
+        "DA2": {
+          "header": "Rb85_ppm_LOD_Longerich",
+          "formula_or_value": 0.0365122478441606,
+          "cached": 0.0365122478441606
+        },
+        "DB2": {
+          "header": "Rb85_ppm_LOD_Howell",
+          "formula_or_value": 0.0365122478441606,
+          "cached": 0.0365122478441606
+        },
+        "DC2": {
+          "header": "Sr88_ppm_mean",
+          "formula_or_value": 155.013797830724,
+          "cached": 155.013797830724
+        },
+        "DD2": {
+          "header": "Sr88_ppm_2SE(int)",
+          "formula_or_value": 2.95576649609961,
+          "cached": 2.95576649609961
+        },
+        "DE2": {
+          "header": "Sr88_ppm_LOD_Longerich",
+          "formula_or_value": 0.0336522104506983,
+          "cached": 0.0336522104506983
+        },
+        "DF2": {
+          "header": "Sr88_ppm_LOD_Howell",
+          "formula_or_value": 0.0336522104506983,
+          "cached": 0.0336522104506983
+        },
+        "DG2": {
+          "header": "Y89_ppm_mean",
+          "formula_or_value": 25.1085876963177,
+          "cached": 25.1085876963177
+        },
+        "DH2": {
+          "header": "Y89_ppm_2SE(int)",
+          "formula_or_value": 1.27403494406749,
+          "cached": 1.27403494406749
+        },
+        "DI2": {
+          "header": "Y89_ppm_LOD_Longerich",
+          "formula_or_value": 0.0109642554013621,
+          "cached": 0.0109642554013621
+        },
+        "DJ2": {
+          "header": "Y89_ppm_LOD_Howell",
+          "formula_or_value": 0.0109642554013621,
+          "cached": 0.0109642554013621
+        },
+        "DK2": {
+          "header": "Zr90_ppm_mean",
+          "formula_or_value": 99.3724772765782,
+          "cached": 99.3724772765782
+        },
+        "DL2": {
+          "header": "Zr90_ppm_2SE(int)",
+          "formula_or_value": 16.7638828196714,
+          "cached": 16.7638828196714
+        },
+        "DM2": {
+          "header": "Zr90_ppm_LOD_Longerich",
+          "formula_or_value": 0.0288536313176246,
+          "cached": 0.0288536313176246
+        },
+        "DN2": {
+          "header": "Zr90_ppm_LOD_Howell",
+          "formula_or_value": 0.0288536313176246,
+          "cached": 0.0288536313176246
+        },
+        "DO2": {
+          "header": "Nb93_ppm_mean",
+          "formula_or_value": 4.72304598752771,
+          "cached": 4.72304598752771
+        },
+        "DP2": {
+          "header": "Nb93_ppm_2SE(int)",
+          "formula_or_value": 0.237197065832933,
+          "cached": 0.237197065832933
+        },
+        "DQ2": {
+          "header": "Nb93_ppm_LOD_Longerich",
+          "formula_or_value": 0.0125861913563738,
+          "cached": 0.0125861913563738
+        },
+        "DR2": {
+          "header": "Nb93_ppm_LOD_Howell",
+          "formula_or_value": 0.0125861913563738,
+          "cached": 0.0125861913563738
+        },
+        "DS2": {
+          "header": "Mo95_ppm_mean",
+          "formula_or_value": 0.0434970869028486,
+          "cached": 0.0434970869028486
+        },
+        "DT2": {
+          "header": "Mo95_ppm_2SE(int)",
+          "formula_or_value": 0.0338795943648079,
+          "cached": 0.0338795943648079
+        },
+        "DU2": {
+          "header": "Mo95_ppm_LOD_Longerich",
+          "formula_or_value": 0,
+          "cached": 0
+        },
+        "DV2": {
+          "header": "Mo95_ppm_LOD_Howell",
+          "formula_or_value": 0.0132702063572822,
+          "cached": 0.0132702063572822
+        },
+        "DW2": {
+          "header": "Ag107_ppm_mean",
+          "formula_or_value": -0.00512883410502537,
+          "cached": -0.00512883410502537
+        },
+        "DX2": {
+          "header": "Ag107_ppm_2SE(int)",
+          "formula_or_value": 0.00900067503778164,
+          "cached": 0.00900067503778164
+        },
+        "DY2": {
+          "header": "Ag107_ppm_LOD_Longerich",
+          "formula_or_value": 0.0401834798899687,
+          "cached": 0.0401834798899687
+        },
+        "DZ2": {
+          "header": "Ag107_ppm_LOD_Howell",
+          "formula_or_value": 0.0401834798899687,
+          "cached": 0.0401834798899687
+        },
+        "EA2": {
+          "header": "Cd111_ppm_mean",
+          "formula_or_value": -0.0251632583088177,
+          "cached": -0.0251632583088177
+        },
+        "EB2": {
+          "header": "Cd111_ppm_2SE(int)",
+          "formula_or_value": 0.0734794056701608,
+          "cached": 0.0734794056701608
+        },
+        "EC2": {
+          "header": "Cd111_ppm_LOD_Longerich",
+          "formula_or_value": 0.201407099161919,
+          "cached": 0.201407099161919
+        },
+        "ED2": {
+          "header": "Cd111_ppm_LOD_Howell",
+          "formula_or_value": 0.201407099161919,
+          "cached": 0.201407099161919
+        },
+        "EE2": {
+          "header": "Sn118_ppm_mean",
+          "formula_or_value": 0.352734323149247,
+          "cached": 0.352734323149247
+        },
+        "EF2": {
+          "header": "Sn118_ppm_2SE(int)",
+          "formula_or_value": 0.0806383663486412,
+          "cached": 0.0806383663486412
+        },
+        "EG2": {
+          "header": "Sn118_ppm_LOD_Longerich",
+          "formula_or_value": 0.0989520501349662,
+          "cached": 0.0989520501349662
+        },
+        "EH2": {
+          "header": "Sn118_ppm_LOD_Howell",
+          "formula_or_value": 0.0989520501349662,
+          "cached": 0.0989520501349662
+        },
+        "EI2": {
+          "header": "Sb121_ppm_mean",
+          "formula_or_value": 0.0194506907866986,
+          "cached": 0.0194506907866986
+        },
+        "EJ2": {
+          "header": "Sb121_ppm_2SE(int)",
+          "formula_or_value": 0.0250920691581518,
+          "cached": 0.0250920691581518
+        },
+        "EK2": {
+          "header": "Sb121_ppm_LOD_Longerich",
+          "formula_or_value": 0.0834883985605278,
+          "cached": 0.0834883985605278
+        },
+        "EL2": {
+          "header": "Sb121_ppm_LOD_Howell",
+          "formula_or_value": 0.0834883985605278,
+          "cached": 0.0834883985605278
+        },
+        "EM2": {
+          "header": "Cs133_ppm_mean",
+          "formula_or_value": 0.0901865728818578,
+          "cached": 0.0901865728818578
+        },
+        "EN2": {
+          "header": "Cs133_ppm_2SE(int)",
+          "formula_or_value": 0.0214784496086682,
+          "cached": 0.0214784496086682
+        },
+        "EO2": {
+          "header": "Cs133_ppm_LOD_Longerich",
+          "formula_or_value": 0.00845452652957639,
+          "cached": 0.00845452652957639
+        },
+        "EP2": {
+          "header": "Cs133_ppm_LOD_Howell",
+          "formula_or_value": 0.00845452652957639,
+          "cached": 0.00845452652957639
+        },
+        "EQ2": {
+          "header": "Ba137_ppm_mean",
+          "formula_or_value": 66.4465859285443,
+          "cached": 66.4465859285443
+        },
+        "ER2": {
+          "header": "Ba137_ppm_2SE(int)",
+          "formula_or_value": 2.1966380949314,
+          "cached": 2.1966380949314
+        },
+        "ES2": {
+          "header": "Ba137_ppm_LOD_Longerich",
+          "formula_or_value": 0,
+          "cached": 0
+        },
+        "ET2": {
+          "header": "Ba137_ppm_LOD_Howell",
+          "formula_or_value": 0.0211741335420093,
+          "cached": 0.0211741335420093
+        },
+        "EU2": {
+          "header": "La139_ppm_mean",
+          "formula_or_value": 6.05959527051189,
+          "cached": 6.05959527051189
+        },
+        "EV2": {
+          "header": "La139_ppm_2SE(int)",
+          "formula_or_value": 0.530454305626712,
+          "cached": 0.530454305626712
+        },
+        "EW2": {
+          "header": "La139_ppm_LOD_Longerich",
+          "formula_or_value": 0.0195657513584045,
+          "cached": 0.0195657513584045
+        },
+        "EX2": {
+          "header": "La139_ppm_LOD_Howell",
+          "formula_or_value": 0.0195657513584045,
+          "cached": 0.0195657513584045
+        },
+        "EY2": {
+          "header": "Ce140_ppm_mean",
+          "formula_or_value": 17.3482442758018,
+          "cached": 17.3482442758018
+        },
+        "EZ2": {
+          "header": "Ce140_ppm_2SE(int)",
+          "formula_or_value": 1.43633134926732,
+          "cached": 1.43633134926732
+        },
+        "FA2": {
+          "header": "Ce140_ppm_LOD_Longerich",
+          "formula_or_value": 0.0310250174324996,
+          "cached": 0.0310250174324996
+        },
+        "FB2": {
+          "header": "Ce140_ppm_LOD_Howell",
+          "formula_or_value": 0.0310250174324996,
+          "cached": 0.0310250174324996
+        },
+        "FC2": {
+          "header": "Pr141_ppm_mean",
+          "formula_or_value": 2.47812706834739,
+          "cached": 2.47812706834739
+        },
+        "FD2": {
+          "header": "Pr141_ppm_2SE(int)",
+          "formula_or_value": 0.241638238160016,
+          "cached": 0.241638238160016
+        },
+        "FE2": {
+          "header": "Pr141_ppm_LOD_Longerich",
+          "formula_or_value": 0,
+          "cached": 0
+        },
+        "FF2": {
+          "header": "Pr141_ppm_LOD_Howell",
+          "formula_or_value": 0.00201713287920651,
+          "cached": 0.00201713287920651
+        },
+        "FG2": {
+          "header": "Nd146_ppm_mean",
+          "formula_or_value": 11.4035477164973,
+          "cached": 11.4035477164973
+        },
+        "FH2": {
+          "header": "Nd146_ppm_2SE(int)",
+          "formula_or_value": 1.07886873862141,
+          "cached": 1.07886873862141
+        },
+        "FI2": {
+          "header": "Nd146_ppm_LOD_Longerich",
+          "formula_or_value": 0,
+          "cached": 0
+        },
+        "FJ2": {
+          "header": "Nd146_ppm_LOD_Howell",
+          "formula_or_value": 0.0113572401873553,
+          "cached": 0.0113572401873553
+        },
+        "FK2": {
+          "header": "Sm147_ppm_mean",
+          "formula_or_value": 3.19522131778572,
+          "cached": 3.19522131778572
+        },
+        "FL2": {
+          "header": "Sm147_ppm_2SE(int)",
+          "formula_or_value": 0.356894513770373,
+          "cached": 0.356894513770373
+        },
+        "FM2": {
+          "header": "Sm147_ppm_LOD_Longerich",
+          "formula_or_value": 0,
+          "cached": 0
+        },
+        "FN2": {
+          "header": "Sm147_ppm_LOD_Howell",
+          "formula_or_value": 0.0130115397214356,
+          "cached": 0.0130115397214356
+        },
+        "FO2": {
+          "header": "Eu153_ppm_mean",
+          "formula_or_value": 1.00711856579325,
+          "cached": 1.00711856579325
+        },
+        "FP2": {
+          "header": "Eu153_ppm_2SE(int)",
+          "formula_or_value": 0.113983824445379,
+          "cached": 0.113983824445379
+        },
+        "FQ2": {
+          "header": "Eu153_ppm_LOD_Longerich",
+          "formula_or_value": 0,
+          "cached": 0
+        },
+        "FR2": {
+          "header": "Eu153_ppm_LOD_Howell",
+          "formula_or_value": 0.0035256102951045,
+          "cached": 0.0035256102951045
+        },
+        "FS2": {
+          "header": "Gd157_ppm_mean",
+          "formula_or_value": 4.25314658026321,
+          "cached": 4.25314658026321
+        },
+        "FT2": {
+          "header": "Gd157_ppm_2SE(int)",
+          "formula_or_value": 0.485997650700655,
+          "cached": 0.485997650700655
+        },
+        "FU2": {
+          "header": "Gd157_ppm_LOD_Longerich",
+          "formula_or_value": 0,
+          "cached": 0
+        },
+        "FV2": {
+          "header": "Gd157_ppm_LOD_Howell",
+          "formula_or_value": 0.0125697128181785,
+          "cached": 0.0125697128181785
+        },
+        "FW2": {
+          "header": "Tb159_ppm_mean",
+          "formula_or_value": 0.711399483873596,
+          "cached": 0.711399483873596
+        },
+        "FX2": {
+          "header": "Tb159_ppm_2SE(int)",
+          "formula_or_value": 0.0802715337987455,
+          "cached": 0.0802715337987455
+        },
+        "FY2": {
+          "header": "Tb159_ppm_LOD_Longerich",
+          "formula_or_value": 0,
+          "cached": 0
+        },
+        "FZ2": {
+          "header": "Tb159_ppm_LOD_Howell",
+          "formula_or_value": 0.00190329861696633,
+          "cached": 0.00190329861696633
+        },
+        "GA2": {
+          "header": "Dy163_ppm_mean",
+          "formula_or_value": 4.89343194427679,
+          "cached": 4.89343194427679
+        },
+        "GB2": {
+          "header": "Dy163_ppm_2SE(int)",
+          "formula_or_value": 0.444082140584765,
+          "cached": 0.444082140584765
+        },
+        "GC2": {
+          "header": "Dy163_ppm_LOD_Longerich",
+          "formula_or_value": 0,
+          "cached": 0
+        },
+        "GD2": {
+          "header": "Dy163_ppm_LOD_Howell",
+          "formula_or_value": 0.00801132304571108,
+          "cached": 0.00801132304571108
+        },
+        "GE2": {
+          "header": "Ho165_ppm_mean",
+          "formula_or_value": 0.869708535694597,
+          "cached": 0.869708535694597
+        },
+        "GF2": {
+          "header": "Ho165_ppm_2SE(int)",
+          "formula_or_value": 0.0703589374177741,
+          "cached": 0.0703589374177741
+        },
+        "GG2": {
+          "header": "Ho165_ppm_LOD_Longerich",
+          "formula_or_value": 0,
+          "cached": 0
+        },
+        "GH2": {
+          "header": "Ho165_ppm_LOD_Howell",
+          "formula_or_value": 0.0019896941960481,
+          "cached": 0.0019896941960481
+        },
+        "GI2": {
+          "header": "Er166_ppm_mean",
+          "formula_or_value": 2.45762472626005,
+          "cached": 2.45762472626005
+        },
+        "GJ2": {
+          "header": "Er166_ppm_2SE(int)",
+          "formula_or_value": 0.268728504064621,
+          "cached": 0.268728504064621
+        },
+        "GK2": {
+          "header": "Er166_ppm_LOD_Longerich",
+          "formula_or_value": 0.0244109680123768,
+          "cached": 0.0244109680123768
+        },
+        "GL2": {
+          "header": "Er166_ppm_LOD_Howell",
+          "formula_or_value": 0.0244109680123768,
+          "cached": 0.0244109680123768
+        },
+        "GM2": {
+          "header": "Tm169_ppm_mean",
+          "formula_or_value": 0.316478092728302,
+          "cached": 0.316478092728302
+        },
+        "GN2": {
+          "header": "Tm169_ppm_2SE(int)",
+          "formula_or_value": 0.0497124738640977,
+          "cached": 0.0497124738640977
+        },
+        "GO2": {
+          "header": "Tm169_ppm_LOD_Longerich",
+          "formula_or_value": 0,
+          "cached": 0
+        },
+        "GP2": {
+          "header": "Tm169_ppm_LOD_Howell",
+          "formula_or_value": 0.00188126268214607,
+          "cached": 0.00188126268214607
+        },
+        "GQ2": {
+          "header": "Yb172_ppm_mean",
+          "formula_or_value": 2.1567307300326,
+          "cached": 2.1567307300326
+        },
+        "GR2": {
+          "header": "Yb172_ppm_2SE(int)",
+          "formula_or_value": 0.203496840760981,
+          "cached": 0.203496840760981
+        },
+        "GS2": {
+          "header": "Yb172_ppm_LOD_Longerich",
+          "formula_or_value": 0,
+          "cached": 0
+        },
+        "GT2": {
+          "header": "Yb172_ppm_LOD_Howell",
+          "formula_or_value": 0.00903453962425818,
+          "cached": 0.00903453962425818
+        },
+        "GU2": {
+          "header": "Lu175_ppm_mean",
+          "formula_or_value": 0.303044361403901,
+          "cached": 0.303044361403901
+        },
+        "GV2": {
+          "header": "Lu175_ppm_2SE(int)",
+          "formula_or_value": 0.043607447456597,
+          "cached": 0.043607447456597
+        },
+        "GW2": {
+          "header": "Lu175_ppm_LOD_Longerich",
+          "formula_or_value": 0,
+          "cached": 0
+        },
+        "GX2": {
+          "header": "Lu175_ppm_LOD_Howell",
+          "formula_or_value": 0.00197519875389557,
+          "cached": 0.00197519875389557
+        },
+        "GY2": {
+          "header": "Hf178_ppm_mean",
+          "formula_or_value": 2.56851434655641,
+          "cached": 2.56851434655641
+        },
+        "GZ2": {
+          "header": "Hf178_ppm_2SE(int)",
+          "formula_or_value": 0.277520583689587,
+          "cached": 0.277520583689587
+        },
+        "HA2": {
+          "header": "Hf178_ppm_LOD_Longerich",
+          "formula_or_value": 0,
+          "cached": 0
+        },
+        "HB2": {
+          "header": "Hf178_ppm_LOD_Howell",
+          "formula_or_value": 0.00691463537561491,
+          "cached": 0.00691463537561491
+        },
+        "HC2": {
+          "header": "Ta181_ppm_mean",
+          "formula_or_value": 0.227079065055273,
+          "cached": 0.227079065055273
+        },
+        "HD2": {
+          "header": "Ta181_ppm_2SE(int)",
+          "formula_or_value": 0.0424575634824862,
+          "cached": 0.0424575634824862
+        },
+        "HE2": {
+          "header": "Ta181_ppm_LOD_Longerich",
+          "formula_or_value": 0,
+          "cached": 0
+        },
+        "HF2": {
+          "header": "Ta181_ppm_LOD_Howell",
+          "formula_or_value": 0.002124566669592,
+          "cached": 0.002124566669592
+        },
+        "HG2": {
+          "header": "W182_ppm_mean",
+          "formula_or_value": 0.0875727560802378,
+          "cached": 0.0875727560802378
+        },
+        "HH2": {
+          "header": "W182_ppm_2SE(int)",
+          "formula_or_value": 0.0365445479504861,
+          "cached": 0.0365445479504861
+        },
+        "HI2": {
+          "header": "W182_ppm_LOD_Longerich",
+          "formula_or_value": 0,
+          "cached": 0
+        },
+        "HJ2": {
+          "header": "W182_ppm_LOD_Howell",
+          "formula_or_value": 0.00696891897357435,
+          "cached": 0.00696891897357435
+        },
+        "HK2": {
+          "header": "Hg202_ppm_mean",
+          "formula_or_value": 0.697852414363618,
+          "cached": 0.697852414363618
+        },
+        "HL2": {
+          "header": "Hg202_ppm_2SE(int)",
+          "formula_or_value": 0.401165278954387,
+          "cached": 0.401165278954387
+        },
+        "HM2": {
+          "header": "Hg202_ppm_LOD_Longerich",
+          "formula_or_value": 0.385683359319852,
+          "cached": 0.385683359319852
+        },
+        "HN2": {
+          "header": "Hg202_ppm_LOD_Howell",
+          "formula_or_value": 0.385683359319852,
+          "cached": 0.385683359319852
+        },
+        "HO2": {
+          "header": "Pb204_ppm_mean",
+          "formula_or_value": 1.01885023621308,
+          "cached": 1.01885023621308
+        },
+        "HP2": {
+          "header": "Pb204_ppm_2SE(int)",
+          "formula_or_value": 1.17630459712925,
+          "cached": 1.17630459712925
+        },
+        "HQ2": {
+          "header": "Pb204_ppm_LOD_Longerich",
+          "formula_or_value": 4.08502555506403,
+          "cached": 4.08502555506403
+        },
+        "HR2": {
+          "header": "Pb204_ppm_LOD_Howell",
+          "formula_or_value": 4.08502555506403,
+          "cached": 4.08502555506403
+        },
+        "HS2": {
+          "header": "Pb206_ppm_mean",
+          "formula_or_value": 0.601589669015982,
+          "cached": 0.601589669015982
+        },
+        "HT2": {
+          "header": "Pb206_ppm_2SE(int)",
+          "formula_or_value": 0.136355038544545,
+          "cached": 0.136355038544545
+        },
+        "HU2": {
+          "header": "Pb206_ppm_LOD_Longerich",
+          "formula_or_value": 0,
+          "cached": 0
+        },
+        "HV2": {
+          "header": "Pb206_ppm_LOD_Howell",
+          "formula_or_value": 0.00869780113100802,
+          "cached": 0.00869780113100802
+        },
+        "HW2": {
+          "header": "Pb207_ppm_mean",
+          "formula_or_value": 0.347265106985233,
+          "cached": 0.347265106985233
+        },
+        "HX2": {
+          "header": "Pb207_ppm_2SE(int)",
+          "formula_or_value": 0.0799690560347499,
+          "cached": 0.0799690560347499
+        },
+        "HY2": {
+          "header": "Pb207_ppm_LOD_Longerich",
+          "formula_or_value": 0.0407533043920463,
+          "cached": 0.0407533043920463
+        },
+        "HZ2": {
+          "header": "Pb207_ppm_LOD_Howell",
+          "formula_or_value": 0.0407533043920463,
+          "cached": 0.0407533043920463
+        },
+        "IA2": {
+          "header": "Pb208_ppm_mean",
+          "formula_or_value": 0.232552105801684,
+          "cached": 0.232552105801684
+        },
+        "IB2": {
+          "header": "Pb208_ppm_2SE(int)",
+          "formula_or_value": 0.0525676237998186,
+          "cached": 0.0525676237998186
+        },
+        "IC2": {
+          "header": "Pb208_ppm_LOD_Longerich",
+          "formula_or_value": 0.0289681849632093,
+          "cached": 0.0289681849632093
+        },
+        "ID2": {
+          "header": "Pb208_ppm_LOD_Howell",
+          "formula_or_value": 0.0289681849632093,
+          "cached": 0.0289681849632093
+        },
+        "IE2": {
+          "header": "Th232_ppm_mean",
+          "formula_or_value": 0.996064791142722,
+          "cached": 0.996064791142722
+        },
+        "IF2": {
+          "header": "Th232_ppm_2SE(int)",
+          "formula_or_value": 0.138982717542975,
+          "cached": 0.138982717542975
+        },
+        "IG2": {
+          "header": "Th232_ppm_LOD_Longerich",
+          "formula_or_value": 0,
+          "cached": 0
+        },
+        "IH2": {
+          "header": "Th232_ppm_LOD_Howell",
+          "formula_or_value": 0.00247751845406099,
+          "cached": 0.00247751845406099
+        },
+        "II2": {
+          "header": "U238_ppm_mean",
+          "formula_or_value": 0.191166209374559,
+          "cached": 0.191166209374559
+        },
+        "IJ2": {
+          "header": "U238_ppm_2SE(int)",
+          "formula_or_value": 0.0375392816410845,
+          "cached": 0.0375392816410845
+        },
+        "IK2": {
+          "header": "U238_ppm_LOD_Longerich",
+          "formula_or_value": 0,
+          "cached": 0
+        },
+        "IL2": {
+          "header": "U238_ppm_LOD_Howell",
+          "formula_or_value": 0.00216839729062009,
+          "cached": 0.00216839729062009
+        },
+        "IM2": {
+          "header": "PbTotal_ppm_mean",
+          "formula_or_value": 0.35754643524683,
+          "cached": 0.35754643524683
+        },
+        "IN2": {
+          "header": "PbTotal_ppm_2SE(int)",
+          "formula_or_value": 0.0539338605005628,
+          "cached": 0.0539338605005628
+        },
+        "IO2": {
+          "header": "PbTotal_ppm_LOD_Longerich",
+          "formula_or_value": 0.0616848933594991,
+          "cached": 0.0616848933594991
+        },
+        "IP2": {
+          "header": "PbTotal_ppm_LOD_Howell",
+          "formula_or_value": 0.0616848933594991,
+          "cached": 0.0616848933594991
+        },
+        "IQ2": {
+          "header": "source_file",
+          "formula_or_value": "LABLE-huangfule-a",
+          "cached": "LABLE-huangfule-a"
+        }
+      }
+    },
+    "实验数据汇总": {
+      "cached_errors_count": 0,
+      "cached_errors_examples": [],
+      "duplicate_headers": {
+        "(La/Yb)n": 2
+      },
+      "formula_columns": {
+        "AZ": {
+          "header": "(La/Yb)n",
+          "count": 229,
+          "example": "=P2/'Normalization value'!D$4/(AB2/'Normalization value'!D$16)",
+          "cache": 1.908645275286848
+        },
+        "BA": {
+          "header": "(La/Sm)n",
+          "count": 246,
+          "example": "=P2/'Normalization value'!D$4/(T2/'Normalization value'!D$8)",
+          "cache": 1.1842844919504802
+        },
+        "BC": {
+          "header": "(La/Lu)n",
+          "count": 220,
+          "example": "=P2/'Normalization value'!D$4/(AC2/'Normalization value'!D$17)",
+          "cache": 2.0755068512669492
+        }
+      },
+      "row2": {
+        "A2": {
+          "header": "task",
+          "formula_or_value": "LABLE",
+          "cached": "LABLE"
+        },
+        "B2": {
+          "header": "phase",
+          "formula_or_value": "GLASS",
+          "cached": "GLASS"
+        },
+        "C2": {
+          "header": "mineral_group",
+          "formula_or_value": "Glass",
+          "cached": "Glass"
+        },
+        "D2": {
+          "header": "original_name",
+          "formula_or_value": "CE6-118-GLASS - 1",
+          "cached": "CE6-118-GLASS - 1"
+        },
+        "E2": {
+          "header": "source_file",
+          "formula_or_value": "LABLE-huangfule-a",
+          "cached": "LABLE-huangfule-a"
+        },
+        "F2": {
+          "header": "has_full_ree",
+          "formula_or_value": true,
+          "cached": true
+        },
+        "G2": {
+          "header": "Si",
+          "formula_or_value": 229518.728673995,
+          "cached": 229518.728673995
+        },
+        "H2": {
+          "header": "Ti",
+          "formula_or_value": 10472.3708821727,
+          "cached": 10472.3708821727
+        },
+        "I2": {
+          "header": "Al",
+          "formula_or_value": 96306.398109211,
+          "cached": 96306.398109211
+        },
+        "J2": {
+          "header": "Fe",
+          "formula_or_value": 99215.5505410235,
+          "cached": 99215.5505410235
+        },
+        "K2": {
+          "header": "Mn",
+          "formula_or_value": 1323.58733609604,
+          "cached": 1323.58733609604
+        },
+        "L2": {
+          "header": "Mg",
+          "formula_or_value": 30188.6939954829,
+          "cached": 30188.6939954829
+        },
+        "M2": {
+          "header": "Ca",
+          "formula_or_value": 84603.3020232782,
+          "cached": 84603.3020232782
+        },
+        "N2": {
+          "header": "Na",
+          "formula_or_value": 2644.83722970805,
+          "cached": 2644.83722970805
+        },
+        "O2": {
+          "header": "K",
+          "formula_or_value": 560.132522133277,
+          "cached": 560.132522133277
+        },
+        "P2": {
+          "header": "La",
+          "formula_or_value": 6.05959527051189,
+          "cached": 6.05959527051189
+        },
+        "Q2": {
+          "header": "Ce",
+          "formula_or_value": 17.3482442758018,
+          "cached": 17.3482442758018
+        },
+        "R2": {
+          "header": "Pr",
+          "formula_or_value": 2.47812706834739,
+          "cached": 2.47812706834739
+        },
+        "S2": {
+          "header": "Nd",
+          "formula_or_value": 11.4035477164973,
+          "cached": 11.4035477164973
+        },
+        "T2": {
+          "header": "Sm",
+          "formula_or_value": 3.19522131778572,
+          "cached": 3.19522131778572
+        },
+        "U2": {
+          "header": "Eu",
+          "formula_or_value": 1.00711856579325,
+          "cached": 1.00711856579325
+        },
+        "V2": {
+          "header": "Gd",
+          "formula_or_value": 4.25314658026321,
+          "cached": 4.25314658026321
+        },
+        "W2": {
+          "header": "Tb",
+          "formula_or_value": 0.711399483873596,
+          "cached": 0.711399483873596
+        },
+        "X2": {
+          "header": "Dy",
+          "formula_or_value": 4.89343194427679,
+          "cached": 4.89343194427679
+        },
+        "Y2": {
+          "header": "Ho",
+          "formula_or_value": 0.869708535694597,
+          "cached": 0.869708535694597
+        },
+        "Z2": {
+          "header": "Er",
+          "formula_or_value": 2.45762472626005,
+          "cached": 2.45762472626005
+        },
+        "AA2": {
+          "header": "Tm",
+          "formula_or_value": 0.316478092728302,
+          "cached": 0.316478092728302
+        },
+        "AB2": {
+          "header": "Yb",
+          "formula_or_value": 2.1567307300326,
+          "cached": 2.1567307300326
+        },
+        "AC2": {
+          "header": "Lu",
+          "formula_or_value": 0.303044361403901,
+          "cached": 0.303044361403901
+        },
+        "AD2": {
+          "header": "Cs",
+          "formula_or_value": 0.0901865728818578,
+          "cached": 0.0901865728818578
+        },
+        "AE2": {
+          "header": "Rb",
+          "formula_or_value": 1.52294847824594,
+          "cached": 1.52294847824594
+        },
+        "AF2": {
+          "header": "Ba",
+          "formula_or_value": 66.4465859285443,
+          "cached": 66.4465859285443
+        },
+        "AG2": {
+          "header": "Th",
+          "formula_or_value": 0.996064791142722,
+          "cached": 0.996064791142722
+        },
+        "AH2": {
+          "header": "U",
+          "formula_or_value": 0.191166209374559,
+          "cached": 0.191166209374559
+        },
+        "AI2": {
+          "header": "Nb",
+          "formula_or_value": 4.72304598752771,
+          "cached": 4.72304598752771
+        },
+        "AJ2": {
+          "header": "Ta",
+          "formula_or_value": 0.227079065055273,
+          "cached": 0.227079065055273
+        },
+        "AK2": {
+          "header": "Sr",
+          "formula_or_value": 155.013797830724,
+          "cached": 155.013797830724
+        },
+        "AL2": {
+          "header": "Zr",
+          "formula_or_value": 99.3724772765782,
+          "cached": 99.3724772765782
+        },
+        "AM2": {
+          "header": "Hf",
+          "formula_or_value": 2.56851434655641,
+          "cached": 2.56851434655641
+        },
+        "AN2": {
+          "header": "Y",
+          "formula_or_value": 25.1085876963177,
+          "cached": 25.1085876963177
+        },
+        "AO2": {
+          "header": "Pb",
+          "formula_or_value": 0.232552105801684,
+          "cached": 0.232552105801684
+        },
+        "AP2": {
+          "header": "Li",
+          "formula_or_value": 6.4185583450287,
+          "cached": 6.4185583450287
+        },
+        "AQ2": {
+          "header": "Sc",
+          "formula_or_value": 28.3780931152832,
+          "cached": 28.3780931152832
+        },
+        "AR2": {
+          "header": "V",
+          "formula_or_value": 48.1854769213015,
+          "cached": 48.1854769213015
+        },
+        "AS2": {
+          "header": "Cr",
+          "formula_or_value": 1125.8328301889,
+          "cached": 1125.8328301889
+        },
+        "AT2": {
+          "header": "Mo",
+          "formula_or_value": 0.0434970869028486,
+          "cached": 0.0434970869028486
+        },
+        "AU2": {
+          "header": "Co",
+          "formula_or_value": 19.2926540590685,
+          "cached": 19.2926540590685
+        },
+        "AV2": {
+          "header": "Ni",
+          "formula_or_value": 146.56645844234,
+          "cached": 146.56645844234
+        },
+        "AW2": {
+          "header": "Cu",
+          "formula_or_value": 5.92972574942979,
+          "cached": 5.92972574942979
+        },
+        "AX2": {
+          "header": "Zn",
+          "formula_or_value": 5.14081944955753,
+          "cached": 5.14081944955753
+        },
+        "AY2": {
+          "header": "Ga",
+          "formula_or_value": 3.72651646826705,
+          "cached": 3.72651646826705
+        },
+        "AZ2": {
+          "header": "(La/Yb)n",
+          "formula_or_value": "=P2/'Normalization value'!D$4/(AB2/'Normalization value'!D$16)",
+          "cached": 1.908645275286848
+        },
+        "BA2": {
+          "header": "(La/Sm)n",
+          "formula_or_value": "=P2/'Normalization value'!D$4/(T2/'Normalization value'!D$8)",
+          "cached": 1.1842844919504802
+        },
+        "BB2": {
+          "header": "(La/Yb)n",
+          "formula_or_value": 1.908645275286848,
+          "cached": 1.908645275286848
+        },
+        "BC2": {
+          "header": "(La/Lu)n",
+          "formula_or_value": "=P2/'Normalization value'!D$4/(AC2/'Normalization value'!D$17)",
+          "cached": 2.0755068512669492
+        }
+      }
+    },
+    "嫦娥搜集数据": {
+      "cached_errors_count": 2943,
+      "cached_errors_examples": [
+        {
+          "cell": "X1087",
+          "value": "#DIV/0!"
+        },
+        {
+          "cell": "Y1087",
+          "value": "#DIV/0!"
+        },
+        {
+          "cell": "X1088",
+          "value": "#DIV/0!"
+        },
+        {
+          "cell": "Y1088",
+          "value": "#DIV/0!"
+        },
+        {
+          "cell": "X1089",
+          "value": "#DIV/0!"
+        },
+        {
+          "cell": "Y1089",
+          "value": "#DIV/0!"
+        },
+        {
+          "cell": "X1090",
+          "value": "#DIV/0!"
+        },
+        {
+          "cell": "Y1090",
+          "value": "#DIV/0!"
+        },
+        {
+          "cell": "X1091",
+          "value": "#DIV/0!"
+        },
+        {
+          "cell": "Y1091",
+          "value": "#DIV/0!"
+        },
+        {
+          "cell": "X1092",
+          "value": "#DIV/0!"
+        },
+        {
+          "cell": "Y1092",
+          "value": "#DIV/0!"
+        }
+      ],
+      "duplicate_headers": {},
+      "formula_columns": {
+        "X": {
+          "header": "Mg#",
+          "count": 8150,
+          "example": "=Q2/40/(Q2/40+M2/72)*100",
+          "cache": 56.387595160023785
+        },
+        "Y": {
+          "header": "An#",
+          "count": 8150,
+          "example": "=R2/56/(R2/56+S2/64)*100",
+          "cache": 95.86862161844621
+        }
+      },
+      "row2": {
+        "A2": {
+          "header": "序号",
+          "formula_or_value": 1,
+          "cached": 1
+        },
+        "B2": {
+          "header": "DOI",
+          "formula_or_value": "10.18654/1000-0569_2025.04.02",
+          "cached": "10.18654/1000-0569_2025.04.02"
+        },
+        "C2": {
+          "header": "第一作者_年份",
+          "formula_or_value": "Wang et al., 2025",
+          "cached": "Wang et al., 2025"
+        },
+        "D2": {
+          "header": "期刊",
+          "formula_or_value": "ActaPetrol",
+          "cached": "ActaPetrol"
+        },
+        "E2": {
+          "header": "任务(CE5/CE6)",
+          "formula_or_value": "CE5",
+          "cached": "CE5"
+        },
+        "F2": {
+          "header": "样品编号",
+          "formula_or_value": "A6582 -G2-1",
+          "cached": "A6582 -G2-1"
+        },
+        "G2": {
+          "header": "分析对象",
+          "formula_or_value": "Glass",
+          "cached": "Glass"
+        },
+        "I2": {
+          "header": "类型",
+          "formula_or_value": "全岩",
+          "cached": "全岩"
+        },
+        "J2": {
+          "header": "SiO2",
+          "formula_or_value": 47.8985,
+          "cached": 47.8985
+        },
+        "K2": {
+          "header": "TiO2",
+          "formula_or_value": 2.1046,
+          "cached": 2.1046
+        },
+        "L2": {
+          "header": "Al2O3",
+          "formula_or_value": 17.65,
+          "cached": 17.65
+        },
+        "M2": {
+          "header": "FeOT",
+          "formula_or_value": 10.808,
+          "cached": 10.808
+        },
+        "P2": {
+          "header": "MnO",
+          "formula_or_value": 0.1527,
+          "cached": 0.1527
+        },
+        "Q2": {
+          "header": "MgO",
+          "formula_or_value": 7.7633,
+          "cached": 7.7633
+        },
+        "R2": {
+          "header": "CaO",
+          "formula_or_value": 10.9136,
+          "cached": 10.9136
+        },
+        "S2": {
+          "header": "Na2O",
+          "formula_or_value": 0.5375,
+          "cached": 0.5375
+        },
+        "T2": {
+          "header": "K2O",
+          "formula_or_value": 0.3621,
+          "cached": 0.3621
+        },
+        "V2": {
+          "header": "Cr2O3",
+          "formula_or_value": 0.2717,
+          "cached": 0.2717
+        },
+        "W2": {
+          "header": "Total",
+          "formula_or_value": 98.5257,
+          "cached": 98.5257
+        },
+        "X2": {
+          "header": "Mg#",
+          "formula_or_value": "=Q2/40/(Q2/40+M2/72)*100",
+          "cached": 56.387595160023785
+        },
+        "Y2": {
+          "header": "An#",
+          "formula_or_value": "=R2/56/(R2/56+S2/64)*100",
+          "cached": 95.86862161844621
+        }
+      }
+    },
+    "CE with trace ele": {
+      "cached_errors_count": 60,
+      "cached_errors_examples": [
+        {
+          "cell": "BR480",
+          "value": "#VALUE!"
+        },
+        {
+          "cell": "BV480",
+          "value": "#VALUE!"
+        },
+        {
+          "cell": "BW480",
+          "value": "#VALUE!"
+        },
+        {
+          "cell": "BX480",
+          "value": "#VALUE!"
+        },
+        {
+          "cell": "BT481",
+          "value": "#VALUE!"
+        },
+        {
+          "cell": "BU481",
+          "value": "#VALUE!"
+        },
+        {
+          "cell": "BV481",
+          "value": "#VALUE!"
+        },
+        {
+          "cell": "BX481",
+          "value": "#VALUE!"
+        },
+        {
+          "cell": "BX482",
+          "value": "#VALUE!"
+        },
+        {
+          "cell": "BQ483",
+          "value": "#VALUE!"
+        },
+        {
+          "cell": "BR483",
+          "value": "#VALUE!"
+        },
+        {
+          "cell": "BW483",
+          "value": "#VALUE!"
+        }
+      ],
+      "duplicate_headers": {
+        "La": 2,
+        "Ce": 2,
+        "Pr": 2,
+        "Nd": 2,
+        "Sm": 2,
+        "Eu": 2,
+        "Gd": 2,
+        "Tb": 2,
+        "Dy": 2,
+        "Ho": 2,
+        "Er": 2,
+        "Tm": 2,
+        "Yb": 2,
+        "Lu": 2,
+        "(La/Sm)n": 2
+      },
+      "formula_columns": {
+        "BK": {
+          "header": "La",
+          "count": 535,
+          "example": "=Z2/'Normalization value'!D$4",
+          "cache": 9.70464135021097
+        },
+        "BL": {
+          "header": "Ce",
+          "count": 535,
+          "example": "=AA2/'Normalization value'!D$5",
+          "cache": 14.38825448613377
+        },
+        "BM": {
+          "header": "Pr",
+          "count": 535,
+          "example": "=AB2/'Normalization value'!D$6",
+          "cache": 22.629310344827587
+        },
+        "BN": {
+          "header": "Nd",
+          "count": 535,
+          "example": "=AC2/'Normalization value'!D$7",
+          "cache": 32.822757111597376
+        },
+        "BO": {
+          "header": "Sm",
+          "count": 535,
+          "example": "=AD2/'Normalization value'!D$8",
+          "cache": 46.82432432432432
+        },
+        "BP": {
+          "header": "Eu",
+          "count": 535,
+          "example": "=AE2/'Normalization value'!D$9",
+          "cache": 7.246891651865008
+        },
+        "BQ": {
+          "header": "Gd",
+          "count": 535,
+          "example": "=AF2/'Normalization value'!D$10",
+          "cache": 52.76381909547739
+        },
+        "BR": {
+          "header": "Tb",
+          "count": 535,
+          "example": "=AG2/'Normalization value'!D$11",
+          "cache": 52.35457063711911
+        },
+        "BS": {
+          "header": "Dy",
+          "count": 535,
+          "example": "=AH2/'Normalization value'!D$12",
+          "cache": 59.756097560975604
+        },
+        "BT": {
+          "header": "Ho",
+          "count": 535,
+          "example": "=AI2/'Normalization value'!D$13",
+          "cache": 57.50915750915751
+        },
+        "BU": {
+          "header": "Er",
+          "count": 535,
+          "example": "=AJ2/'Normalization value'!D$14",
+          "cache": 55.6875
+        },
+        "BV": {
+          "header": "Tm",
+          "count": 535,
+          "example": "=AK2/'Normalization value'!D$15",
+          "cache": 47.368421052631575
+        },
+        "BW": {
+          "header": "Yb",
+          "count": 535,
+          "example": "=AL2/'Normalization value'!D$16",
+          "cache": 47.82608695652174
+        },
+        "BX": {
+          "header": "Lu",
+          "count": 535,
+          "example": "=AM2/'Normalization value'!D$17",
+          "cache": 43.4959349593496
+        },
+        "BZ": {
+          "header": "（La/Yb)n",
+          "count": 514,
+          "example": "=BK2/BW2",
+          "cache": 0.2029152282316839
+        },
+        "CA": {
+          "header": "(La/Sm)n",
+          "count": 534,
+          "example": "=BK2/BO2",
+          "cache": 0.20725640978805535
+        },
+        "CE": {
+          "header": null,
+          "count": 2,
+          "example": "=10/2",
+          "cache": 5
+        }
+      },
+      "row2": {
+        "A2": {
+          "header": "序号",
+          "formula_or_value": 2,
+          "cached": 2
+        },
+        "B2": {
+          "header": "DOI",
+          "formula_or_value": "10.2138/am-2022-8570",
+          "cached": "10.2138/am-2022-8570"
+        },
+        "C2": {
+          "header": "第一作者_年份",
+          "formula_or_value": "Tian et al., 2023",
+          "cached": "Tian et al., 2023"
+        },
+        "D2": {
+          "header": "期刊",
+          "formula_or_value": "American Mineralogist",
+          "cached": "American Mineralogist"
+        },
+        "E2": {
+          "header": "任务(CE5/CE6)",
+          "formula_or_value": "CE5",
+          "cached": "CE5"
+        },
+        "F2": {
+          "header": "样品编号",
+          "formula_or_value": "036-004-py-2",
+          "cached": "036-004-py-2"
+        },
+        "G2": {
+          "header": "分析对象",
+          "formula_or_value": "Pyroxene",
+          "cached": "Pyroxene"
+        },
+        "I2": {
+          "header": "类型",
+          "formula_or_value": "矿物",
+          "cached": "矿物"
+        },
+        "J2": {
+          "header": "SiO2",
+          "formula_or_value": 45.52,
+          "cached": 45.52
+        },
+        "K2": {
+          "header": "TiO2",
+          "formula_or_value": 1.099,
+          "cached": 1.099
+        },
+        "L2": {
+          "header": "Al2O3",
+          "formula_or_value": 1.676,
+          "cached": 1.676
+        },
+        "M2": {
+          "header": "FeOT",
+          "formula_or_value": 30.21,
+          "cached": 30.21
+        },
+        "P2": {
+          "header": "MnO",
+          "formula_or_value": 0.4711,
+          "cached": 0.4711
+        },
+        "Q2": {
+          "header": "MgO",
+          "formula_or_value": 6.53,
+          "cached": 6.53
+        },
+        "R2": {
+          "header": "CaO",
+          "formula_or_value": 12.64,
+          "cached": 12.64
+        },
+        "S2": {
+          "header": "Na2O",
+          "formula_or_value": 0.0168,
+          "cached": 0.0168
+        },
+        "T2": {
+          "header": "K2O",
+          "formula_or_value": 0.00084,
+          "cached": 0.00084
+        },
+        "U2": {
+          "header": "P2O5",
+          "formula_or_value": 0.0039,
+          "cached": 0.0039
+        },
+        "X2": {
+          "header": "Mg#",
+          "formula_or_value": 28.00972261938805,
+          "cached": 28.00972261938805
+        },
+        "Y2": {
+          "header": "An#",
+          "formula_or_value": 99.88383762554625,
+          "cached": 99.88383762554625
+        },
+        "Z2": {
+          "header": "La",
+          "formula_or_value": 2.3,
+          "cached": 2.3
+        },
+        "AA2": {
+          "header": "Ce",
+          "formula_or_value": 8.82,
+          "cached": 8.82
+        },
+        "AB2": {
+          "header": "Pr",
+          "formula_or_value": 2.1,
+          "cached": 2.1
+        },
+        "AC2": {
+          "header": "Nd",
+          "formula_or_value": 15,
+          "cached": 15
+        },
+        "AD2": {
+          "header": "Sm",
+          "formula_or_value": 6.93,
+          "cached": 6.93
+        },
+        "AE2": {
+          "header": "Eu",
+          "formula_or_value": 0.408,
+          "cached": 0.408
+        },
+        "AF2": {
+          "header": "Gd",
+          "formula_or_value": 10.5,
+          "cached": 10.5
+        },
+        "AG2": {
+          "header": "Tb",
+          "formula_or_value": 1.89,
+          "cached": 1.89
+        },
+        "AH2": {
+          "header": "Dy",
+          "formula_or_value": 14.7,
+          "cached": 14.7
+        },
+        "AI2": {
+          "header": "Ho",
+          "formula_or_value": 3.14,
+          "cached": 3.14
+        },
+        "AJ2": {
+          "header": "Er",
+          "formula_or_value": 8.91,
+          "cached": 8.91
+        },
+        "AK2": {
+          "header": "Tm",
+          "formula_or_value": 1.17,
+          "cached": 1.17
+        },
+        "AL2": {
+          "header": "Yb",
+          "formula_or_value": 7.7,
+          "cached": 7.7
+        },
+        "AM2": {
+          "header": "Lu",
+          "formula_or_value": 1.07,
+          "cached": 1.07
+        },
+        "AN2": {
+          "header": "Cs",
+          "formula_or_value": 563,
+          "cached": 563
+        },
+        "AO2": {
+          "header": "Rb",
+          "formula_or_value": 0.13,
+          "cached": 0.13
+        },
+        "AP2": {
+          "header": "Ba",
+          "formula_or_value": 0.11,
+          "cached": 0.11
+        },
+        "AQ2": {
+          "header": "Th",
+          "formula_or_value": 0.037,
+          "cached": 0.037
+        },
+        "AR2": {
+          "header": "U",
+          "formula_or_value": 0.0063,
+          "cached": 0.0063
+        },
+        "AS2": {
+          "header": "Nb",
+          "formula_or_value": 0.296,
+          "cached": 0.296
+        },
+        "AT2": {
+          "header": "Ta",
+          "formula_or_value": 0.005,
+          "cached": 0.005
+        },
+        "AU2": {
+          "header": "Sr",
+          "formula_or_value": 18.7,
+          "cached": 18.7
+        },
+        "AV2": {
+          "header": "Zr",
+          "formula_or_value": 85,
+          "cached": 85
+        },
+        "AW2": {
+          "header": "Hf",
+          "formula_or_value": 4.83,
+          "cached": 4.83
+        },
+        "AX2": {
+          "header": "Y",
+          "formula_or_value": 78.7,
+          "cached": 78.7
+        },
+        "AY2": {
+          "header": "Pb",
+          "formula_or_value": 0.027,
+          "cached": 0.027
+        },
+        "AZ2": {
+          "header": "Sc",
+          "formula_or_value": 146.7,
+          "cached": 146.7
+        },
+        "BA2": {
+          "header": "V",
+          "formula_or_value": 64.8,
+          "cached": 64.8
+        },
+        "BB2": {
+          "header": "Cr",
+          "formula_or_value": 563,
+          "cached": 563
+        },
+        "BC2": {
+          "header": "Co",
+          "formula_or_value": 32.5,
+          "cached": 32.5
+        },
+        "BE2": {
+          "header": "Cu",
+          "formula_or_value": 0.12,
+          "cached": 0.12
+        },
+        "BF2": {
+          "header": "Zn",
+          "formula_or_value": 3.7,
+          "cached": 3.7
+        },
+        "BG2": {
+          "header": "Ga",
+          "formula_or_value": 1.7,
+          "cached": 1.7
+        },
+        "BK2": {
+          "header": "La",
+          "formula_or_value": "=Z2/'Normalization value'!D$4",
+          "cached": 9.70464135021097
+        },
+        "BL2": {
+          "header": "Ce",
+          "formula_or_value": "=AA2/'Normalization value'!D$5",
+          "cached": 14.38825448613377
+        },
+        "BM2": {
+          "header": "Pr",
+          "formula_or_value": "=AB2/'Normalization value'!D$6",
+          "cached": 22.629310344827587
+        },
+        "BN2": {
+          "header": "Nd",
+          "formula_or_value": "=AC2/'Normalization value'!D$7",
+          "cached": 32.822757111597376
+        },
+        "BO2": {
+          "header": "Sm",
+          "formula_or_value": "=AD2/'Normalization value'!D$8",
+          "cached": 46.82432432432432
+        },
+        "BP2": {
+          "header": "Eu",
+          "formula_or_value": "=AE2/'Normalization value'!D$9",
+          "cached": 7.246891651865008
+        },
+        "BQ2": {
+          "header": "Gd",
+          "formula_or_value": "=AF2/'Normalization value'!D$10",
+          "cached": 52.76381909547739
+        },
+        "BR2": {
+          "header": "Tb",
+          "formula_or_value": "=AG2/'Normalization value'!D$11",
+          "cached": 52.35457063711911
+        },
+        "BS2": {
+          "header": "Dy",
+          "formula_or_value": "=AH2/'Normalization value'!D$12",
+          "cached": 59.756097560975604
+        },
+        "BT2": {
+          "header": "Ho",
+          "formula_or_value": "=AI2/'Normalization value'!D$13",
+          "cached": 57.50915750915751
+        },
+        "BU2": {
+          "header": "Er",
+          "formula_or_value": "=AJ2/'Normalization value'!D$14",
+          "cached": 55.6875
+        },
+        "BV2": {
+          "header": "Tm",
+          "formula_or_value": "=AK2/'Normalization value'!D$15",
+          "cached": 47.368421052631575
+        },
+        "BW2": {
+          "header": "Yb",
+          "formula_or_value": "=AL2/'Normalization value'!D$16",
+          "cached": 47.82608695652174
+        },
+        "BX2": {
+          "header": "Lu",
+          "formula_or_value": "=AM2/'Normalization value'!D$17",
+          "cached": 43.4959349593496
+        },
+        "BZ2": {
+          "header": "（La/Yb)n",
+          "formula_or_value": "=BK2/BW2",
+          "cached": 0.2029152282316839
+        },
+        "CA2": {
+          "header": "(La/Sm)n",
+          "formula_or_value": "=BK2/BO2",
+          "cached": 0.20725640978805535
+        }
+      }
+    },
+    "Normalization value": {
+      "cached_errors_count": 0,
+      "cached_errors_examples": [],
+      "duplicate_headers": {},
+      "formula_columns": {},
+      "row2": {}
+    },
+    "Apollo数据": {
+      "cached_errors_count": 0,
+      "cached_errors_examples": [],
+      "duplicate_headers": {},
+      "formula_columns": {},
+      "row2": {
+        "A2": {
+          "header": "Sample Name",
+          "formula_or_value": "74235,62",
+          "cached": "74235,62"
+        },
+        "B2": {
+          "header": "Citation",
+          "formula_or_value": "Neal, C. R. (2001). INTERIOR OF THE MOON: THE PRESENCE OF GARNET IN THE PRIMITIVE DEEP LUNAR MANTLE. JOURNAL OF GEOPHYSICAL RESEARCH, 106(E11), 27865-27885.",
+          "cached": "Neal, C. R. (2001). INTERIOR OF THE MOON: THE PRESENCE OF GARNET IN THE PRIMITIVE DEEP LUNAR MANTLE. JOURNAL OF GEOPHYSICAL RESEARCH, 106(E11), 27865-27885."
+        },
+        "C2": {
+          "header": "Sample Collection",
+          "formula_or_value": "LUNAR SAMPLES",
+          "cached": "LUNAR SAMPLES"
+        },
+        "D2": {
+          "header": "样品类型",
+          "formula_or_value": "ROCK>>BASALT",
+          "cached": "ROCK>>BASALT"
+        },
+        "E2": {
+          "header": "Sample SubType",
+          "formula_or_value": "ILMENITE BASALT",
+          "cached": "ILMENITE BASALT"
+        },
+        "G2": {
+          "header": "Analyzed Material",
+          "formula_or_value": "WHOLE ROCK",
+          "cached": "WHOLE ROCK"
+        },
+        "H2": {
+          "header": "方法",
+          "formula_or_value": "Rock Analysis",
+          "cached": "Rock Analysis"
+        },
+        "W2": {
+          "header": "La",
+          "formula_or_value": 6.5,
+          "cached": 6.5
+        },
+        "X2": {
+          "header": "Ce",
+          "formula_or_value": 25.5,
+          "cached": 25.5
+        },
+        "Y2": {
+          "header": "Pr",
+          "formula_or_value": 4.35,
+          "cached": 4.35
+        },
+        "Z2": {
+          "header": "Nd",
+          "formula_or_value": 25.9,
+          "cached": 25.9
+        },
+        "AA2": {
+          "header": "Sm",
+          "formula_or_value": 10.7,
+          "cached": 10.7
+        },
+        "AB2": {
+          "header": "Eu",
+          "formula_or_value": 1.95,
+          "cached": 1.95
+        },
+        "AC2": {
+          "header": "Gd",
+          "formula_or_value": 13.9,
+          "cached": 13.9
+        },
+        "AD2": {
+          "header": "Tb",
+          "formula_or_value": 2.82,
+          "cached": 2.82
+        },
+        "AE2": {
+          "header": "Dy",
+          "formula_or_value": 18.4,
+          "cached": 18.4
+        },
+        "AF2": {
+          "header": "Ho",
+          "formula_or_value": 3.95,
+          "cached": 3.95
+        },
+        "AG2": {
+          "header": "Er",
+          "formula_or_value": 11.1,
+          "cached": 11.1
+        },
+        "AH2": {
+          "header": "Tm",
+          "formula_or_value": 1.53,
+          "cached": 1.53
+        },
+        "AI2": {
+          "header": "Yb",
+          "formula_or_value": 11.1,
+          "cached": 11.1
+        },
+        "AJ2": {
+          "header": "Lu",
+          "formula_or_value": 1.42,
+          "cached": 1.42
+        },
+        "AL2": {
+          "header": "Rb",
+          "formula_or_value": 0.6,
+          "cached": 0.6
+        },
+        "AM2": {
+          "header": "Ba",
+          "formula_or_value": 83,
+          "cached": 83
+        },
+        "AN2": {
+          "header": "Th",
+          "formula_or_value": 0.36,
+          "cached": 0.36
+        },
+        "AO2": {
+          "header": "U",
+          "formula_or_value": 0.1,
+          "cached": 0.1
+        },
+        "AP2": {
+          "header": "Nb",
+          "formula_or_value": 26.6,
+          "cached": 26.6
+        },
+        "AQ2": {
+          "header": "Ta",
+          "formula_or_value": 1.79,
+          "cached": 1.79
+        },
+        "AR2": {
+          "header": "Sr",
+          "formula_or_value": 198.8,
+          "cached": 198.8
+        },
+        "AS2": {
+          "header": "Zr",
+          "formula_or_value": 255.6,
+          "cached": 255.6
+        },
+        "AT2": {
+          "header": "Hf",
+          "formula_or_value": 8.78,
+          "cached": 8.78
+        },
+        "AU2": {
+          "header": "Y",
+          "formula_or_value": 133.6,
+          "cached": 133.6
+        },
+        "AV2": {
+          "header": "Pb",
+          "formula_or_value": 0.4,
+          "cached": 0.4
+        },
+        "AW2": {
+          "header": "Sc",
+          "formula_or_value": 85.5,
+          "cached": 85.5
+        },
+        "AX2": {
+          "header": "V",
+          "formula_or_value": 137,
+          "cached": 137
+        },
+        "AY2": {
+          "header": "Cr",
+          "formula_or_value": 2906,
+          "cached": 2906
+        },
+        "AZ2": {
+          "header": "Co",
+          "formula_or_value": 22.7,
+          "cached": 22.7
+        },
+        "BA2": {
+          "header": "Ni",
+          "formula_or_value": 2.16,
+          "cached": 2.16
+        },
+        "BB2": {
+          "header": "Cu",
+          "formula_or_value": 49.6,
+          "cached": 49.6
+        },
+        "BC2": {
+          "header": "Zn",
+          "formula_or_value": 106.4,
+          "cached": 106.4
+        },
+        "BD2": {
+          "header": "Ga",
+          "formula_or_value": 3.92,
+          "cached": 3.92
+        }
+      }
+    }
+  },
+  "raw_repeated_headers": [
+    1,
+    75
+  ],
+  "raw_missing_sample_rows": [
+    154,
+    166,
+    176,
+    194,
+    210,
+    224,
+    237,
+    258,
+    269,
+    334,
+    352,
+    356,
+    365
+  ],
+  "apollo_74235": [
+    {
+      "row": 2,
+      "sample": "74235,62",
+      "material": "WHOLE ROCK",
+      "phase": null
+    },
+    {
+      "row": 3,
+      "sample": "74235,62",
+      "material": "WHOLE ROCK",
+      "phase": null
+    },
+    {
+      "row": 4,
+      "sample": "74235,52",
+      "material": "WHOLE ROCK",
+      "phase": null
+    },
+    {
+      "row": 5,
+      "sample": "74235,52",
+      "material": "WHOLE ROCK",
+      "phase": null
+    },
+    {
+      "row": 6,
+      "sample": "74235, 41",
+      "material": "WHOLE ROCK",
+      "phase": null
+    },
+    {
+      "row": 7,
+      "sample": "74235,18",
+      "material": "WHOLE ROCK",
+      "phase": null
+    },
+    {
+      "row": 8,
+      "sample": "74235,21",
+      "material": "WHOLE ROCK",
+      "phase": null
+    },
+    {
+      "row": 9,
+      "sample": "74235,52",
+      "material": "WHOLE ROCK",
+      "phase": null
+    },
+    {
+      "row": 10,
+      "sample": "74235,52",
+      "material": "WHOLE ROCK",
+      "phase": null
+    },
+    {
+      "row": 11,
+      "sample": "74235",
+      "material": "WHOLE ROCK",
+      "phase": null
+    },
+    {
+      "row": 12,
+      "sample": "74235",
+      "material": "WHOLE ROCK",
+      "phase": null
+    },
+    {
+      "row": 13,
+      "sample": "74235,23",
+      "material": "WHOLE ROCK",
+      "phase": null
+    },
+    {
+      "row": 14,
+      "sample": "74235",
+      "material": "WHOLE ROCK",
+      "phase": null
+    },
+    {
+      "row": 15,
+      "sample": "74235",
+      "material": "WHOLE ROCK",
+      "phase": null
+    }
+  ],
+  "apollo_material": {
+    "WHOLE ROCK": 9724,
+    "MINERAL": 22162,
+    "SEPARATE": 651,
+    "RESIDUE": 150,
+    "LEACHATE": 242,
+    "GLASS": 2537,
+    "GROUNDMASS": 36,
+    "MATRIX": 121,
+    "CLAST": 148,
+    "SOIL": 26,
+    "VEIN": 3,
+    "MESOSTASIS": 2
+  },
+  "apollo_unique_sample_strings": 8817,
+  "trace_overlap": {
+    "comparison": "E,F,G,I,J:BG cached cell values, exact equality; no citation imputation",
+    "trace_rows": 535,
+    "matched_rows": 535,
+    "multiple_candidates": 2,
+    "examples": [
+      {
+        "trace_row": 2,
+        "main_rows": [
+          971
+        ]
+      },
+      {
+        "trace_row": 3,
+        "main_rows": [
+          972
+        ]
+      },
+      {
+        "trace_row": 4,
+        "main_rows": [
+          973
+        ]
+      },
+      {
+        "trace_row": 5,
+        "main_rows": [
+          974
+        ]
+      },
+      {
+        "trace_row": 6,
+        "main_rows": [
+          975
+        ]
+      },
+      {
+        "trace_row": 7,
+        "main_rows": [
+          976
+        ]
+      },
+      {
+        "trace_row": 8,
+        "main_rows": [
+          977
+        ]
+      },
+      {
+        "trace_row": 9,
+        "main_rows": [
+          978
+        ]
+      },
+      {
+        "trace_row": 10,
+        "main_rows": [
+          979
+        ]
+      },
+      {
+        "trace_row": 11,
+        "main_rows": [
+          980
+        ]
+      },
+      {
+        "trace_row": 12,
+        "main_rows": [
+          981
+        ]
+      },
+      {
+        "trace_row": 13,
+        "main_rows": [
+          982
+        ]
+      }
+    ]
+  },
+  "normalization": [
+    {
+      "element_text": "    \"La\": 0.237",
+      "value": 0.237,
+      "row": 4
+    },
+    {
+      "element_text": "    \"Ce\": 0.613,",
+      "value": 0.613,
+      "row": 5
+    },
+    {
+      "element_text": "    \"Pr\": 0.0928,",
+      "value": 0.0928,
+      "row": 6
+    },
+    {
+      "element_text": "    \"Nd\": 0.457,",
+      "value": 0.457,
+      "row": 7
+    },
+    {
+      "element_text": "    \"Sm\": 0.148,",
+      "value": 0.148,
+      "row": 8
+    },
+    {
+      "element_text": "    \"Eu\": 0.0563,",
+      "value": 0.0563,
+      "row": 9
+    },
+    {
+      "element_text": "    \"Gd\": 0.199,",
+      "value": 0.199,
+      "row": 10
+    },
+    {
+      "element_text": "    \"Tb\": 0.0361,",
+      "value": 0.0361,
+      "row": 11
+    },
+    {
+      "element_text": "    \"Dy\": 0.246,",
+      "value": 0.246,
+      "row": 12
+    },
+    {
+      "element_text": "    \"Ho\": 0.0546,",
+      "value": 0.0546,
+      "row": 13
+    },
+    {
+      "element_text": "    \"Er\": 0.160,",
+      "value": 0.16,
+      "row": 14
+    },
+    {
+      "element_text": "    \"Tm\": 0.0247,",
+      "value": 0.0247,
+      "row": 15
+    },
+    {
+      "element_text": "    \"Yb\": 0.161,",
+      "value": 0.161,
+      "row": 16
+    },
+    {
+      "element_text": "    \"Lu\": 0.0246",
+      "value": 0.0246,
+      "row": 17
+    }
+  ]
+}

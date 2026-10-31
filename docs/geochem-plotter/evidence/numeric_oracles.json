@@ -1,0 +1,17 @@
+{
+  "purpose": "Synthetic and source-anchored numerical acceptance examples; not natural sample data for publication",
+  "tolerance": {"relative": 1e-10, "absolute": 1e-12},
+  "cases": [
+    {"id":"C01","operation":"normalize","value":2.37,"unit":"ppm","reference":0.237,"reference_unit":"ppm","expected":10},
+    {"id":"C02","operation":"normalize","value":2370,"unit":"ppb","reference":0.237,"reference_unit":"ppm","expected":10},
+    {"id":"C03","operation":"ratio","a":10,"a_unit":"ppm","b":100,"b_unit":"ppm","expected":0.1},
+    {"id":"C04","operation":"normalized_ratio","a":2.37,"b":0.322,"a_reference":0.237,"b_reference":0.161,"unit":"ppm","expected":5},
+    {"id":"C05","operation":"normalized_ratio","a":2.3,"b":7.7,"a_reference":0.237,"b_reference":0.161,"unit":"ppm_assumed_for_test","expected":0.2029152282316839,"source":"CE with trace ele!Z2,AL2; Normalization value!D4,D16; test assumption is not blanket unit confirmation"},
+    {"id":"C07a","operation":"ratio","a":10,"a_unit":"ppm","b":0,"b_unit":"ppm","expected":null,"reason":"ZERO_DENOMINATOR"},
+    {"id":"C07b","operation":"normalize","value":2.37,"unit":"ppm","reference":0,"reference_unit":"ppm","expected":null,"reason":"REFERENCE_INVALID"},
+    {"id":"C13","operation":"normalized_absolute_uncertainty","uncertainty":0.0237,"reference":0.237,"unit":"ppm","error_kind":"2SD","expected":0.1},
+    {"id":"C14","operation":"independent_ratio_uncertainty","a":10,"b":20,"ua":1,"ub":2,"expected":0.07071067811865476},
+    {"id":"C16","priority":"P1","operation":"eu_anomaly_geometric","sm_n":4,"gd_n":9,"eu_n":3,"expected":0.5},
+    {"id":"D03","operation":"tas_raw","SiO2":50,"Na2O":2,"K2O":1,"unit":"wt%","expected_x":50,"expected_y":3}
+  ]
+}

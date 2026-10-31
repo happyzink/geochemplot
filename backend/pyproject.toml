@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=75.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "geoplot-backend"
+version = "1.0.0"
+description = "GeoPlot - Geochemical interactive scientific plotting tool"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.32.0",
+    "pydantic>=2.10.0",
+    "sqlalchemy>=2.0.0",
+    "openpyxl>=3.1.0",
+    "numpy>=2.0.0",
+    "matplotlib>=3.9.0",
+    "python-multipart>=0.0.12",
+    "httpx>=0.27.0",
+    "Pillow>=11.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.24.0",
+    "pytest-cov>=6.0.0",
+    "ruff>=0.8.0",
+]
+package = [
+    "pyinstaller>=6.0.0",
+    "pystray>=0.19.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+markers = [
+    "scientific: scientific calculation tests",
+    "integration: integration tests requiring workbook",
+    "slow: slow running tests",
+]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100

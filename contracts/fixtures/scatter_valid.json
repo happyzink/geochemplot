@@ -1,0 +1,119 @@
+{
+  "schema_version": "1.1",
+  "plot_id": "fixture_scatter_001",
+  "revision": 1,
+  "chart_type": "scatter",
+  "layers": [
+    {
+      "layer_id": "synthetic_layer",
+      "label": "Synthetic Tutorial Data",
+      "selection_id": "sel_synth_001",
+      "visible": true,
+      "aggregation": "none",
+      "style": {
+        "marker_shape": "circle",
+        "marker_fill": "solid",
+        "marker_fill_color": "#D55E00",
+        "marker_edge_color": "#D55E00",
+        "marker_size_pt": 3.5,
+        "marker_edge_width_pt": 0.35,
+        "marker_alpha": 0.0,
+        "line_color": "#D55E00",
+        "line_width_pt": 0.8,
+        "line_dash": "solid",
+        "line_alpha": 0.0,
+        "connect": false
+      },
+      "analysis_style_overrides": {}
+    }
+  ],
+  "variables": {
+    "x": {
+      "kind": "ratio",
+      "numerator": {"kind": "measurement", "analyte": "Rb", "chemical_form": "element", "unit": "ppm"},
+      "denominator": {"kind": "measurement", "analyte": "Sr", "chemical_form": "element", "unit": "ppm"}
+    },
+    "y": {
+      "kind": "ratio",
+      "numerator": {
+        "kind": "normalize",
+        "value": {"kind": "measurement", "analyte": "La", "chemical_form": "element", "unit": "ppm"},
+        "reference_id": "Chondrite_MS95",
+        "reference_version": "1"
+      },
+      "denominator": {
+        "kind": "normalize",
+        "value": {"kind": "measurement", "analyte": "Yb", "chemical_form": "element", "unit": "ppm"},
+        "reference_id": "Chondrite_MS95",
+        "reference_version": "1"
+      }
+    },
+    "elements": null,
+    "value_mode": null,
+    "reference_id": null,
+    "reference_version": null
+  },
+  "quality_policy": {
+    "censored": "exclude",
+    "nonpositive_log": "exclude",
+    "missing_spider": "gap",
+    "unconfirmed_unit": "exclude"
+  },
+  "axes": {
+    "x": {
+      "scale": "linear",
+      "range_mode": "manual",
+      "min": 0.0,
+      "max": 0.5,
+      "reversed": false,
+      "tick_mode": "auto",
+      "tick_step": null,
+      "log_exponent_step": 1,
+      "number_format": "auto",
+      "decimal_places": 2,
+      "significant_digits": 3,
+      "title_override": null,
+      "title_font_size_pt": 7.0,
+      "tick_font_size_pt": 6.0,
+      "major_grid": false,
+      "minor_ticks": false,
+      "tick_direction": "out",
+      "category_order": null,
+      "visible_categories": null
+    },
+    "y": {
+      "scale": "linear",
+      "range_mode": "manual",
+      "min": 0.0,
+      "max": 10.0,
+      "reversed": false,
+      "tick_mode": "auto",
+      "tick_step": null,
+      "log_exponent_step": 1,
+      "number_format": "auto",
+      "decimal_places": 2,
+      "significant_digits": 3,
+      "title_override": null,
+      "title_font_size_pt": 7.0,
+      "tick_font_size_pt": 6.0,
+      "major_grid": false,
+      "minor_ticks": false,
+      "tick_direction": "out",
+      "category_order": null,
+      "visible_categories": null
+    }
+  },
+  "layout": {
+    "width_mm": 183.0,
+    "height_mm": 110.0,
+    "preset": "nature_main_2026",
+    "font_family": "Arial",
+    "font_size_pt": 7.0,
+    "tick_font_size_pt": 6.0,
+    "legend": {"position": "right", "anchor_x": null, "anchor_y": null},
+    "legend_show_counts": true,
+    "annotations": []
+  },
+  "diagram": null,
+  "channel_policy_id": null
+}

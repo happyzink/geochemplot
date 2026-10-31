@@ -1,0 +1,1387 @@
+{
+ "scene_id": "scn_e25260642a88",
+ "schema_version": "1.2",
+ "request_id": "req_fixture_tas_001",
+ "spec_hash": "e6f1f1db2c61076e7e51ce76d0b22c5bde3257d174eb5c3af04570c7f7e35d7f",
+ "scene_hash": "f5b917f034b537fe4a0c93c5a0e6f8731e18bc10cb56978262ca699ef807fce8",
+ "plot_revision": 1,
+ "chart_type": "tas",
+ "resolved_selections": [
+  {
+   "selection_id": "sel_b78ea2731658",
+   "selection_hash": "40f2c6ca9de0448d80246885b3675f9b6a61d71ff1ac01838de5077d1078e996",
+   "analysis_ids": [
+    "ana_0003d7f146d5",
+    "ana_000d6679edca",
+    "ana_002115889860",
+    "ana_00219544ae78",
+    "ana_0021a2e05467",
+    "ana_00265ddd5174"
+   ],
+   "dataset_versions": [
+    {
+     "version": "1.0"
+    }
+   ]
+  }
+ ],
+ "reference_snapshots": [],
+ "variables": {
+  "x": null,
+  "y": null,
+  "elements": null,
+  "value_mode": null,
+  "reference_id": null,
+  "reference_version": null
+ },
+ "axes": {
+  "x": {
+   "label": "SiO₂ (wt%)",
+   "unit": null,
+   "scale": "linear",
+   "range": [
+    35.0,
+    88.0
+   ],
+   "ticks": [
+    41.0,
+    42.0,
+    43.0,
+    44.0,
+    45.0,
+    46.0,
+    47.0
+   ]
+  },
+  "y": {
+   "label": "Na₂O + K₂O (wt%)",
+   "unit": null,
+   "scale": "linear",
+   "range": [
+    0.0,
+    18.0
+   ],
+   "ticks": [
+    0.0,
+    0.2,
+    0.4,
+    0.6,
+    0.8,
+    1.0,
+    1.2,
+    1.4,
+    1.6
+   ]
+  }
+ },
+ "series": [
+  {
+   "series_id": "ser_whole_rock",
+   "layer_id": "whole_rock",
+   "analysis_ids": [
+    "ana_0003d7f146d5",
+    "ana_000d6679edca",
+    "ana_002115889860",
+    "ana_00219544ae78",
+    "ana_0021a2e05467",
+    "ana_00265ddd5174"
+   ],
+   "sample_ids": [
+    "CE6-4-3-Pl5",
+    "CE6-11-21-Px1",
+    "CE6-11-21-Px7",
+    "14305,388",
+    "115-Pl-2",
+    "G30"
+   ],
+   "label": "Whole rock",
+   "style": {
+    "marker_shape": "circle",
+    "marker_fill": "solid",
+    "marker_fill_color": "#D55E00",
+    "marker_edge_color": "#D55E00",
+    "marker_size_pt": 3.5,
+    "marker_edge_width_pt": 0.35,
+    "marker_alpha": 1.0,
+    "line_color": "#D55E00",
+    "line_width_pt": 0.8,
+    "line_dash": "solid",
+    "line_alpha": 1.0,
+    "connect": false
+   },
+   "points": [
+    {
+     "point_id": "pt_ana_0003d7f146d5",
+     "analysis_id": "ana_0003d7f146d5",
+     "x": 46.505,
+     "y": 1.053,
+     "x_error": null,
+     "y_error": null,
+     "quality_flags": [],
+     "provenance": {
+      "measurements": {
+       "SiO2": 46.505,
+       "TiO2": 0.051,
+       "Al2O3": 32.621,
+       "FeOT": 0.936,
+       "MnO": 0.014,
+       "MgO": 0.181,
+       "CaO": 17.053,
+       "Na2O": 1.021,
+       "K2O": 0.032,
+       "P2O5": 0.0,
+       "Cr2O3": 0.051
+      },
+      "anhydrous": false,
+      "sio2_raw": 46.505,
+      "na2o_raw": 1.021,
+      "k2o_raw": 0.032
+     },
+     "resolved_style": null
+    },
+    {
+     "point_id": "pt_ana_000d6679edca",
+     "analysis_id": "ana_000d6679edca",
+     "x": 46.405,
+     "y": 0.023,
+     "x_error": null,
+     "y_error": null,
+     "quality_flags": [],
+     "provenance": {
+      "measurements": {
+       "SiO2": 46.405,
+       "TiO2": 1.469,
+       "Al2O3": 1.687,
+       "FeOT": 32.317,
+       "MnO": 0.292,
+       "MgO": 0.145,
+       "CaO": 17.818,
+       "Na2O": 0.016,
+       "K2O": 0.007,
+       "P2O5": 0.02,
+       "Cr2O3": 0.011
+      },
+      "anhydrous": false,
+      "sio2_raw": 46.405,
+      "na2o_raw": 0.016,
+      "k2o_raw": 0.007
+     },
+     "resolved_style": null
+    },
+    {
+     "point_id": "pt_ana_002115889860",
+     "analysis_id": "ana_002115889860",
+     "x": 46.25,
+     "y": 0.004,
+     "x_error": null,
+     "y_error": null,
+     "quality_flags": [],
+     "provenance": {
+      "measurements": {
+       "SiO2": 46.25,
+       "TiO2": 0.626,
+       "Al2O3": 0.533,
+       "FeOT": 45.321,
+       "MnO": 0.521,
+       "MgO": 0.821,
+       "CaO": 6.503,
+       "Na2O": 0.004,
+       "K2O": 0.0,
+       "P2O5": 0.003,
+       "Cr2O3": 0.023
+      },
+      "anhydrous": false,
+      "sio2_raw": 46.25,
+      "na2o_raw": 0.004,
+      "k2o_raw": 0.0
+     },
+     "resolved_style": null
+    },
+    {
+     "point_id": "pt_ana_00219544ae78",
+     "analysis_id": "ana_00219544ae78",
+     "x": 44.8,
+     "y": 1.04,
+     "x_error": null,
+     "y_error": null,
+     "quality_flags": [],
+     "provenance": {
+      "measurements": {
+       "SiO2": 44.8,
+       "Al2O3": 35.0,
+       "FeO": 0.53,
+       "MgO": 0.2,
+       "CaO": 18.5,
+       "Na2O": 0.91,
+       "K2O": 0.13
+      },
+      "anhydrous": false,
+      "sio2_raw": 44.8,
+      "na2o_raw": 0.91,
+      "k2o_raw": 0.13
+     },
+     "resolved_style": null
+    },
+    {
+     "point_id": "pt_ana_0021a2e05467",
+     "analysis_id": "ana_0021a2e05467",
+     "x": 47.11,
+     "y": 1.54,
+     "x_error": null,
+     "y_error": null,
+     "quality_flags": [],
+     "provenance": {
+      "measurements": {
+       "SiO2": 47.11,
+       "Al2O3": 33.15,
+       "FeOT": 0.73,
+       "MnO": 0.02,
+       "MgO": 0.23,
+       "CaO": 16.79,
+       "Na2O": 1.43,
+       "K2O": 0.11,
+       "P2O5": 0.02
+      },
+      "anhydrous": false,
+      "sio2_raw": 47.11,
+      "na2o_raw": 1.43,
+      "k2o_raw": 0.11
+     },
+     "resolved_style": null
+    },
+    {
+     "point_id": "pt_ana_00265ddd5174",
+     "analysis_id": "ana_00265ddd5174",
+     "x": 40.805,
+     "y": 0.67,
+     "x_error": null,
+     "y_error": null,
+     "quality_flags": [],
+     "provenance": {
+      "measurements": {
+       "SiO2": 40.805,
+       "TiO2": 6.023,
+       "Al2O3": 9.812,
+       "FeOT": 25.081,
+       "MnO": 0.289,
+       "MgO": 6.506,
+       "CaO": 9.872,
+       "Na2O": 0.39,
+       "K2O": 0.28,
+       "P2O5": 0.25,
+       "Cr2O3": 0.222,
+       "La": 47.42907831,
+       "Ce": 116.204177,
+       "Pr": 15.89526275,
+       "Nd": 72.59366058,
+       "Sm": 19.22960635,
+       "Eu": 2.554782182,
+       "Gd": 19.98892782,
+       "Tb": 3.910294893,
+       "Dy": 21.82796069,
+       "Ho": 4.257057741,
+       "Er": 11.76953874,
+       "Tm": 1.740892764,
+       "Yb": 10.72625203,
+       "Lu": 1.528958775,
+       "Cs": 0.157328423,
+       "Rb": 4.369287964,
+       "Ba": 318.0096092,
+       "Th": 5.95450455,
+       "U": 2.078208266,
+       "Nb": 38.22186125,
+       "Ta": 2.09210156,
+       "Sr": 243.5485359,
+       "Zr": 690.415949,
+       "Hf": 16.50352513,
+       "Y": 112.2445847,
+       "Pb": 1.572744661,
+       "Cr": 0.157328423,
+       "Co": 33.53176781,
+       "Ni": 116.231602,
+       "Cu": 15.66534019,
+       "Zn": 10.97833945
+      },
+      "anhydrous": false,
+      "sio2_raw": 40.805,
+      "na2o_raw": 0.39,
+      "k2o_raw": 0.28
+     },
+     "resolved_style": null
+    }
+   ],
+   "break_at_missing": true
+  }
+ ],
+ "diagram_geometry": {
+  "model_id": "tas_LeMaitre",
+  "model_version": "pyrolite-0.3.8.post1",
+  "source_hash": "sha256:80c5af6da0566ecbc568cb606ff8672bf52df7a2d40e2fe7d4beeae4ad33ea53",
+  "polygons": [
+   {
+    "field_id": "Ba",
+    "label": "Alkalic Basalt / Alkalic Gabbro",
+    "vertices": [
+     [
+      45.0,
+      5.0
+     ],
+     [
+      52.0,
+      5.0
+     ],
+     [
+      45.0,
+      2.0
+     ]
+    ]
+   },
+   {
+    "field_id": "Bs",
+    "label": "Subalkalic Basalt / Subalkalic Gabbro",
+    "vertices": [
+     [
+      45.0,
+      2.0
+     ],
+     [
+      52.0,
+      5.0
+     ],
+     [
+      52.0,
+      0.0
+     ],
+     [
+      45.0,
+      0.0
+     ]
+    ]
+   },
+   {
+    "field_id": "F",
+    "label": "Foidite / Foidolite",
+    "vertices": [
+     [
+      35.0,
+      9.0
+     ],
+     [
+      37.0,
+      14.0
+     ],
+     [
+      52.5,
+      18.0
+     ],
+     [
+      52.5,
+      14.0
+     ],
+     [
+      48.4,
+      11.5
+     ],
+     [
+      45.0,
+      9.4
+     ],
+     [
+      41.0,
+      7.0
+     ],
+     [
+      41.0,
+      3.0
+     ],
+     [
+      37.0,
+      3.0
+     ]
+    ]
+   },
+   {
+    "field_id": "O1",
+    "label": "Basaltic Andesite / Gabbroic Diorite",
+    "vertices": [
+     [
+      52.0,
+      0.0
+     ],
+     [
+      52.0,
+      5.0
+     ],
+     [
+      57.0,
+      5.9
+     ],
+     [
+      57.0,
+      0.0
+     ]
+    ]
+   },
+   {
+    "field_id": "O2",
+    "label": "Andesite / Diorite",
+    "vertices": [
+     [
+      57.0,
+      0.0
+     ],
+     [
+      57.0,
+      5.9
+     ],
+     [
+      63.0,
+      7.0
+     ],
+     [
+      63.0,
+      0.0
+     ]
+    ]
+   },
+   {
+    "field_id": "O3",
+    "label": "Dacite / Granodiorite",
+    "vertices": [
+     [
+      63.0,
+      0.0
+     ],
+     [
+      63.0,
+      7.0
+     ],
+     [
+      69.0,
+      8.0
+     ],
+     [
+      77.3,
+      0.0
+     ]
+    ]
+   },
+   {
+    "field_id": "Pc",
+    "label": "Picrite / Peridot-gabbro",
+    "vertices": [
+     [
+      41.0,
+      3.0
+     ],
+     [
+      45.0,
+      3.0
+     ],
+     [
+      45.0,
+      2.0
+     ],
+     [
+      45.0,
+      0.0
+     ],
+     [
+      41.0,
+      0.0
+     ]
+    ]
+   },
+   {
+    "field_id": "Ph",
+    "label": "Phonolite / Foid Syenite",
+    "vertices": [
+     [
+      52.5,
+      14.0
+     ],
+     [
+      52.5,
+      18.0
+     ],
+     [
+      57.0,
+      18.0
+     ],
+     [
+      63.0,
+      16.2
+     ],
+     [
+      61.0,
+      13.5
+     ],
+     [
+      57.6,
+      11.7
+     ]
+    ]
+   },
+   {
+    "field_id": "R",
+    "label": "Rhyolite / Granite",
+    "vertices": [
+     [
+      69.0,
+      8.0
+     ],
+     [
+      69.0,
+      13.0
+     ],
+     [
+      85.9,
+      6.8
+     ],
+     [
+      87.5,
+      4.7
+     ],
+     [
+      77.3,
+      0.0
+     ]
+    ]
+   },
+   {
+    "field_id": "S1",
+    "label": "Trachybasalt / Monzogabbro",
+    "vertices": [
+     [
+      45.0,
+      5.0
+     ],
+     [
+      49.4,
+      7.3
+     ],
+     [
+      52.0,
+      5.0
+     ]
+    ]
+   },
+   {
+    "field_id": "S2",
+    "label": "Basaltic Trachyandesite / Monzodiorite",
+    "vertices": [
+     [
+      49.4,
+      7.3
+     ],
+     [
+      53.0,
+      9.3
+     ],
+     [
+      57.0,
+      5.9
+     ],
+     [
+      52.0,
+      5.0
+     ]
+    ]
+   },
+   {
+    "field_id": "S3",
+    "label": "Trachyandesite / Monzonite",
+    "vertices": [
+     [
+      53.0,
+      9.3
+     ],
+     [
+      57.6,
+      11.7
+     ],
+     [
+      61.0,
+      8.6
+     ],
+     [
+      63.0,
+      7.0
+     ],
+     [
+      57.0,
+      5.9
+     ]
+    ]
+   },
+   {
+    "field_id": "T1",
+    "label": "Trachyte / Syenite",
+    "vertices": [
+     [
+      57.6,
+      11.7
+     ],
+     [
+      61.0,
+      13.5
+     ],
+     [
+      63.0,
+      16.2
+     ],
+     [
+      69.0,
+      13.0
+     ],
+     [
+      61.0,
+      8.6
+     ]
+    ]
+   },
+   {
+    "field_id": "T2",
+    "label": "Trachydacite / Quartz Monzonite",
+    "vertices": [
+     [
+      61.0,
+      8.6
+     ],
+     [
+      69.0,
+      13.0
+     ],
+     [
+      69.0,
+      8.0
+     ],
+     [
+      63.0,
+      7.0
+     ]
+    ]
+   },
+   {
+    "field_id": "U1",
+    "label": "Tephrite / Foid Gabbro",
+    "vertices": [
+     [
+      41.0,
+      3.0
+     ],
+     [
+      41.0,
+      7.0
+     ],
+     [
+      45.0,
+      9.4
+     ],
+     [
+      49.4,
+      7.3
+     ],
+     [
+      45.0,
+      5.0
+     ],
+     [
+      45.0,
+      3.0
+     ]
+    ]
+   },
+   {
+    "field_id": "U2",
+    "label": "Phonotephrite / Foid Monzodiorite",
+    "vertices": [
+     [
+      45.0,
+      9.4
+     ],
+     [
+      48.4,
+      11.5
+     ],
+     [
+      53.0,
+      9.3
+     ],
+     [
+      49.4,
+      7.3
+     ]
+    ]
+   },
+   {
+    "field_id": "U3",
+    "label": "Tephriphonolite / Foid Monzosyenite",
+    "vertices": [
+     [
+      48.4,
+      11.5
+     ],
+     [
+      52.5,
+      14.0
+     ],
+     [
+      57.6,
+      11.7
+     ],
+     [
+      53.0,
+      9.3
+     ]
+    ]
+   }
+  ],
+  "labels": [
+   {
+    "field_id": "Ba",
+    "x": 47.333333333333336,
+    "y": 4.0,
+    "text": "Alkalic Basalt"
+   },
+   {
+    "field_id": "Bs",
+    "x": 48.5,
+    "y": 1.75,
+    "text": "Subalkalic Basalt"
+   },
+   {
+    "field_id": "F",
+    "x": 43.266666666666666,
+    "y": 9.877777777777778,
+    "text": "Foidite"
+   },
+   {
+    "field_id": "O1",
+    "x": 54.5,
+    "y": 2.725,
+    "text": "Basaltic Andesite"
+   },
+   {
+    "field_id": "O2",
+    "x": 60.0,
+    "y": 3.225,
+    "text": "Andesite"
+   },
+   {
+    "field_id": "O3",
+    "x": 68.075,
+    "y": 3.75,
+    "text": "Dacite"
+   },
+   {
+    "field_id": "Pc",
+    "x": 43.4,
+    "y": 1.6,
+    "text": "Picrite"
+   },
+   {
+    "field_id": "Ph",
+    "x": 57.26666666666667,
+    "y": 15.233333333333334,
+    "text": "Phonolite"
+   },
+   {
+    "field_id": "R",
+    "x": 77.74,
+    "y": 6.5,
+    "text": "Rhyolite"
+   },
+   {
+    "field_id": "S1",
+    "x": 48.800000000000004,
+    "y": 5.766666666666667,
+    "text": "Trachybasalt"
+   },
+   {
+    "field_id": "S2",
+    "x": 52.85,
+    "y": 6.875,
+    "text": "Basaltic Trachyandesite"
+   },
+   {
+    "field_id": "S3",
+    "x": 58.32000000000001,
+    "y": 8.5,
+    "text": "Trachyandesite"
+   },
+   {
+    "field_id": "T1",
+    "x": 62.32000000000001,
+    "y": 12.6,
+    "text": "Trachyte"
+   },
+   {
+    "field_id": "T2",
+    "x": 65.5,
+    "y": 9.15,
+    "text": "Trachydacite"
+   },
+   {
+    "field_id": "U1",
+    "x": 44.4,
+    "y": 5.783333333333332,
+    "text": "Tephrite"
+   },
+   {
+    "field_id": "U2",
+    "x": 48.95,
+    "y": 9.375,
+    "text": "Phonotephrite"
+   },
+   {
+    "field_id": "U3",
+    "x": 52.875,
+    "y": 11.625,
+    "text": "Tephriphonolite"
+   }
+  ],
+  "segments": [
+   [
+    [
+     35.0,
+     9.0
+    ],
+    [
+     37.0,
+     3.0
+    ]
+   ],
+   [
+    [
+     35.0,
+     9.0
+    ],
+    [
+     37.0,
+     14.0
+    ]
+   ],
+   [
+    [
+     37.0,
+     3.0
+    ],
+    [
+     41.0,
+     3.0
+    ]
+   ],
+   [
+    [
+     37.0,
+     14.0
+    ],
+    [
+     52.5,
+     18.0
+    ]
+   ],
+   [
+    [
+     41.0,
+     0.0
+    ],
+    [
+     41.0,
+     3.0
+    ]
+   ],
+   [
+    [
+     41.0,
+     0.0
+    ],
+    [
+     45.0,
+     0.0
+    ]
+   ],
+   [
+    [
+     41.0,
+     3.0
+    ],
+    [
+     41.0,
+     7.0
+    ]
+   ],
+   [
+    [
+     41.0,
+     3.0
+    ],
+    [
+     45.0,
+     3.0
+    ]
+   ],
+   [
+    [
+     41.0,
+     7.0
+    ],
+    [
+     45.0,
+     9.4
+    ]
+   ],
+   [
+    [
+     45.0,
+     0.0
+    ],
+    [
+     45.0,
+     2.0
+    ]
+   ],
+   [
+    [
+     45.0,
+     0.0
+    ],
+    [
+     52.0,
+     0.0
+    ]
+   ],
+   [
+    [
+     45.0,
+     2.0
+    ],
+    [
+     45.0,
+     3.0
+    ]
+   ],
+   [
+    [
+     45.0,
+     2.0
+    ],
+    [
+     45.0,
+     5.0
+    ]
+   ],
+   [
+    [
+     45.0,
+     2.0
+    ],
+    [
+     52.0,
+     5.0
+    ]
+   ],
+   [
+    [
+     45.0,
+     3.0
+    ],
+    [
+     45.0,
+     5.0
+    ]
+   ],
+   [
+    [
+     45.0,
+     5.0
+    ],
+    [
+     49.4,
+     7.3
+    ]
+   ],
+   [
+    [
+     45.0,
+     5.0
+    ],
+    [
+     52.0,
+     5.0
+    ]
+   ],
+   [
+    [
+     45.0,
+     9.4
+    ],
+    [
+     48.4,
+     11.5
+    ]
+   ],
+   [
+    [
+     45.0,
+     9.4
+    ],
+    [
+     49.4,
+     7.3
+    ]
+   ],
+   [
+    [
+     48.4,
+     11.5
+    ],
+    [
+     52.5,
+     14.0
+    ]
+   ],
+   [
+    [
+     48.4,
+     11.5
+    ],
+    [
+     53.0,
+     9.3
+    ]
+   ],
+   [
+    [
+     49.4,
+     7.3
+    ],
+    [
+     52.0,
+     5.0
+    ]
+   ],
+   [
+    [
+     49.4,
+     7.3
+    ],
+    [
+     53.0,
+     9.3
+    ]
+   ],
+   [
+    [
+     52.0,
+     0.0
+    ],
+    [
+     52.0,
+     5.0
+    ]
+   ],
+   [
+    [
+     52.0,
+     0.0
+    ],
+    [
+     57.0,
+     0.0
+    ]
+   ],
+   [
+    [
+     52.0,
+     5.0
+    ],
+    [
+     57.0,
+     5.9
+    ]
+   ],
+   [
+    [
+     52.5,
+     14.0
+    ],
+    [
+     52.5,
+     18.0
+    ]
+   ],
+   [
+    [
+     52.5,
+     14.0
+    ],
+    [
+     57.6,
+     11.7
+    ]
+   ],
+   [
+    [
+     52.5,
+     18.0
+    ],
+    [
+     57.0,
+     18.0
+    ]
+   ],
+   [
+    [
+     53.0,
+     9.3
+    ],
+    [
+     57.0,
+     5.9
+    ]
+   ],
+   [
+    [
+     53.0,
+     9.3
+    ],
+    [
+     57.6,
+     11.7
+    ]
+   ],
+   [
+    [
+     57.0,
+     0.0
+    ],
+    [
+     57.0,
+     5.9
+    ]
+   ],
+   [
+    [
+     57.0,
+     0.0
+    ],
+    [
+     63.0,
+     0.0
+    ]
+   ],
+   [
+    [
+     57.0,
+     5.9
+    ],
+    [
+     63.0,
+     7.0
+    ]
+   ],
+   [
+    [
+     57.0,
+     18.0
+    ],
+    [
+     63.0,
+     16.2
+    ]
+   ],
+   [
+    [
+     57.6,
+     11.7
+    ],
+    [
+     61.0,
+     8.6
+    ]
+   ],
+   [
+    [
+     57.6,
+     11.7
+    ],
+    [
+     61.0,
+     13.5
+    ]
+   ],
+   [
+    [
+     61.0,
+     8.6
+    ],
+    [
+     63.0,
+     7.0
+    ]
+   ],
+   [
+    [
+     61.0,
+     8.6
+    ],
+    [
+     69.0,
+     13.0
+    ]
+   ],
+   [
+    [
+     61.0,
+     13.5
+    ],
+    [
+     63.0,
+     16.2
+    ]
+   ],
+   [
+    [
+     63.0,
+     0.0
+    ],
+    [
+     63.0,
+     7.0
+    ]
+   ],
+   [
+    [
+     63.0,
+     0.0
+    ],
+    [
+     77.3,
+     0.0
+    ]
+   ],
+   [
+    [
+     63.0,
+     7.0
+    ],
+    [
+     69.0,
+     8.0
+    ]
+   ],
+   [
+    [
+     63.0,
+     16.2
+    ],
+    [
+     69.0,
+     13.0
+    ]
+   ],
+   [
+    [
+     69.0,
+     8.0
+    ],
+    [
+     69.0,
+     13.0
+    ]
+   ],
+   [
+    [
+     69.0,
+     8.0
+    ],
+    [
+     77.3,
+     0.0
+    ]
+   ],
+   [
+    [
+     69.0,
+     13.0
+    ],
+    [
+     85.9,
+     6.8
+    ]
+   ],
+   [
+    [
+     77.3,
+     0.0
+    ],
+    [
+     87.5,
+     4.7
+    ]
+   ],
+   [
+    [
+     85.9,
+     6.8
+    ],
+    [
+     87.5,
+     4.7
+    ]
+   ]
+  ],
+  "boundary_coordinates": [],
+  "region_labels": {}
+ },
+ "legend": {},
+ "layout": {
+  "width_mm": 183.0,
+  "height_mm": 110.0,
+  "preset": "nature_main_2026",
+  "font_family": "Arial",
+  "font_size_pt": 7.0,
+  "tick_font_size_pt": 6.0,
+  "legend": {
+   "position": "right",
+   "anchor_x": null,
+   "anchor_y": null
+  },
+  "legend_show_counts": true,
+  "annotations": [
+   {
+    "id": "tas_model_caption",
+    "text": "TAS fields: Le Maitre et al. (2002) via pyrolite-0.3.8.post1 (config_lemaitre.json sha256:80c5af6da0566ecbc568cb606ff8672bf52df7a2d40e2fe7d4beeae4ad33ea53). Lunar samples (CE5/CE6/Apollo) plotted for reference comparison only; not for rock naming.",
+    "anchor_x": 0.01,
+    "anchor_y": 0.05,
+    "font_size_pt": 4.5,
+    "color": "#666666"
+   }
+  ]
+ },
+ "font_manifest": {
+  "primary": "Arial",
+  "fallback": [
+   "Arial",
+   "Helvetica",
+   "sans-serif"
+  ],
+  "available": true,
+  "substituted_with": null
+ },
+ "warnings": [],
+ "counts": {
+  "selected_analyses": 6,
+  "valid_analyses": 6,
+  "excluded_analyses": 0,
+  "distinct_samples": 6,
+  "physical_identity_unknown": 0,
+  "plotted_points": 6,
+  "out_of_view": 0,
+  "hidden_by_style": 0
+ },
+ "exclusions": [],
+ "software_version": "1.0.0"
+}

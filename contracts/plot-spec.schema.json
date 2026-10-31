@@ -1,0 +1,1228 @@
+{
+  "$defs": {
+    "AddExpr": {
+      "properties": {
+        "kind": {
+          "const": "add",
+          "default": "add",
+          "title": "Kind",
+          "type": "string"
+        },
+        "operands": {
+          "items": {
+            "discriminator": {
+              "mapping": {
+                "add": "#/$defs/AddExpr",
+                "constant": "#/$defs/ConstantExpr",
+                "measurement": "#/$defs/MeasurementExpr",
+                "normalize": "#/$defs/NormalizeExpr",
+                "ratio": "#/$defs/RatioExpr"
+              },
+              "propertyName": "kind"
+            },
+            "oneOf": [
+              {
+                "$ref": "#/$defs/MeasurementExpr"
+              },
+              {
+                "$ref": "#/$defs/NormalizeExpr"
+              },
+              {
+                "$ref": "#/$defs/RatioExpr"
+              },
+              {
+                "$ref": "#/$defs/AddExpr"
+              },
+              {
+                "$ref": "#/$defs/ConstantExpr"
+              }
+            ]
+          },
+          "minItems": 2,
+          "title": "Operands",
+          "type": "array"
+        }
+      },
+      "required": [
+        "operands"
+      ],
+      "title": "AddExpr",
+      "type": "object"
+    },
+    "AnalysisStyleOverride": {
+      "description": "Partial style override for specific analysis points within a layer.",
+      "properties": {
+        "marker_shape": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/MarkerShape"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "marker_fill": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/MarkerFill"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "marker_fill_color": {
+          "anyOf": [
+            {
+              "pattern": "^#[0-9A-Fa-f]{6}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Marker Fill Color"
+        },
+        "marker_edge_color": {
+          "anyOf": [
+            {
+              "pattern": "^#[0-9A-Fa-f]{6}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Marker Edge Color"
+        },
+        "marker_size_pt": {
+          "anyOf": [
+            {
+              "maximum": 20.0,
+              "minimum": 1.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Marker Size Pt"
+        },
+        "marker_edge_width_pt": {
+          "anyOf": [
+            {
+              "maximum": 3.0,
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Marker Edge Width Pt"
+        },
+        "marker_alpha": {
+          "anyOf": [
+            {
+              "maximum": 1.0,
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Marker Alpha"
+        },
+        "line_color": {
+          "anyOf": [
+            {
+              "pattern": "^#[0-9A-Fa-f]{6}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Line Color"
+        },
+        "line_width_pt": {
+          "anyOf": [
+            {
+              "maximum": 5.0,
+              "minimum": 0.1,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Line Width Pt"
+        },
+        "line_dash": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/LineDash"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "line_alpha": {
+          "anyOf": [
+            {
+              "maximum": 1.0,
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Line Alpha"
+        },
+        "connect": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Connect"
+        }
+      },
+      "title": "AnalysisStyleOverride",
+      "type": "object"
+    },
+    "Annotation": {
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "text": {
+          "title": "Text",
+          "type": "string"
+        },
+        "anchor_x": {
+          "maximum": 1.0,
+          "minimum": 0.0,
+          "title": "Anchor X",
+          "type": "number"
+        },
+        "anchor_y": {
+          "maximum": 1.0,
+          "minimum": 0.0,
+          "title": "Anchor Y",
+          "type": "number"
+        },
+        "font_size_pt": {
+          "default": 7.0,
+          "maximum": 36.0,
+          "minimum": 4.0,
+          "title": "Font Size Pt",
+          "type": "number"
+        },
+        "color": {
+          "default": "#000000",
+          "pattern": "^#[0-9A-Fa-f]{6}$",
+          "title": "Color",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "text",
+        "anchor_x",
+        "anchor_y"
+      ],
+      "title": "Annotation",
+      "type": "object"
+    },
+    "AxesConfig": {
+      "description": "Container for X and Y axis formats.",
+      "properties": {
+        "x": {
+          "$ref": "#/$defs/AxisFormat"
+        },
+        "y": {
+          "$ref": "#/$defs/AxisFormat"
+        }
+      },
+      "title": "AxesConfig",
+      "type": "object"
+    },
+    "AxisFormat": {
+      "description": "Axis format - schema 1.1 replaces flat x_scale/y_scale/x_range/y_range.",
+      "properties": {
+        "scale": {
+          "default": "linear",
+          "description": "linear|log10|category",
+          "title": "Scale",
+          "type": "string"
+        },
+        "range_mode": {
+          "default": "auto",
+          "description": "auto|manual",
+          "title": "Range Mode",
+          "type": "string"
+        },
+        "min": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Min"
+        },
+        "max": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Max"
+        },
+        "reversed": {
+          "default": false,
+          "title": "Reversed",
+          "type": "boolean"
+        },
+        "tick_mode": {
+          "default": "auto",
+          "description": "auto|step",
+          "title": "Tick Mode",
+          "type": "string"
+        },
+        "tick_step": {
+          "anyOf": [
+            {
+              "exclusiveMinimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Tick Step"
+        },
+        "log_exponent_step": {
+          "anyOf": [
+            {
+              "maximum": 6,
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Log Exponent Step"
+        },
+        "number_format": {
+          "default": "auto",
+          "description": "auto|fixed|scientific",
+          "title": "Number Format",
+          "type": "string"
+        },
+        "decimal_places": {
+          "anyOf": [
+            {
+              "maximum": 8,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Decimal Places"
+        },
+        "significant_digits": {
+          "anyOf": [
+            {
+              "maximum": 8,
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Significant Digits"
+        },
+        "title_override": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Title Override"
+        },
+        "title_font_size_pt": {
+          "default": 7.0,
+          "maximum": 36.0,
+          "minimum": 4.0,
+          "title": "Title Font Size Pt",
+          "type": "number"
+        },
+        "tick_font_size_pt": {
+          "default": 6.0,
+          "maximum": 36.0,
+          "minimum": 4.0,
+          "title": "Tick Font Size Pt",
+          "type": "number"
+        },
+        "major_grid": {
+          "default": false,
+          "title": "Major Grid",
+          "type": "boolean"
+        },
+        "minor_ticks": {
+          "default": false,
+          "title": "Minor Ticks",
+          "type": "boolean"
+        },
+        "tick_direction": {
+          "default": "out",
+          "description": "in|out",
+          "title": "Tick Direction",
+          "type": "string"
+        },
+        "category_order": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Category Order"
+        },
+        "visible_categories": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Visible Categories"
+        }
+      },
+      "title": "AxisFormat",
+      "type": "object"
+    },
+    "ChartType": {
+      "enum": [
+        "scatter",
+        "ree",
+        "spider",
+        "tas"
+      ],
+      "title": "ChartType",
+      "type": "string"
+    },
+    "ConstantExpr": {
+      "properties": {
+        "kind": {
+          "const": "constant",
+          "default": "constant",
+          "title": "Kind",
+          "type": "string"
+        },
+        "value": {
+          "title": "Value",
+          "type": "number"
+        },
+        "unit": {
+          "minLength": 1,
+          "title": "Unit",
+          "type": "string"
+        }
+      },
+      "required": [
+        "value",
+        "unit"
+      ],
+      "title": "ConstantExpr",
+      "type": "object"
+    },
+    "LayerSpec": {
+      "description": "A data layer in the plot specification.",
+      "properties": {
+        "layer_id": {
+          "minLength": 1,
+          "title": "Layer Id",
+          "type": "string"
+        },
+        "label": {
+          "minLength": 1,
+          "title": "Label",
+          "type": "string"
+        },
+        "selection_id": {
+          "minLength": 1,
+          "title": "Selection Id",
+          "type": "string"
+        },
+        "visible": {
+          "default": true,
+          "title": "Visible",
+          "type": "boolean"
+        },
+        "aggregation": {
+          "const": "none",
+          "default": "none",
+          "title": "Aggregation",
+          "type": "string"
+        },
+        "style": {
+          "$ref": "#/$defs/LayerStyle"
+        },
+        "analysis_style_overrides": {
+          "additionalProperties": {
+            "$ref": "#/$defs/AnalysisStyleOverride"
+          },
+          "title": "Analysis Style Overrides",
+          "type": "object"
+        }
+      },
+      "required": [
+        "layer_id",
+        "label",
+        "selection_id"
+      ],
+      "title": "LayerSpec",
+      "type": "object"
+    },
+    "LayerStyle": {
+      "description": "Complete style for a data layer. Schema 1.1: independent marker_alpha and line_alpha.",
+      "properties": {
+        "marker_shape": {
+          "$ref": "#/$defs/MarkerShape",
+          "default": "circle"
+        },
+        "marker_fill": {
+          "$ref": "#/$defs/MarkerFill",
+          "default": "solid"
+        },
+        "marker_fill_color": {
+          "default": "#D55E00",
+          "pattern": "^#[0-9A-Fa-f]{6}$",
+          "title": "Marker Fill Color",
+          "type": "string"
+        },
+        "marker_edge_color": {
+          "default": "#D55E00",
+          "pattern": "^#[0-9A-Fa-f]{6}$",
+          "title": "Marker Edge Color",
+          "type": "string"
+        },
+        "marker_size_pt": {
+          "default": 3.5,
+          "description": "Nominal diameter in points",
+          "maximum": 20.0,
+          "minimum": 1.0,
+          "title": "Marker Size Pt",
+          "type": "number"
+        },
+        "marker_edge_width_pt": {
+          "default": 0.35,
+          "maximum": 3.0,
+          "minimum": 0.0,
+          "title": "Marker Edge Width Pt",
+          "type": "number"
+        },
+        "marker_alpha": {
+          "default": 1.0,
+          "description": "0=opaque, 1=transparent",
+          "maximum": 1.0,
+          "minimum": 0.0,
+          "title": "Marker Alpha",
+          "type": "number"
+        },
+        "line_color": {
+          "default": "#D55E00",
+          "pattern": "^#[0-9A-Fa-f]{6}$",
+          "title": "Line Color",
+          "type": "string"
+        },
+        "line_width_pt": {
+          "default": 0.8,
+          "maximum": 5.0,
+          "minimum": 0.1,
+          "title": "Line Width Pt",
+          "type": "number"
+        },
+        "line_dash": {
+          "$ref": "#/$defs/LineDash",
+          "default": "solid"
+        },
+        "line_alpha": {
+          "default": 1.0,
+          "description": "Independent from marker_alpha",
+          "maximum": 1.0,
+          "minimum": 0.0,
+          "title": "Line Alpha",
+          "type": "number"
+        },
+        "connect": {
+          "default": false,
+          "description": "True for REE/spider curves",
+          "title": "Connect",
+          "type": "boolean"
+        }
+      },
+      "title": "LayerStyle",
+      "type": "object"
+    },
+    "LayoutConfig": {
+      "properties": {
+        "width_mm": {
+          "default": 183.0,
+          "maximum": 500.0,
+          "minimum": 20.0,
+          "title": "Width Mm",
+          "type": "number"
+        },
+        "height_mm": {
+          "default": 110.0,
+          "maximum": 500.0,
+          "minimum": 20.0,
+          "title": "Height Mm",
+          "type": "number"
+        },
+        "preset": {
+          "default": "nature_main_2026",
+          "description": "nature_main_2026|thesis_cn|custom",
+          "title": "Preset",
+          "type": "string"
+        },
+        "font_family": {
+          "default": "Arial",
+          "title": "Font Family",
+          "type": "string"
+        },
+        "font_size_pt": {
+          "default": 7.0,
+          "maximum": 36.0,
+          "minimum": 4.0,
+          "title": "Font Size Pt",
+          "type": "number"
+        },
+        "tick_font_size_pt": {
+          "default": 6.0,
+          "maximum": 36.0,
+          "minimum": 4.0,
+          "title": "Tick Font Size Pt",
+          "type": "number"
+        },
+        "legend": {
+          "$ref": "#/$defs/LegendConfig"
+        },
+        "legend_show_counts": {
+          "default": true,
+          "title": "Legend Show Counts",
+          "type": "boolean"
+        },
+        "annotations": {
+          "items": {
+            "$ref": "#/$defs/Annotation"
+          },
+          "title": "Annotations",
+          "type": "array"
+        }
+      },
+      "title": "LayoutConfig",
+      "type": "object"
+    },
+    "LegendConfig": {
+      "properties": {
+        "position": {
+          "default": "right",
+          "description": "right|inside|custom",
+          "title": "Position",
+          "type": "string"
+        },
+        "anchor_x": {
+          "anyOf": [
+            {
+              "maximum": 1.0,
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Anchor X"
+        },
+        "anchor_y": {
+          "anyOf": [
+            {
+              "maximum": 1.0,
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Anchor Y"
+        }
+      },
+      "title": "LegendConfig",
+      "type": "object"
+    },
+    "LineDash": {
+      "enum": [
+        "solid",
+        "dash",
+        "dot",
+        "dashdot"
+      ],
+      "title": "LineDash",
+      "type": "string"
+    },
+    "MarkerFill": {
+      "enum": [
+        "solid",
+        "open"
+      ],
+      "title": "MarkerFill",
+      "type": "string"
+    },
+    "MarkerShape": {
+      "enum": [
+        "circle",
+        "square",
+        "triangle_up",
+        "triangle_down",
+        "diamond",
+        "plus",
+        "cross",
+        "star",
+        "hexagon"
+      ],
+      "title": "MarkerShape",
+      "type": "string"
+    },
+    "MeasurementExpr": {
+      "properties": {
+        "kind": {
+          "const": "measurement",
+          "default": "measurement",
+          "title": "Kind",
+          "type": "string"
+        },
+        "analyte": {
+          "description": "Element or oxide symbol, e.g. La, SiO2",
+          "minLength": 1,
+          "title": "Analyte",
+          "type": "string"
+        },
+        "chemical_form": {
+          "enum": [
+            "element",
+            "oxide",
+            "isotope_ratio",
+            "index"
+          ],
+          "title": "Chemical Form",
+          "type": "string"
+        },
+        "unit": {
+          "description": "e.g. ppm, ppb, wt%",
+          "minLength": 1,
+          "title": "Unit",
+          "type": "string"
+        },
+        "channel": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Measurement channel, e.g. La139_ppm_mean",
+          "title": "Channel"
+        }
+      },
+      "required": [
+        "analyte",
+        "chemical_form",
+        "unit"
+      ],
+      "title": "MeasurementExpr",
+      "type": "object"
+    },
+    "NormalizeExpr": {
+      "properties": {
+        "kind": {
+          "const": "normalize",
+          "default": "normalize",
+          "title": "Kind",
+          "type": "string"
+        },
+        "value": {
+          "discriminator": {
+            "mapping": {
+              "add": "#/$defs/AddExpr",
+              "constant": "#/$defs/ConstantExpr",
+              "measurement": "#/$defs/MeasurementExpr",
+              "normalize": "#/$defs/NormalizeExpr",
+              "ratio": "#/$defs/RatioExpr"
+            },
+            "propertyName": "kind"
+          },
+          "oneOf": [
+            {
+              "$ref": "#/$defs/MeasurementExpr"
+            },
+            {
+              "$ref": "#/$defs/NormalizeExpr"
+            },
+            {
+              "$ref": "#/$defs/RatioExpr"
+            },
+            {
+              "$ref": "#/$defs/AddExpr"
+            },
+            {
+              "$ref": "#/$defs/ConstantExpr"
+            }
+          ],
+          "title": "Value"
+        },
+        "reference_id": {
+          "minLength": 1,
+          "title": "Reference Id",
+          "type": "string"
+        },
+        "reference_version": {
+          "minLength": 1,
+          "title": "Reference Version",
+          "type": "string"
+        }
+      },
+      "required": [
+        "value",
+        "reference_id",
+        "reference_version"
+      ],
+      "title": "NormalizeExpr",
+      "type": "object"
+    },
+    "QualityPolicy": {
+      "properties": {
+        "censored": {
+          "default": "exclude",
+          "description": "exclude|include",
+          "title": "Censored",
+          "type": "string"
+        },
+        "nonpositive_log": {
+          "default": "exclude",
+          "description": "exclude|include",
+          "title": "Nonpositive Log",
+          "type": "string"
+        },
+        "missing_spider": {
+          "default": "gap",
+          "description": "gap|drop",
+          "title": "Missing Spider",
+          "type": "string"
+        },
+        "unconfirmed_unit": {
+          "default": "exclude",
+          "description": "exclude|include",
+          "title": "Unconfirmed Unit",
+          "type": "string"
+        }
+      },
+      "title": "QualityPolicy",
+      "type": "object"
+    },
+    "RatioExpr": {
+      "properties": {
+        "kind": {
+          "const": "ratio",
+          "default": "ratio",
+          "title": "Kind",
+          "type": "string"
+        },
+        "numerator": {
+          "discriminator": {
+            "mapping": {
+              "add": "#/$defs/AddExpr",
+              "constant": "#/$defs/ConstantExpr",
+              "measurement": "#/$defs/MeasurementExpr",
+              "normalize": "#/$defs/NormalizeExpr",
+              "ratio": "#/$defs/RatioExpr"
+            },
+            "propertyName": "kind"
+          },
+          "oneOf": [
+            {
+              "$ref": "#/$defs/MeasurementExpr"
+            },
+            {
+              "$ref": "#/$defs/NormalizeExpr"
+            },
+            {
+              "$ref": "#/$defs/RatioExpr"
+            },
+            {
+              "$ref": "#/$defs/AddExpr"
+            },
+            {
+              "$ref": "#/$defs/ConstantExpr"
+            }
+          ],
+          "title": "Numerator"
+        },
+        "denominator": {
+          "discriminator": {
+            "mapping": {
+              "add": "#/$defs/AddExpr",
+              "constant": "#/$defs/ConstantExpr",
+              "measurement": "#/$defs/MeasurementExpr",
+              "normalize": "#/$defs/NormalizeExpr",
+              "ratio": "#/$defs/RatioExpr"
+            },
+            "propertyName": "kind"
+          },
+          "oneOf": [
+            {
+              "$ref": "#/$defs/MeasurementExpr"
+            },
+            {
+              "$ref": "#/$defs/NormalizeExpr"
+            },
+            {
+              "$ref": "#/$defs/RatioExpr"
+            },
+            {
+              "$ref": "#/$defs/AddExpr"
+            },
+            {
+              "$ref": "#/$defs/ConstantExpr"
+            }
+          ],
+          "title": "Denominator"
+        }
+      },
+      "required": [
+        "numerator",
+        "denominator"
+      ],
+      "title": "RatioExpr",
+      "type": "object"
+    },
+    "TASDiagram": {
+      "properties": {
+        "model_id": {
+          "default": "tas_LeMaitre",
+          "title": "Model Id",
+          "type": "string"
+        },
+        "model_version": {
+          "default": "1",
+          "title": "Model Version",
+          "type": "string"
+        },
+        "mode": {
+          "const": "reference",
+          "default": "reference",
+          "title": "Mode",
+          "type": "string"
+        },
+        "oxide_basis": {
+          "default": "raw",
+          "description": "raw|anhydrous_100",
+          "title": "Oxide Basis",
+          "type": "string"
+        },
+        "oxide_set": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Oxide Set",
+          "type": "array"
+        },
+        "iron_policy": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "FeOT|FeO_Fe2O3",
+          "title": "Iron Policy"
+        }
+      },
+      "title": "TASDiagram",
+      "type": "object"
+    },
+    "VariablesConfig": {
+      "description": "Variables configuration - differs by chart type.",
+      "properties": {
+        "x": {
+          "anyOf": [
+            {
+              "discriminator": {
+                "mapping": {
+                  "add": "#/$defs/AddExpr",
+                  "constant": "#/$defs/ConstantExpr",
+                  "measurement": "#/$defs/MeasurementExpr",
+                  "normalize": "#/$defs/NormalizeExpr",
+                  "ratio": "#/$defs/RatioExpr"
+                },
+                "propertyName": "kind"
+              },
+              "oneOf": [
+                {
+                  "$ref": "#/$defs/MeasurementExpr"
+                },
+                {
+                  "$ref": "#/$defs/NormalizeExpr"
+                },
+                {
+                  "$ref": "#/$defs/RatioExpr"
+                },
+                {
+                  "$ref": "#/$defs/AddExpr"
+                },
+                {
+                  "$ref": "#/$defs/ConstantExpr"
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "X"
+        },
+        "y": {
+          "anyOf": [
+            {
+              "discriminator": {
+                "mapping": {
+                  "add": "#/$defs/AddExpr",
+                  "constant": "#/$defs/ConstantExpr",
+                  "measurement": "#/$defs/MeasurementExpr",
+                  "normalize": "#/$defs/NormalizeExpr",
+                  "ratio": "#/$defs/RatioExpr"
+                },
+                "propertyName": "kind"
+              },
+              "oneOf": [
+                {
+                  "$ref": "#/$defs/MeasurementExpr"
+                },
+                {
+                  "$ref": "#/$defs/NormalizeExpr"
+                },
+                {
+                  "$ref": "#/$defs/RatioExpr"
+                },
+                {
+                  "$ref": "#/$defs/AddExpr"
+                },
+                {
+                  "$ref": "#/$defs/ConstantExpr"
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Y"
+        },
+        "elements": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Elements"
+        },
+        "value_mode": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "raw|normalized",
+          "title": "Value Mode"
+        },
+        "reference_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reference Id"
+        },
+        "reference_version": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reference Version"
+        }
+      },
+      "title": "VariablesConfig",
+      "type": "object"
+    }
+  },
+  "description": "Plot specification - schema 1.1.\n\nThis is the mutable configuration that describes what to plot.",
+  "properties": {
+    "schema_version": {
+      "const": "1.1",
+      "default": "1.1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "plot_id": {
+      "minLength": 1,
+      "title": "Plot Id",
+      "type": "string"
+    },
+    "revision": {
+      "default": 1,
+      "minimum": 1,
+      "title": "Revision",
+      "type": "integer"
+    },
+    "chart_type": {
+      "$ref": "#/$defs/ChartType"
+    },
+    "layers": {
+      "items": {
+        "$ref": "#/$defs/LayerSpec"
+      },
+      "minItems": 1,
+      "title": "Layers",
+      "type": "array"
+    },
+    "variables": {
+      "$ref": "#/$defs/VariablesConfig"
+    },
+    "quality_policy": {
+      "$ref": "#/$defs/QualityPolicy"
+    },
+    "axes": {
+      "$ref": "#/$defs/AxesConfig"
+    },
+    "layout": {
+      "$ref": "#/$defs/LayoutConfig"
+    },
+    "diagram": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/TASDiagram"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "channel_policy_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Channel Policy Id"
+    }
+  },
+  "required": [
+    "plot_id",
+    "chart_type",
+    "layers",
+    "variables"
+  ],
+  "title": "PlotSpec",
+  "type": "object"
+}

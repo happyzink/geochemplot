@@ -1,0 +1,123 @@
+{
+  "schema_version": "1.1",
+  "plot_id": "fixture_ree_001",
+  "revision": 1,
+  "chart_type": "ree",
+  "layers": [
+    {
+      "layer_id": "own_ce6",
+      "label": "CE6 own",
+      "selection_id": "sel_ce6",
+      "visible": true,
+      "aggregation": "none",
+      "style": {
+        "marker_shape": "circle",
+        "marker_fill": "solid",
+        "marker_fill_color": "#D55E00",
+        "marker_edge_color": "#D55E00",
+        "marker_size_pt": 3.5,
+        "marker_edge_width_pt": 0.35,
+        "marker_alpha": 1.0,
+        "line_color": "#D55E00",
+        "line_width_pt": 0.8,
+        "line_dash": "solid",
+        "line_alpha": 1.0,
+        "connect": true
+      },
+      "analysis_style_overrides": {}
+    },
+    {
+      "layer_id": "apollo74235",
+      "label": "Apollo 74235",
+      "selection_id": "sel_apollo",
+      "visible": true,
+      "aggregation": "none",
+      "style": {
+        "marker_shape": "triangle_up",
+        "marker_fill": "solid",
+        "marker_fill_color": "#6B6B6B",
+        "marker_edge_color": "#6B6B6B",
+        "marker_size_pt": 3.0,
+        "marker_edge_width_pt": 0.35,
+        "marker_alpha": 0.6,
+        "line_color": "#6B6B6B",
+        "line_width_pt": 0.6,
+        "line_dash": "dash",
+        "line_alpha": 0.6,
+        "connect": true
+      },
+      "analysis_style_overrides": {}
+    }
+  ],
+  "variables": {
+    "x": null,
+    "y": null,
+    "elements": ["La", "Ce", "Pr", "Nd", "Sm", "Eu", "Gd", "Tb", "Dy", "Ho", "Er", "Tm", "Yb", "Lu"],
+    "value_mode": "normalized",
+    "reference_id": "Chondrite_MS95",
+    "reference_version": "1"
+  },
+  "quality_policy": {
+    "censored": "exclude",
+    "nonpositive_log": "exclude",
+    "missing_spider": "gap",
+    "unconfirmed_unit": "exclude"
+  },
+  "axes": {
+    "x": {
+      "scale": "category",
+      "range_mode": "auto",
+      "min": null,
+      "max": null,
+      "reversed": false,
+      "tick_mode": "auto",
+      "tick_step": null,
+      "log_exponent_step": 1,
+      "number_format": "auto",
+      "decimal_places": 2,
+      "significant_digits": 3,
+      "title_override": null,
+      "title_font_size_pt": 7.0,
+      "tick_font_size_pt": 6.0,
+      "major_grid": false,
+      "minor_ticks": false,
+      "tick_direction": "out",
+      "category_order": ["La", "Ce", "Pr", "Nd", "Sm", "Eu", "Gd", "Tb", "Dy", "Ho", "Er", "Tm", "Yb", "Lu"],
+      "visible_categories": ["La", "Ce", "Pr", "Nd", "Sm", "Eu", "Gd", "Tb", "Dy", "Ho", "Er", "Tm", "Yb", "Lu"]
+    },
+    "y": {
+      "scale": "log10",
+      "range_mode": "auto",
+      "min": null,
+      "max": null,
+      "reversed": false,
+      "tick_mode": "auto",
+      "tick_step": null,
+      "log_exponent_step": 1,
+      "number_format": "auto",
+      "decimal_places": 2,
+      "significant_digits": 3,
+      "title_override": null,
+      "title_font_size_pt": 7.0,
+      "tick_font_size_pt": 6.0,
+      "major_grid": false,
+      "minor_ticks": false,
+      "tick_direction": "out",
+      "category_order": null,
+      "visible_categories": null
+    }
+  },
+  "layout": {
+    "width_mm": 183.0,
+    "height_mm": 110.0,
+    "preset": "nature_main_2026",
+    "font_family": "Arial",
+    "font_size_pt": 7.0,
+    "tick_font_size_pt": 6.0,
+    "legend": {"position": "right", "anchor_x": null, "anchor_y": null},
+    "legend_show_counts": true,
+    "annotations": []
+  },
+  "diagram": null,
+  "channel_policy_id": null
+}

@@ -1,0 +1,629 @@
+{
+  "scene_id": "scn_7bf039c4070d",
+  "schema_version": "1.2",
+  "request_id": "req_fixture_ree_001",
+  "spec_hash": "83bf2db529c810b521562bbff31562ae8b06cb7d7345e9f4ca799444649ec519",
+  "scene_hash": "31db8bddf6b4c3257cd236b2d476db3db125e4158e5813e10c8598433daefd00",
+  "plot_revision": 1,
+  "chart_type": "ree",
+  "resolved_selections": [
+    {
+      "selection_id": "sel_22b4b14e0119",
+      "selection_hash": "1fb4255f718521a7e5dc759208161733d91eade2337764526f6037a927d7a643",
+      "analysis_ids": [
+        "a1",
+        "a2"
+      ],
+      "dataset_versions": [
+        {
+          "version": "1.0"
+        }
+      ]
+    }
+  ],
+  "reference_snapshots": [],
+  "variables": {
+    "x": null,
+    "y": null,
+    "elements": [
+      "La",
+      "Ce",
+      "Pr",
+      "Nd",
+      "Sm",
+      "Eu",
+      "Gd",
+      "Tb",
+      "Dy",
+      "Ho",
+      "Er",
+      "Tm",
+      "Yb",
+      "Lu"
+    ],
+    "value_mode": "raw",
+    "reference_id": null,
+    "reference_version": null
+  },
+  "axes": {
+    "x": {
+      "label": "X",
+      "unit": null,
+      "scale": "linear",
+      "range": [
+        -0.65,
+        13.65
+      ],
+      "ticks": [
+        0.0,
+        2.0,
+        4.0,
+        6.0,
+        8.0,
+        10.0,
+        12.0
+      ]
+    },
+    "y": {
+      "label": "Y",
+      "unit": null,
+      "scale": "linear",
+      "range": [
+        -1.225,
+        36.725
+      ],
+      "ticks": [
+        0.0,
+        10.0,
+        20.0,
+        30.0
+      ]
+    }
+  },
+  "series": [
+    {
+      "series_id": "ser_L1_a1",
+      "layer_id": "L1",
+      "analysis_ids": [
+        "a1"
+      ],
+      "sample_ids": [
+        "SYN-001-A"
+      ],
+      "label": "SYNTHETIC REE (SYN-001-A)",
+      "style": {
+        "marker_shape": "circle",
+        "marker_fill": "solid",
+        "marker_fill_color": "#D55E00",
+        "marker_edge_color": "#D55E00",
+        "marker_size_pt": 3.5,
+        "marker_edge_width_pt": 0.35,
+        "marker_alpha": 1.0,
+        "line_color": "#D55E00",
+        "line_width_pt": 0.8,
+        "line_dash": "solid",
+        "line_alpha": 1.0,
+        "connect": true
+      },
+      "points": [
+        {
+          "point_id": "pt_a1_La",
+          "analysis_id": "a1",
+          "x": 0.0,
+          "y": 10.0,
+          "x_error": null,
+          "y_error": null,
+          "quality_flags": [],
+          "provenance": {
+            "element": "La",
+            "raw_value": 10.0,
+            "raw_unit": "ppm",
+            "normalized_value": null
+          },
+          "resolved_style": null
+        },
+        {
+          "point_id": "pt_a1_Ce",
+          "analysis_id": "a1",
+          "x": 1.0,
+          "y": 25.0,
+          "x_error": null,
+          "y_error": null,
+          "quality_flags": [],
+          "provenance": {
+            "element": "Ce",
+            "raw_value": 25.0,
+            "raw_unit": "ppm",
+            "normalized_value": null
+          },
+          "resolved_style": null
+        },
+        {
+          "point_id": "pt_a1_Pr",
+          "analysis_id": "a1",
+          "x": 2.0,
+          "y": 3.5,
+          "x_error": null,
+          "y_error": null,
+          "quality_flags": [],
+          "provenance": {
+            "element": "Pr",
+            "raw_value": 3.5,
+            "raw_unit": "ppm",
+            "normalized_value": null
+          },
+          "resolved_style": null
+        },
+        {
+          "point_id": "pt_a1_Nd",
+          "analysis_id": "a1",
+          "x": 3.0,
+          "y": 15.0,
+          "x_error": null,
+          "y_error": null,
+          "quality_flags": [],
+          "provenance": {
+            "element": "Nd",
+            "raw_value": 15.0,
+            "raw_unit": "ppm",
+            "normalized_value": null
+          },
+          "resolved_style": null
+        },
+        {
+          "point_id": "pt_a1_Sm",
+          "analysis_id": "a1",
+          "x": 4.0,
+          "y": 4.0,
+          "x_error": null,
+          "y_error": null,
+          "quality_flags": [],
+          "provenance": {
+            "element": "Sm",
+            "raw_value": 4.0,
+            "raw_unit": "ppm",
+            "normalized_value": null
+          },
+          "resolved_style": null
+        },
+        {
+          "point_id": "pt_a1_Eu",
+          "analysis_id": "a1",
+          "x": 5.0,
+          "y": 1.5,
+          "x_error": null,
+          "y_error": null,
+          "quality_flags": [],
+          "provenance": {
+            "element": "Eu",
+            "raw_value": 1.5,
+            "raw_unit": "ppm",
+            "normalized_value": null
+          },
+          "resolved_style": null
+        },
+        {
+          "point_id": "pt_a1_Gd",
+          "analysis_id": "a1",
+          "x": 6.0,
+          "y": 5.0,
+          "x_error": null,
+          "y_error": null,
+          "quality_flags": [],
+          "provenance": {
+            "element": "Gd",
+            "raw_value": 5.0,
+            "raw_unit": "ppm",
+            "normalized_value": null
+          },
+          "resolved_style": null
+        },
+        {
+          "point_id": "pt_a1_Tb",
+          "analysis_id": "a1",
+          "x": 7.0,
+          "y": 0.8,
+          "x_error": null,
+          "y_error": null,
+          "quality_flags": [],
+          "provenance": {
+            "element": "Tb",
+            "raw_value": 0.8,
+            "raw_unit": "ppm",
+            "normalized_value": null
+          },
+          "resolved_style": null
+        },
+        {
+          "point_id": "pt_a1_Dy",
+          "analysis_id": "a1",
+          "x": 8.0,
+          "y": 5.5,
+          "x_error": null,
+          "y_error": null,
+          "quality_flags": [],
+          "provenance": {
+            "element": "Dy",
+            "raw_value": 5.5,
+            "raw_unit": "ppm",
+            "normalized_value": null
+          },
+          "resolved_style": null
+        },
+        {
+          "point_id": "pt_a1_Ho",
+          "analysis_id": "a1",
+          "x": 9.0,
+          "y": 1.2,
+          "x_error": null,
+          "y_error": null,
+          "quality_flags": [],
+          "provenance": {
+            "element": "Ho",
+            "raw_value": 1.2,
+            "raw_unit": "ppm",
+            "normalized_value": null
+          },
+          "resolved_style": null
+        },
+        {
+          "point_id": "pt_a1_Er",
+          "analysis_id": "a1",
+          "x": 10.0,
+          "y": 3.5,
+          "x_error": null,
+          "y_error": null,
+          "quality_flags": [],
+          "provenance": {
+            "element": "Er",
+            "raw_value": 3.5,
+            "raw_unit": "ppm",
+            "normalized_value": null
+          },
+          "resolved_style": null
+        },
+        {
+          "point_id": "pt_a1_Tm",
+          "analysis_id": "a1",
+          "x": 11.0,
+          "y": 0.5,
+          "x_error": null,
+          "y_error": null,
+          "quality_flags": [],
+          "provenance": {
+            "element": "Tm",
+            "raw_value": 0.5,
+            "raw_unit": "ppm",
+            "normalized_value": null
+          },
+          "resolved_style": null
+        },
+        {
+          "point_id": "pt_a1_Yb",
+          "analysis_id": "a1",
+          "x": 12.0,
+          "y": 3.2,
+          "x_error": null,
+          "y_error": null,
+          "quality_flags": [],
+          "provenance": {
+            "element": "Yb",
+            "raw_value": 3.2,
+            "raw_unit": "ppm",
+            "normalized_value": null
+          },
+          "resolved_style": null
+        },
+        {
+          "point_id": "pt_a1_Lu",
+          "analysis_id": "a1",
+          "x": 13.0,
+          "y": 0.5,
+          "x_error": null,
+          "y_error": null,
+          "quality_flags": [],
+          "provenance": {
+            "element": "Lu",
+            "raw_value": 0.5,
+            "raw_unit": "ppm",
+            "normalized_value": null
+          },
+          "resolved_style": null
+        }
+      ],
+      "break_at_missing": true
+    },
+    {
+      "series_id": "ser_L1_a2",
+      "layer_id": "L1",
+      "analysis_ids": [
+        "a2"
+      ],
+      "sample_ids": [
+        "SYN-001-B"
+      ],
+      "label": "SYNTHETIC REE (SYN-001-B)",
+      "style": {
+        "marker_shape": "circle",
+        "marker_fill": "solid",
+        "marker_fill_color": "#D55E00",
+        "marker_edge_color": "#D55E00",
+        "marker_size_pt": 3.5,
+        "marker_edge_width_pt": 0.35,
+        "marker_alpha": 1.0,
+        "line_color": "#D55E00",
+        "line_width_pt": 0.8,
+        "line_dash": "solid",
+        "line_alpha": 1.0,
+        "connect": true
+      },
+      "points": [
+        {
+          "point_id": "pt_a2_La",
+          "analysis_id": "a2",
+          "x": 0.0,
+          "y": 15.0,
+          "x_error": null,
+          "y_error": null,
+          "quality_flags": [],
+          "provenance": {
+            "element": "La",
+            "raw_value": 15.0,
+            "raw_unit": "ppm",
+            "normalized_value": null
+          },
+          "resolved_style": null
+        },
+        {
+          "point_id": "pt_a2_Ce",
+          "analysis_id": "a2",
+          "x": 1.0,
+          "y": 35.0,
+          "x_error": null,
+          "y_error": null,
+          "quality_flags": [],
+          "provenance": {
+            "element": "Ce",
+            "raw_value": 35.0,
+            "raw_unit": "ppm",
+            "normalized_value": null
+          },
+          "resolved_style": null
+        },
+        {
+          "point_id": "pt_a2_Pr",
+          "analysis_id": "a2",
+          "x": 2.0,
+          "y": 5.0,
+          "x_error": null,
+          "y_error": null,
+          "quality_flags": [],
+          "provenance": {
+            "element": "Pr",
+            "raw_value": 5.0,
+            "raw_unit": "ppm",
+            "normalized_value": null
+          },
+          "resolved_style": null
+        },
+        {
+          "point_id": "pt_a2_Nd",
+          "analysis_id": "a2",
+          "x": 3.0,
+          "y": 21.0,
+          "x_error": null,
+          "y_error": null,
+          "quality_flags": [],
+          "provenance": {
+            "element": "Nd",
+            "raw_value": 21.0,
+            "raw_unit": "ppm",
+            "normalized_value": null
+          },
+          "resolved_style": null
+        },
+        {
+          "point_id": "pt_a2_Sm",
+          "analysis_id": "a2",
+          "x": 4.0,
+          "y": 5.5,
+          "x_error": null,
+          "y_error": null,
+          "quality_flags": [],
+          "provenance": {
+            "element": "Sm",
+            "raw_value": 5.5,
+            "raw_unit": "ppm",
+            "normalized_value": null
+          },
+          "resolved_style": null
+        },
+        {
+          "point_id": "pt_a2_Eu",
+          "analysis_id": "a2",
+          "x": 5.0,
+          "y": 2.0,
+          "x_error": null,
+          "y_error": null,
+          "quality_flags": [],
+          "provenance": {
+            "element": "Eu",
+            "raw_value": 2.0,
+            "raw_unit": "ppm",
+            "normalized_value": null
+          },
+          "resolved_style": null
+        },
+        {
+          "point_id": "pt_a2_Gd",
+          "analysis_id": "a2",
+          "x": 6.0,
+          "y": 7.0,
+          "x_error": null,
+          "y_error": null,
+          "quality_flags": [],
+          "provenance": {
+            "element": "Gd",
+            "raw_value": 7.0,
+            "raw_unit": "ppm",
+            "normalized_value": null
+          },
+          "resolved_style": null
+        },
+        {
+          "point_id": "pt_a2_Tb",
+          "analysis_id": "a2",
+          "x": 7.0,
+          "y": 1.1,
+          "x_error": null,
+          "y_error": null,
+          "quality_flags": [],
+          "provenance": {
+            "element": "Tb",
+            "raw_value": 1.1,
+            "raw_unit": "ppm",
+            "normalized_value": null
+          },
+          "resolved_style": null
+        },
+        {
+          "point_id": "pt_a2_Dy",
+          "analysis_id": "a2",
+          "x": 8.0,
+          "y": 7.5,
+          "x_error": null,
+          "y_error": null,
+          "quality_flags": [],
+          "provenance": {
+            "element": "Dy",
+            "raw_value": 7.5,
+            "raw_unit": "ppm",
+            "normalized_value": null
+          },
+          "resolved_style": null
+        },
+        {
+          "point_id": "pt_a2_Ho",
+          "analysis_id": "a2",
+          "x": 9.0,
+          "y": 1.6,
+          "x_error": null,
+          "y_error": null,
+          "quality_flags": [],
+          "provenance": {
+            "element": "Ho",
+            "raw_value": 1.6,
+            "raw_unit": "ppm",
+            "normalized_value": null
+          },
+          "resolved_style": null
+        },
+        {
+          "point_id": "pt_a2_Er",
+          "analysis_id": "a2",
+          "x": 10.0,
+          "y": 4.7,
+          "x_error": null,
+          "y_error": null,
+          "quality_flags": [],
+          "provenance": {
+            "element": "Er",
+            "raw_value": 4.7,
+            "raw_unit": "ppm",
+            "normalized_value": null
+          },
+          "resolved_style": null
+        },
+        {
+          "point_id": "pt_a2_Tm",
+          "analysis_id": "a2",
+          "x": 11.0,
+          "y": 0.7,
+          "x_error": null,
+          "y_error": null,
+          "quality_flags": [],
+          "provenance": {
+            "element": "Tm",
+            "raw_value": 0.7,
+            "raw_unit": "ppm",
+            "normalized_value": null
+          },
+          "resolved_style": null
+        },
+        {
+          "point_id": "pt_a2_Yb",
+          "analysis_id": "a2",
+          "x": 12.0,
+          "y": 4.3,
+          "x_error": null,
+          "y_error": null,
+          "quality_flags": [],
+          "provenance": {
+            "element": "Yb",
+            "raw_value": 4.3,
+            "raw_unit": "ppm",
+            "normalized_value": null
+          },
+          "resolved_style": null
+        },
+        {
+          "point_id": "pt_a2_Lu",
+          "analysis_id": "a2",
+          "x": 13.0,
+          "y": 0.65,
+          "x_error": null,
+          "y_error": null,
+          "quality_flags": [],
+          "provenance": {
+            "element": "Lu",
+            "raw_value": 0.65,
+            "raw_unit": "ppm",
+            "normalized_value": null
+          },
+          "resolved_style": null
+        }
+      ],
+      "break_at_missing": true
+    }
+  ],
+  "diagram_geometry": null,
+  "legend": {},
+  "layout": {
+    "width_mm": 183.0,
+    "height_mm": 110.0,
+    "preset": "nature_main_2026",
+    "font_family": "Arial",
+    "font_size_pt": 7.0,
+    "tick_font_size_pt": 6.0,
+    "legend": {
+      "position": "right",
+      "anchor_x": null,
+      "anchor_y": null
+    },
+    "legend_show_counts": true,
+    "annotations": []
+  },
+  "font_manifest": {
+    "primary": "Arial",
+    "fallback": [
+      "Arial",
+      "Helvetica",
+      "sans-serif"
+    ],
+    "available": true,
+    "substituted_with": null
+  },
+  "warnings": [],
+  "counts": {
+    "selected_analyses": 2,
+    "valid_analyses": 2,
+    "excluded_analyses": 0,
+    "distinct_samples": 2,
+    "physical_identity_unknown": 0,
+    "plotted_points": 28,
+    "out_of_view": 0,
+    "hidden_by_style": 0
+  },
+  "exclusions": [],
+  "software_version": "1.0.0"
+}

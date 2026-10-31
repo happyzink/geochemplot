@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.1",
+  "generated_at": null,
+  "fixtures": {
+    "valid": [
+      {"file": "scatter_valid.json", "chart_type": "scatter", "description": "Rb/Sr vs (La/Yb)_N scatter with manual axes"},
+      {"file": "ree_valid.json", "chart_type": "ree", "description": "Two-layer normalized REE with Chondrite_MS95"},
+      {"file": "ree_raw_no_reference_valid.json", "chart_type": "ree", "description": "Raw REE without reference - valid"},
+      {"file": "spider_valid.json", "chart_type": "spider", "description": "27-element spider with PM_SM89"},
+      {"file": "tas_valid.json", "chart_type": "tas", "description": "TAS reference diagram with LeMaitre model"}
+    ],
+    "reject": [
+      {"file": "ree_no_reference_reject.json", "reason": "normalized REE without reference_id", "error_code": "VALIDATION_ERROR"},
+      {"file": "scatter_no_x_reject.json", "reason": "scatter without x expression", "error_code": "VALIDATION_ERROR"},
+      {"file": "ree_duplicate_layer_reject.json", "reason": "duplicate layer_id", "error_code": "VALIDATION_ERROR"}
+    ]
+  }
+}

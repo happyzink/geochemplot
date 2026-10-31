@@ -1,0 +1,11 @@
+{
+  "hashes.json": "f5b48a822df8ada5fc4d81e56ebafc3306624880de536a2a7f38b6b93084d722",
+  "ree_duplicate_layer_reject.json": "f9c1f2e2344441e3e3b3e757e19f32186db64ed3fd880bde018f760d2b50edb3",
+  "ree_no_reference_reject.json": "5ff39cf045d1b550d3386a1fbd0de02f93c1adc499d09d31409d239e7be12bf9",
+  "ree_raw_no_reference_valid.json": "0615421b5978579f6d25d1542d161847068620afb95f016a5a249542cdefd87c",
+  "ree_valid.json": "1591c3d26ab402db2be0699cd02a895c51eb1dea89ae137c7942353e6265ad10",
+  "scatter_no_x_reject.json": "7893cc881bcd81d93c1a74577f9a952ffe451378ffcc7f23138ad14766850fb2",
+  "scatter_valid.json": "b8d56487377227a5cb332b66a0c2a4bbc6faaf822466e50144d7856660216dfd",
+  "spider_valid.json": "c637b1bc1fb15566d5426e0884d6b228d229fb9603fe59d27042eab63cc395dd",
+  "tas_valid.json": "1a040dabd530024a7444913b6c487659595c9f3cd9f874ddc136aa58f9d64e67"
+}

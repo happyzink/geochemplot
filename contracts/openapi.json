@@ -1,0 +1,6165 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "GeoPlot API",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/api/v1/datasets/query": {
+      "post": {
+        "tags": [
+          "data"
+        ],
+        "summary": "Query Analyses",
+        "operationId": "query_analyses_api_v1_datasets_query_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/QueryRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/datasets/facets": {
+      "post": {
+        "tags": [
+          "data"
+        ],
+        "summary": "Get Facets",
+        "operationId": "get_facets_api_v1_datasets_facets_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/QueryRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FacetResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/analyses/{analysis_id}": {
+      "get": {
+        "tags": [
+          "data"
+        ],
+        "summary": "Get Analysis",
+        "operationId": "get_analysis_api_v1_analyses__analysis_id__get",
+        "parameters": [
+          {
+            "name": "analysis_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Analysis Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AnalysisDetail"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/selections": {
+      "get": {
+        "tags": [
+          "data"
+        ],
+        "summary": "List Selections",
+        "operationId": "list_selections_api_v1_selections_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "data"
+        ],
+        "summary": "Create Selection",
+        "operationId": "create_selection_api_v1_selections_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SelectionCreate"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SelectionResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/selections/{selection_id}": {
+      "get": {
+        "tags": [
+          "data"
+        ],
+        "summary": "Get Selection",
+        "operationId": "get_selection_api_v1_selections__selection_id__get",
+        "parameters": [
+          {
+            "name": "selection_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Selection Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SelectionResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/selections/{selection_id}/analyses/{analysis_id}": {
+      "delete": {
+        "tags": [
+          "data"
+        ],
+        "summary": "Remove From Selection",
+        "operationId": "remove_from_selection_api_v1_selections__selection_id__analyses__analysis_id__delete",
+        "parameters": [
+          {
+            "name": "selection_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Selection Id"
+            }
+          },
+          {
+            "name": "analysis_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Analysis Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/datasets/import": {
+      "post": {
+        "tags": [
+          "data"
+        ],
+        "summary": "Import Dataset",
+        "operationId": "import_dataset_api_v1_datasets_import_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ImportRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/plots/compute": {
+      "post": {
+        "tags": [
+          "plots"
+        ],
+        "summary": "Compute Scene",
+        "description": "Compute a PlotScene from a PlotSpec against frozen data.\n\nSchema 1.2 contract:\n- request_id is echoed back (client uses it to discard stale results)\n- spec.selection_id contains frozen dataset_id+version\n- Returns PlotScene directly (not wrapped)\n- Scene contains schema_version=\"1.2\", chart_type, variables, complete axes",
+        "operationId": "compute_scene_api_v1_plots_compute_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ComputeRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PlotScene"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/plots/validate": {
+      "post": {
+        "tags": [
+          "plots"
+        ],
+        "summary": "Validate Spec",
+        "description": "Validate a PlotSpec without computing.",
+        "operationId": "validate_spec_api_v1_plots_validate_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PlotSpec"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/projects/": {
+      "get": {
+        "tags": [
+          "projects"
+        ],
+        "summary": "List Projects",
+        "description": "List all projects with names (from manifests) and figure counts.",
+        "operationId": "list_projects_api_v1_projects__get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "projects"
+        ],
+        "summary": "Create Project",
+        "description": "Create a new project.",
+        "operationId": "create_project_api_v1_projects__post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateProjectRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateProjectResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/projects/export": {
+      "post": {
+        "tags": [
+          "projects"
+        ],
+        "summary": "Export Project",
+        "description": "Export project to .geoplot package.",
+        "operationId": "export_project_api_v1_projects_export_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ExportProjectRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExportProjectResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/projects/restore": {
+      "post": {
+        "tags": [
+          "projects"
+        ],
+        "summary": "Restore Project",
+        "description": "Restore project from uploaded .geoplot package.",
+        "operationId": "restore_project_api_v1_projects_restore_post",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "$ref": "#/components/schemas/Body_restore_project_api_v1_projects_restore_post"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RestoreProjectResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/projects/{project_id}": {
+      "get": {
+        "tags": [
+          "projects"
+        ],
+        "summary": "Get Project",
+        "description": "Get project metadata.",
+        "operationId": "get_project_api_v1_projects__project_id__get",
+        "parameters": [
+          {
+            "name": "project_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Project Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProjectInfoResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/projects/{project_id}/check-conflict": {
+      "get": {
+        "tags": [
+          "projects"
+        ],
+        "summary": "Check Conflict",
+        "description": "Check for version conflict (optimistic locking).",
+        "operationId": "check_conflict_api_v1_projects__project_id__check_conflict_get",
+        "parameters": [
+          {
+            "name": "project_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Project Id"
+            }
+          },
+          {
+            "name": "expected_revision",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "title": "Expected Revision"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/projects/{project_id}/save": {
+      "post": {
+        "tags": [
+          "projects"
+        ],
+        "summary": "Save Project",
+        "description": "Save project (flush pending changes); optionally rename.",
+        "operationId": "save_project_api_v1_projects__project_id__save_post",
+        "parameters": [
+          {
+            "name": "project_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Project Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "anyOf": [
+                  {
+                    "$ref": "#/components/schemas/SaveProjectRequest"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "title": "Req"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/projects/{project_id}/figures": {
+      "get": {
+        "tags": [
+          "projects"
+        ],
+        "summary": "List Project Figures",
+        "description": "List all figures in a project.",
+        "operationId": "list_project_figures_api_v1_projects__project_id__figures_get",
+        "parameters": [
+          {
+            "name": "project_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Project Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/catalog/builtin": {
+      "get": {
+        "tags": [
+          "catalog"
+        ],
+        "summary": "Get Builtin Catalog",
+        "description": "Get built-in catalog items and reference compositions.",
+        "operationId": "get_builtin_catalog_api_v1_catalog_builtin_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/catalog/attach": {
+      "post": {
+        "tags": [
+          "catalog"
+        ],
+        "summary": "Attach Item",
+        "description": "Attach a built-in catalog item to a project. Idempotent.",
+        "operationId": "attach_item_api_v1_catalog_attach_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AttachRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AttachResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/catalog/references/{ref_id}": {
+      "get": {
+        "tags": [
+          "catalog"
+        ],
+        "summary": "Get Reference",
+        "description": "Get full reference composition details.",
+        "operationId": "get_reference_api_v1_catalog_references__ref_id__get",
+        "parameters": [
+          {
+            "name": "ref_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Ref Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReferenceDetail"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/imports/scan": {
+      "post": {
+        "tags": [
+          "imports"
+        ],
+        "summary": "Scan Import",
+        "description": "Scan an uploaded Excel workbook and return structure preview.",
+        "operationId": "scan_import_api_v1_imports_scan_post",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "$ref": "#/components/schemas/Body_scan_import_api_v1_imports_scan_post"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ScanResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/imports/{scan_id}/preview": {
+      "get": {
+        "tags": [
+          "imports"
+        ],
+        "summary": "Get Preview",
+        "description": "Get detailed preview of a scanned workbook.",
+        "operationId": "get_preview_api_v1_imports__scan_id__preview_get",
+        "parameters": [
+          {
+            "name": "scan_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Scan Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PreviewResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/imports/{scan_id}/commit": {
+      "post": {
+        "tags": [
+          "imports"
+        ],
+        "summary": "Commit Import",
+        "description": "Commit a scanned workbook to create a dataset version and import data.",
+        "operationId": "commit_import_api_v1_imports__scan_id__commit_post",
+        "parameters": [
+          {
+            "name": "scan_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Scan Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CommitRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CommitResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/figures": {
+      "post": {
+        "tags": [
+          "figures"
+        ],
+        "summary": "Create Figure",
+        "description": "Create a new figure (draft) from a PlotSpec.",
+        "operationId": "create_figure_api_v1_figures_post",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FigureCreateRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FigureCreateResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "figures"
+        ],
+        "summary": "List Figures",
+        "description": "List figures, optionally filtered by project.",
+        "operationId": "list_figures_api_v1_figures_get",
+        "parameters": [
+          {
+            "name": "project_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Project Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/figures/{figure_id}": {
+      "get": {
+        "tags": [
+          "figures"
+        ],
+        "summary": "Get Figure",
+        "description": "Get figure metadata.",
+        "operationId": "get_figure_api_v1_figures__figure_id__get",
+        "parameters": [
+          {
+            "name": "figure_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Figure Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FigureInfo"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "figures"
+        ],
+        "summary": "Delete Figure",
+        "description": "Delete a figure and all its revisions.",
+        "operationId": "delete_figure_api_v1_figures__figure_id__delete",
+        "parameters": [
+          {
+            "name": "figure_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Figure Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "figures"
+        ],
+        "summary": "Patch Figure",
+        "description": "Rename or archive a figure without creating a revision.",
+        "operationId": "patch_figure_api_v1_figures__figure_id__patch",
+        "parameters": [
+          {
+            "name": "figure_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Figure Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FigurePatchRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/figures/{figure_id}/revise": {
+      "post": {
+        "tags": [
+          "figures"
+        ],
+        "summary": "Revise Figure",
+        "description": "Create a new revision of an existing figure.",
+        "operationId": "revise_figure_api_v1_figures__figure_id__revise_post",
+        "parameters": [
+          {
+            "name": "figure_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Figure Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FigureCreateRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/figures/{figure_id}/publish": {
+      "post": {
+        "tags": [
+          "figures"
+        ],
+        "summary": "Publish Figure",
+        "description": "Publish a figure (transition from draft to published).",
+        "operationId": "publish_figure_api_v1_figures__figure_id__publish_post",
+        "parameters": [
+          {
+            "name": "figure_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Figure Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/figures/{figure_id}/render": {
+      "post": {
+        "tags": [
+          "figures"
+        ],
+        "summary": "Render Figure",
+        "description": "Render a figure to PNG/PDF/SVG.",
+        "operationId": "render_figure_api_v1_figures__figure_id__render_post",
+        "parameters": [
+          {
+            "name": "figure_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Figure Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RenderRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RenderResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/figures/{figure_id}/versions": {
+      "get": {
+        "tags": [
+          "figures"
+        ],
+        "summary": "List Figure Versions",
+        "description": "List all versions of a figure.",
+        "operationId": "list_figure_versions_api_v1_figures__figure_id__versions_get",
+        "parameters": [
+          {
+            "name": "figure_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Figure Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/figures/{figure_id}/restore": {
+      "post": {
+        "tags": [
+          "figures"
+        ],
+        "summary": "Restore Figure Version",
+        "description": "Restore a figure to a previous version.",
+        "operationId": "restore_figure_version_api_v1_figures__figure_id__restore_post",
+        "parameters": [
+          {
+            "name": "figure_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Figure Id"
+            }
+          },
+          {
+            "name": "revision_id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Revision Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/export-roots": {
+      "get": {
+        "tags": [
+          "exports"
+        ],
+        "summary": "List Export Roots",
+        "description": "List registered export root directories.",
+        "operationId": "list_export_roots_api_v1_export_roots_get",
+        "parameters": [
+          {
+            "name": "project_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "",
+              "title": "Project Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "exports"
+        ],
+        "summary": "Create Export Root",
+        "description": "Register a new export root directory (validated writable).",
+        "operationId": "create_export_root_api_v1_export_roots_post",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ExportRootCreateRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExportRootInfo"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/export-roots/choose": {
+      "post": {
+        "tags": [
+          "exports"
+        ],
+        "summary": "Choose Export Root",
+        "description": "Return a Job whose result is the default export root choice.\n\n浏览器环境无原生目录对话框：返回项目 exports 目录作为默认根，\n由前端渲染“使用默认目录 / 手动输入路径”选择界面。",
+        "operationId": "choose_export_root_api_v1_export_roots_choose_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChooseRootRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/exports": {
+      "post": {
+        "tags": [
+          "exports"
+        ],
+        "summary": "Create Export",
+        "description": "Render figure revisions to PNG/PDF/SVG in the export root and record files.",
+        "operationId": "create_export_api_v1_exports_post",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ExportCreateRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "exports"
+        ],
+        "summary": "List Exports",
+        "description": "List export records (optionally by project).",
+        "operationId": "list_exports_api_v1_exports_get",
+        "parameters": [
+          {
+            "name": "project_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Project Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/exports/{export_id}": {
+      "get": {
+        "tags": [
+          "exports"
+        ],
+        "summary": "Get Export",
+        "description": "Get export record with disk-verified files.",
+        "operationId": "get_export_api_v1_exports__export_id__get",
+        "parameters": [
+          {
+            "name": "export_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Export Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/exports/{export_id}/open-folder": {
+      "post": {
+        "tags": [
+          "exports"
+        ],
+        "summary": "Open Export Folder",
+        "description": "Open the export folder in the system file manager.",
+        "operationId": "open_export_folder_api_v1_exports__export_id__open_folder_post",
+        "parameters": [
+          {
+            "name": "export_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Export Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/exports/{export_id}/reexport": {
+      "post": {
+        "tags": [
+          "exports"
+        ],
+        "summary": "Reexport",
+        "description": "Re-render an export from its figure revision (optionally to a new root).",
+        "operationId": "reexport_api_v1_exports__export_id__reexport_post",
+        "parameters": [
+          {
+            "name": "export_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Export Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "anyOf": [
+                  {
+                    "$ref": "#/components/schemas/ReexportBody"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "title": "Body"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/health": {
+      "get": {
+        "summary": "Health",
+        "operationId": "health_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HealthResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/health": {
+      "get": {
+        "summary": "Health V1",
+        "operationId": "health_v1_api_v1_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HealthResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/runtime/status": {
+      "get": {
+        "summary": "Runtime Status",
+        "operationId": "runtime_status_api_v1_runtime_status_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/directory/choose": {
+      "post": {
+        "tags": [
+          "directory"
+        ],
+        "summary": "Choose Directory",
+        "description": "Validate and choose a directory path.",
+        "operationId": "choose_directory_api_v1_directory_choose_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChooseDirectoryRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ChooseDirectoryResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/directory/open-folder": {
+      "post": {
+        "tags": [
+          "directory"
+        ],
+        "summary": "Open Folder",
+        "description": "Open a folder in system file manager.",
+        "operationId": "open_folder_api_v1_directory_open_folder_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OpenFolderRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OpenFolderResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/directory/reexport": {
+      "post": {
+        "tags": [
+          "directory"
+        ],
+        "summary": "Reexport",
+        "description": "Re-export files from source to target directory.",
+        "operationId": "reexport_api_v1_directory_reexport_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReexportRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReexportResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/datasets": {
+      "get": {
+        "tags": [
+          "datasets"
+        ],
+        "summary": "List Datasets",
+        "description": "List all datasets with optional filtering.",
+        "operationId": "list_datasets_api_v1_datasets_get",
+        "parameters": [
+          {
+            "name": "role",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Role"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 1000,
+              "minimum": 1,
+              "default": 100,
+              "title": "Limit"
+            }
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 0,
+              "default": 0,
+              "title": "Offset"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DatasetListResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/jobs": {
+      "get": {
+        "tags": [
+          "jobs"
+        ],
+        "summary": "List Jobs",
+        "description": "List all jobs with optional status filter.",
+        "operationId": "list_jobs_api_v1_jobs_get",
+        "parameters": [
+          {
+            "name": "status",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Status"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 1000,
+              "minimum": 1,
+              "default": 100,
+              "title": "Limit"
+            }
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 0,
+              "default": 0,
+              "title": "Offset"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/JobListResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/jobs/{job_id}": {
+      "get": {
+        "tags": [
+          "jobs"
+        ],
+        "summary": "Get Job",
+        "description": "Get job detail.",
+        "operationId": "get_job_api_v1_jobs__job_id__get",
+        "parameters": [
+          {
+            "name": "job_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Job Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/JobDetail"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "jobs"
+        ],
+        "summary": "Delete Job",
+        "description": "Delete a job record.",
+        "operationId": "delete_job_api_v1_jobs__job_id__delete",
+        "parameters": [
+          {
+            "name": "job_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Job Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/jobs/{job_id}/cancel": {
+      "post": {
+        "tags": [
+          "jobs"
+        ],
+        "summary": "Cancel Job",
+        "description": "Cancel a queued or running job.",
+        "operationId": "cancel_job_api_v1_jobs__job_id__cancel_post",
+        "parameters": [
+          {
+            "name": "job_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Job Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AddExpr-Input": {
+        "properties": {
+          "kind": {
+            "type": "string",
+            "const": "add",
+            "title": "Kind",
+            "default": "add"
+          },
+          "operands": {
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/MeasurementExpr"
+                },
+                {
+                  "$ref": "#/components/schemas/NormalizeExpr-Input"
+                },
+                {
+                  "$ref": "#/components/schemas/RatioExpr-Input"
+                },
+                {
+                  "$ref": "#/components/schemas/AddExpr-Input"
+                },
+                {
+                  "$ref": "#/components/schemas/ConstantExpr"
+                }
+              ],
+              "discriminator": {
+                "propertyName": "kind",
+                "mapping": {
+                  "add": "#/components/schemas/AddExpr-Input",
+                  "constant": "#/components/schemas/ConstantExpr",
+                  "measurement": "#/components/schemas/MeasurementExpr",
+                  "normalize": "#/components/schemas/NormalizeExpr-Input",
+                  "ratio": "#/components/schemas/RatioExpr-Input"
+                }
+              }
+            },
+            "type": "array",
+            "minItems": 2,
+            "title": "Operands"
+          }
+        },
+        "type": "object",
+        "required": [
+          "operands"
+        ],
+        "title": "AddExpr"
+      },
+      "AddExpr-Output": {
+        "properties": {
+          "kind": {
+            "type": "string",
+            "const": "add",
+            "title": "Kind",
+            "default": "add"
+          },
+          "operands": {
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/MeasurementExpr"
+                },
+                {
+                  "$ref": "#/components/schemas/NormalizeExpr-Output"
+                },
+                {
+                  "$ref": "#/components/schemas/RatioExpr-Output"
+                },
+                {
+                  "$ref": "#/components/schemas/AddExpr-Output"
+                },
+                {
+                  "$ref": "#/components/schemas/ConstantExpr"
+                }
+              ],
+              "discriminator": {
+                "propertyName": "kind",
+                "mapping": {
+                  "add": "#/components/schemas/AddExpr-Output",
+                  "constant": "#/components/schemas/ConstantExpr",
+                  "measurement": "#/components/schemas/MeasurementExpr",
+                  "normalize": "#/components/schemas/NormalizeExpr-Output",
+                  "ratio": "#/components/schemas/RatioExpr-Output"
+                }
+              }
+            },
+            "type": "array",
+            "minItems": 2,
+            "title": "Operands"
+          }
+        },
+        "type": "object",
+        "required": [
+          "operands"
+        ],
+        "title": "AddExpr"
+      },
+      "AnalysisDetail": {
+        "properties": {
+          "analysis_id": {
+            "type": "string",
+            "title": "Analysis Id"
+          },
+          "sample_id": {
+            "type": "string",
+            "title": "Sample Id"
+          },
+          "raw_name": {
+            "type": "string",
+            "title": "Raw Name"
+          },
+          "parent_sample": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Parent Sample"
+          },
+          "mission": {
+            "type": "string",
+            "title": "Mission"
+          },
+          "material_type": {
+            "type": "string",
+            "title": "Material Type"
+          },
+          "mineral_group": {
+            "type": "string",
+            "title": "Mineral Group"
+          },
+          "sample_group": {
+            "type": "string",
+            "title": "Sample Group"
+          },
+          "classification_evidence": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Classification Evidence"
+          },
+          "measurements": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Measurements"
+          }
+        },
+        "type": "object",
+        "required": [
+          "analysis_id",
+          "sample_id",
+          "raw_name",
+          "parent_sample",
+          "mission",
+          "material_type",
+          "mineral_group",
+          "sample_group",
+          "classification_evidence",
+          "measurements"
+        ],
+        "title": "AnalysisDetail"
+      },
+      "AnalysisStyleOverride": {
+        "properties": {
+          "marker_shape": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/MarkerShape"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "marker_fill": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/MarkerFill"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "marker_fill_color": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^#[0-9A-Fa-f]{6}$"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Marker Fill Color"
+          },
+          "marker_edge_color": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^#[0-9A-Fa-f]{6}$"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Marker Edge Color"
+          },
+          "marker_size_pt": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 20.0,
+                "minimum": 1.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Marker Size Pt"
+          },
+          "marker_edge_width_pt": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 3.0,
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Marker Edge Width Pt"
+          },
+          "marker_alpha": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 1.0,
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Marker Alpha"
+          },
+          "line_color": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^#[0-9A-Fa-f]{6}$"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Line Color"
+          },
+          "line_width_pt": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 5.0,
+                "minimum": 0.1
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Line Width Pt"
+          },
+          "line_dash": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/LineDash"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "line_alpha": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 1.0,
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Line Alpha"
+          },
+          "connect": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Connect"
+          }
+        },
+        "type": "object",
+        "title": "AnalysisStyleOverride",
+        "description": "Partial style override for specific analysis points within a layer."
+      },
+      "Annotation": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "text": {
+            "type": "string",
+            "title": "Text"
+          },
+          "anchor_x": {
+            "type": "number",
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Anchor X"
+          },
+          "anchor_y": {
+            "type": "number",
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Anchor Y"
+          },
+          "font_size_pt": {
+            "type": "number",
+            "maximum": 36.0,
+            "minimum": 4.0,
+            "title": "Font Size Pt",
+            "default": 7.0
+          },
+          "color": {
+            "type": "string",
+            "pattern": "^#[0-9A-Fa-f]{6}$",
+            "title": "Color",
+            "default": "#000000"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "text",
+          "anchor_x",
+          "anchor_y"
+        ],
+        "title": "Annotation"
+      },
+      "AttachRequest": {
+        "properties": {
+          "project_id": {
+            "type": "string",
+            "title": "Project Id"
+          },
+          "data_id": {
+            "type": "string",
+            "title": "Data Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "project_id",
+          "data_id"
+        ],
+        "title": "AttachRequest"
+      },
+      "AttachResponse": {
+        "properties": {
+          "attached": {
+            "type": "boolean",
+            "title": "Attached"
+          },
+          "data_id": {
+            "type": "string",
+            "title": "Data Id"
+          },
+          "project_id": {
+            "type": "string",
+            "title": "Project Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "attached",
+          "data_id",
+          "project_id"
+        ],
+        "title": "AttachResponse"
+      },
+      "AxesConfig": {
+        "properties": {
+          "x": {
+            "$ref": "#/components/schemas/AxisFormat"
+          },
+          "y": {
+            "$ref": "#/components/schemas/AxisFormat"
+          }
+        },
+        "type": "object",
+        "title": "AxesConfig",
+        "description": "Container for X and Y axis formats."
+      },
+      "AxisFormat": {
+        "properties": {
+          "scale": {
+            "type": "string",
+            "title": "Scale",
+            "description": "linear|log10|category",
+            "default": "linear"
+          },
+          "range_mode": {
+            "type": "string",
+            "title": "Range Mode",
+            "description": "auto|manual",
+            "default": "auto"
+          },
+          "min": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Min"
+          },
+          "max": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Max"
+          },
+          "reversed": {
+            "type": "boolean",
+            "title": "Reversed",
+            "default": false
+          },
+          "tick_mode": {
+            "type": "string",
+            "title": "Tick Mode",
+            "description": "auto|step",
+            "default": "auto"
+          },
+          "tick_step": {
+            "anyOf": [
+              {
+                "type": "number",
+                "exclusiveMinimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Tick Step"
+          },
+          "log_exponent_step": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "maximum": 6.0,
+                "minimum": 1.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Log Exponent Step"
+          },
+          "number_format": {
+            "type": "string",
+            "title": "Number Format",
+            "description": "auto|fixed|scientific",
+            "default": "auto"
+          },
+          "decimal_places": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "maximum": 8.0,
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Decimal Places"
+          },
+          "significant_digits": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "maximum": 8.0,
+                "minimum": 1.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Significant Digits"
+          },
+          "title_override": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Title Override"
+          },
+          "title_font_size_pt": {
+            "type": "number",
+            "maximum": 36.0,
+            "minimum": 4.0,
+            "title": "Title Font Size Pt",
+            "default": 7.0
+          },
+          "tick_font_size_pt": {
+            "type": "number",
+            "maximum": 36.0,
+            "minimum": 4.0,
+            "title": "Tick Font Size Pt",
+            "default": 6.0
+          },
+          "major_grid": {
+            "type": "boolean",
+            "title": "Major Grid",
+            "default": false
+          },
+          "minor_ticks": {
+            "type": "boolean",
+            "title": "Minor Ticks",
+            "default": false
+          },
+          "tick_direction": {
+            "type": "string",
+            "title": "Tick Direction",
+            "description": "in|out",
+            "default": "out"
+          },
+          "category_order": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Category Order"
+          },
+          "visible_categories": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Visible Categories"
+          }
+        },
+        "type": "object",
+        "title": "AxisFormat",
+        "description": "Axis format - schema 1.1 replaces flat x_scale/y_scale/x_range/y_range."
+      },
+      "AxisScene": {
+        "properties": {
+          "label": {
+            "type": "string",
+            "title": "Label"
+          },
+          "unit": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Unit"
+          },
+          "scale": {
+            "type": "string",
+            "title": "Scale"
+          },
+          "range": {
+            "items": {
+              "type": "number"
+            },
+            "type": "array",
+            "maxItems": 2,
+            "minItems": 2,
+            "title": "Range"
+          },
+          "ticks": {
+            "items": {
+              "type": "number"
+            },
+            "type": "array",
+            "title": "Ticks"
+          },
+          "reversed": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Reversed"
+          },
+          "number_format": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Number Format"
+          },
+          "decimal_places": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Decimal Places"
+          },
+          "significant_digits": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Significant Digits"
+          },
+          "tick_mode": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Tick Mode"
+          },
+          "tick_step": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Tick Step"
+          },
+          "log_exponent_step": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Log Exponent Step"
+          },
+          "title_font_size_pt": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Title Font Size Pt"
+          },
+          "tick_font_size_pt": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Tick Font Size Pt"
+          },
+          "major_grid": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Major Grid"
+          },
+          "minor_ticks": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Minor Ticks"
+          },
+          "tick_direction": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Tick Direction"
+          },
+          "category_order": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Category Order"
+          },
+          "visible_categories": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Visible Categories"
+          }
+        },
+        "type": "object",
+        "required": [
+          "label",
+          "scale",
+          "range",
+          "ticks"
+        ],
+        "title": "AxisScene"
+      },
+      "Body_restore_project_api_v1_projects_restore_post": {
+        "properties": {
+          "file": {
+            "type": "string",
+            "contentMediaType": "application/octet-stream",
+            "title": "File"
+          }
+        },
+        "type": "object",
+        "required": [
+          "file"
+        ],
+        "title": "Body_restore_project_api_v1_projects_restore_post"
+      },
+      "Body_scan_import_api_v1_imports_scan_post": {
+        "properties": {
+          "file": {
+            "type": "string",
+            "contentMediaType": "application/octet-stream",
+            "title": "File"
+          }
+        },
+        "type": "object",
+        "required": [
+          "file"
+        ],
+        "title": "Body_scan_import_api_v1_imports_scan_post"
+      },
+      "ChartType": {
+        "type": "string",
+        "enum": [
+          "scatter",
+          "ree",
+          "spider",
+          "tas"
+        ],
+        "title": "ChartType"
+      },
+      "ChooseDirectoryRequest": {
+        "properties": {
+          "path": {
+            "type": "string",
+            "title": "Path"
+          }
+        },
+        "type": "object",
+        "required": [
+          "path"
+        ],
+        "title": "ChooseDirectoryRequest"
+      },
+      "ChooseDirectoryResponse": {
+        "properties": {
+          "path": {
+            "type": "string",
+            "title": "Path"
+          },
+          "exists": {
+            "type": "boolean",
+            "title": "Exists"
+          },
+          "writable": {
+            "type": "boolean",
+            "title": "Writable"
+          }
+        },
+        "type": "object",
+        "required": [
+          "path",
+          "exists",
+          "writable"
+        ],
+        "title": "ChooseDirectoryResponse"
+      },
+      "ChooseRootRequest": {
+        "properties": {
+          "project_id": {
+            "type": "string",
+            "title": "Project Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "project_id"
+        ],
+        "title": "ChooseRootRequest"
+      },
+      "CommitRequest": {
+        "properties": {
+          "scan_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Scan Id"
+          },
+          "dataset_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Dataset Id"
+          },
+          "label": {
+            "type": "string",
+            "title": "Label",
+            "default": "Imported dataset"
+          },
+          "role": {
+            "type": "string",
+            "title": "Role",
+            "default": "user_data"
+          },
+          "column_map": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Column Map"
+          },
+          "sheet_config": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Sheet Config"
+          }
+        },
+        "type": "object",
+        "title": "CommitRequest"
+      },
+      "CommitResponse": {
+        "properties": {
+          "dataset_version": {
+            "type": "string",
+            "title": "Dataset Version"
+          },
+          "file_sha256": {
+            "type": "string",
+            "title": "File Sha256"
+          },
+          "mapping_hash": {
+            "type": "string",
+            "title": "Mapping Hash"
+          },
+          "is_duplicate": {
+            "type": "boolean",
+            "title": "Is Duplicate"
+          },
+          "message": {
+            "type": "string",
+            "title": "Message"
+          },
+          "job_id": {
+            "type": "string",
+            "title": "Job Id",
+            "default": ""
+          },
+          "analysis_count": {
+            "type": "integer",
+            "title": "Analysis Count",
+            "default": 0
+          }
+        },
+        "type": "object",
+        "required": [
+          "dataset_version",
+          "file_sha256",
+          "mapping_hash",
+          "is_duplicate",
+          "message"
+        ],
+        "title": "CommitResponse"
+      },
+      "ComputeRequest": {
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "title": "Request Id"
+          },
+          "spec": {
+            "$ref": "#/components/schemas/PlotSpec"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_id",
+          "spec"
+        ],
+        "title": "ComputeRequest",
+        "description": "Schema 1.2 compute request.\n\nrequest_id is client-provided for discarding stale results.\nspec contains selection_id which has frozen dataset_id+version,\nso dataset_versions is NOT required here."
+      },
+      "ConstantExpr": {
+        "properties": {
+          "kind": {
+            "type": "string",
+            "const": "constant",
+            "title": "Kind",
+            "default": "constant"
+          },
+          "value": {
+            "type": "number",
+            "title": "Value"
+          },
+          "unit": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Unit"
+          }
+        },
+        "type": "object",
+        "required": [
+          "value",
+          "unit"
+        ],
+        "title": "ConstantExpr"
+      },
+      "CreateProjectRequest": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Name"
+          }
+        },
+        "type": "object",
+        "required": [
+          "name"
+        ],
+        "title": "CreateProjectRequest"
+      },
+      "CreateProjectResponse": {
+        "properties": {
+          "project_id": {
+            "type": "string",
+            "title": "Project Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "created_at": {
+            "type": "string",
+            "title": "Created At"
+          }
+        },
+        "type": "object",
+        "required": [
+          "project_id",
+          "name",
+          "created_at"
+        ],
+        "title": "CreateProjectResponse"
+      },
+      "DatasetListResponse": {
+        "properties": {
+          "datasets": {
+            "items": {
+              "$ref": "#/components/schemas/DatasetSummary"
+            },
+            "type": "array",
+            "title": "Datasets"
+          },
+          "total": {
+            "type": "integer",
+            "title": "Total"
+          }
+        },
+        "type": "object",
+        "required": [
+          "datasets",
+          "total"
+        ],
+        "title": "DatasetListResponse"
+      },
+      "DatasetSummary": {
+        "properties": {
+          "dataset_id": {
+            "type": "string",
+            "title": "Dataset Id"
+          },
+          "version": {
+            "type": "string",
+            "title": "Version"
+          },
+          "label": {
+            "type": "string",
+            "title": "Label"
+          },
+          "role": {
+            "type": "string",
+            "title": "Role"
+          },
+          "analysis_count": {
+            "type": "integer",
+            "title": "Analysis Count"
+          },
+          "created_at": {
+            "type": "string",
+            "title": "Created At"
+          }
+        },
+        "type": "object",
+        "required": [
+          "dataset_id",
+          "version",
+          "label",
+          "role",
+          "analysis_count",
+          "created_at"
+        ],
+        "title": "DatasetSummary"
+      },
+      "DiagramGeometry": {
+        "properties": {
+          "model_id": {
+            "type": "string",
+            "title": "Model Id"
+          },
+          "model_version": {
+            "type": "string",
+            "title": "Model Version"
+          },
+          "source_hash": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Source Hash"
+          },
+          "polygons": {
+            "items": {
+              "$ref": "#/components/schemas/TASPolygon"
+            },
+            "type": "array",
+            "title": "Polygons"
+          },
+          "labels": {
+            "items": {
+              "$ref": "#/components/schemas/TASLabel"
+            },
+            "type": "array",
+            "title": "Labels"
+          },
+          "segments": {
+            "items": {
+              "items": {
+                "items": {
+                  "type": "number"
+                },
+                "type": "array"
+              },
+              "type": "array"
+            },
+            "type": "array",
+            "title": "Segments"
+          },
+          "boundary_coordinates": {
+            "items": {
+              "items": {
+                "type": "number"
+              },
+              "type": "array"
+            },
+            "type": "array",
+            "title": "Boundary Coordinates"
+          },
+          "region_labels": {
+            "additionalProperties": {
+              "items": {
+                "items": {
+                  "type": "number"
+                },
+                "type": "array"
+              },
+              "type": "array"
+            },
+            "type": "object",
+            "title": "Region Labels"
+          }
+        },
+        "type": "object",
+        "required": [
+          "model_id",
+          "model_version"
+        ],
+        "title": "DiagramGeometry",
+        "description": "Diagram geometry for specialized chart types (TAS, etc.)."
+      },
+      "Exclusion": {
+        "properties": {
+          "analysis_id": {
+            "type": "string",
+            "title": "Analysis Id"
+          },
+          "analyte": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Analyte"
+          },
+          "reason_code": {
+            "type": "string",
+            "title": "Reason Code"
+          },
+          "source_cells": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Source Cells"
+          }
+        },
+        "type": "object",
+        "required": [
+          "analysis_id",
+          "reason_code"
+        ],
+        "title": "Exclusion"
+      },
+      "ExportCreateRequest": {
+        "properties": {
+          "figure_id": {
+            "type": "string",
+            "title": "Figure Id"
+          },
+          "revision_id": {
+            "type": "string",
+            "title": "Revision Id",
+            "default": ""
+          },
+          "scene_id": {
+            "type": "string",
+            "title": "Scene Id",
+            "default": ""
+          },
+          "formats": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Formats"
+          },
+          "dpi": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Dpi",
+            "default": 600
+          },
+          "background": {
+            "type": "string",
+            "title": "Background",
+            "default": "white"
+          },
+          "size_mm": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Size Mm"
+          },
+          "export_root_id": {
+            "type": "string",
+            "title": "Export Root Id",
+            "default": ""
+          },
+          "include_bundle": {
+            "type": "boolean",
+            "title": "Include Bundle",
+            "default": true
+          }
+        },
+        "type": "object",
+        "required": [
+          "figure_id"
+        ],
+        "title": "ExportCreateRequest"
+      },
+      "ExportProjectRequest": {
+        "properties": {
+          "project_id": {
+            "type": "string",
+            "title": "Project Id"
+          },
+          "include_data": {
+            "type": "boolean",
+            "title": "Include Data",
+            "default": true
+          }
+        },
+        "type": "object",
+        "required": [
+          "project_id"
+        ],
+        "title": "ExportProjectRequest"
+      },
+      "ExportProjectResponse": {
+        "properties": {
+          "package_path": {
+            "type": "string",
+            "title": "Package Path"
+          },
+          "byte_size": {
+            "type": "integer",
+            "title": "Byte Size"
+          },
+          "sha256": {
+            "type": "string",
+            "title": "Sha256"
+          },
+          "self_contained": {
+            "type": "boolean",
+            "title": "Self Contained"
+          },
+          "manifest": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Manifest"
+          }
+        },
+        "type": "object",
+        "required": [
+          "package_path",
+          "byte_size",
+          "sha256",
+          "self_contained",
+          "manifest"
+        ],
+        "title": "ExportProjectResponse"
+      },
+      "ExportRootCreateRequest": {
+        "properties": {
+          "project_id": {
+            "type": "string",
+            "title": "Project Id"
+          },
+          "absolute_path": {
+            "type": "string",
+            "title": "Absolute Path"
+          },
+          "display_name": {
+            "type": "string",
+            "title": "Display Name",
+            "default": ""
+          }
+        },
+        "type": "object",
+        "required": [
+          "project_id",
+          "absolute_path"
+        ],
+        "title": "ExportRootCreateRequest"
+      },
+      "ExportRootInfo": {
+        "properties": {
+          "export_root_id": {
+            "type": "string",
+            "title": "Export Root Id"
+          },
+          "project_id": {
+            "type": "string",
+            "title": "Project Id"
+          },
+          "absolute_path": {
+            "type": "string",
+            "title": "Absolute Path"
+          },
+          "display_name": {
+            "type": "string",
+            "title": "Display Name"
+          },
+          "selected_by_user_at": {
+            "type": "string",
+            "title": "Selected By User At"
+          },
+          "writable_check": {
+            "type": "string",
+            "title": "Writable Check"
+          },
+          "is_default": {
+            "type": "boolean",
+            "title": "Is Default",
+            "default": false
+          }
+        },
+        "type": "object",
+        "required": [
+          "export_root_id",
+          "project_id",
+          "absolute_path",
+          "display_name",
+          "selected_by_user_at",
+          "writable_check"
+        ],
+        "title": "ExportRootInfo"
+      },
+      "FacetResponse": {
+        "properties": {
+          "missions": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Missions"
+          },
+          "sample_groups": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Sample Groups"
+          },
+          "material_types": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Material Types"
+          },
+          "mineral_groups": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Mineral Groups"
+          },
+          "total_count": {
+            "type": "integer",
+            "title": "Total Count"
+          }
+        },
+        "type": "object",
+        "required": [
+          "missions",
+          "sample_groups",
+          "material_types",
+          "mineral_groups",
+          "total_count"
+        ],
+        "title": "FacetResponse"
+      },
+      "FigureCreateRequest": {
+        "properties": {
+          "project_id": {
+            "type": "string",
+            "title": "Project Id",
+            "default": ""
+          },
+          "plot_spec": {
+            "$ref": "#/components/schemas/PlotSpec"
+          },
+          "dataset_versions": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Dataset Versions"
+          },
+          "label": {
+            "type": "string",
+            "title": "Label",
+            "default": ""
+          }
+        },
+        "type": "object",
+        "required": [
+          "plot_spec"
+        ],
+        "title": "FigureCreateRequest"
+      },
+      "FigureCreateResponse": {
+        "properties": {
+          "figure_id": {
+            "type": "string",
+            "title": "Figure Id"
+          },
+          "project_id": {
+            "type": "string",
+            "title": "Project Id"
+          },
+          "scene_hash": {
+            "type": "string",
+            "title": "Scene Hash"
+          },
+          "created_at": {
+            "type": "string",
+            "title": "Created At"
+          },
+          "status": {
+            "type": "string",
+            "title": "Status",
+            "default": "draft"
+          }
+        },
+        "type": "object",
+        "required": [
+          "figure_id",
+          "project_id",
+          "scene_hash",
+          "created_at"
+        ],
+        "title": "FigureCreateResponse"
+      },
+      "FigureInfo": {
+        "properties": {
+          "figure_id": {
+            "type": "string",
+            "title": "Figure Id"
+          },
+          "project_id": {
+            "type": "string",
+            "title": "Project Id"
+          },
+          "label": {
+            "type": "string",
+            "title": "Label"
+          },
+          "chart_type": {
+            "type": "string",
+            "title": "Chart Type",
+            "default": "scatter"
+          },
+          "status": {
+            "type": "string",
+            "title": "Status"
+          },
+          "scene_hash": {
+            "type": "string",
+            "title": "Scene Hash"
+          },
+          "created_at": {
+            "type": "string",
+            "title": "Created At"
+          },
+          "revised_at": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Revised At"
+          },
+          "revision_count": {
+            "type": "integer",
+            "title": "Revision Count",
+            "default": 0
+          }
+        },
+        "type": "object",
+        "required": [
+          "figure_id",
+          "project_id",
+          "label",
+          "status",
+          "scene_hash",
+          "created_at"
+        ],
+        "title": "FigureInfo"
+      },
+      "FigurePatchRequest": {
+        "properties": {
+          "name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Name"
+          },
+          "archived": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Archived"
+          }
+        },
+        "type": "object",
+        "title": "FigurePatchRequest"
+      },
+      "FontManifest": {
+        "properties": {
+          "primary": {
+            "type": "string",
+            "title": "Primary"
+          },
+          "fallback": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Fallback"
+          },
+          "available": {
+            "type": "boolean",
+            "title": "Available"
+          },
+          "substituted_with": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Substituted With"
+          }
+        },
+        "type": "object",
+        "required": [
+          "primary",
+          "fallback",
+          "available"
+        ],
+        "title": "FontManifest"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "HealthResponse": {
+        "properties": {
+          "status": {
+            "type": "string",
+            "title": "Status",
+            "default": "ok"
+          },
+          "app_version": {
+            "type": "string",
+            "title": "App Version"
+          },
+          "schema_version": {
+            "type": "string",
+            "title": "Schema Version",
+            "default": "1.1"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Timestamp"
+          }
+        },
+        "type": "object",
+        "required": [
+          "app_version"
+        ],
+        "title": "HealthResponse"
+      },
+      "ImportRequest": {
+        "properties": {
+          "filename": {
+            "type": "string",
+            "title": "Filename"
+          },
+          "sha256": {
+            "type": "string",
+            "title": "Sha256"
+          },
+          "byte_size": {
+            "type": "integer",
+            "title": "Byte Size"
+          },
+          "mapping": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Mapping"
+          },
+          "dataset_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Dataset Id"
+          },
+          "label": {
+            "type": "string",
+            "title": "Label",
+            "default": "Imported dataset"
+          },
+          "role": {
+            "type": "string",
+            "title": "Role",
+            "default": "user_data"
+          }
+        },
+        "type": "object",
+        "required": [
+          "filename",
+          "sha256",
+          "byte_size",
+          "mapping"
+        ],
+        "title": "ImportRequest"
+      },
+      "JobDetail": {
+        "properties": {
+          "job_id": {
+            "type": "string",
+            "title": "Job Id"
+          },
+          "status": {
+            "type": "string",
+            "title": "Status"
+          },
+          "phase": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Phase"
+          },
+          "processed": {
+            "type": "integer",
+            "title": "Processed"
+          },
+          "total": {
+            "type": "integer",
+            "title": "Total"
+          },
+          "created_at": {
+            "type": "string",
+            "title": "Created At"
+          },
+          "updated_at": {
+            "type": "string",
+            "title": "Updated At"
+          },
+          "result": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Result"
+          },
+          "error": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Error"
+          }
+        },
+        "type": "object",
+        "required": [
+          "job_id",
+          "status",
+          "phase",
+          "processed",
+          "total",
+          "created_at",
+          "updated_at"
+        ],
+        "title": "JobDetail"
+      },
+      "JobListResponse": {
+        "properties": {
+          "jobs": {
+            "items": {
+              "$ref": "#/components/schemas/JobSummary"
+            },
+            "type": "array",
+            "title": "Jobs"
+          },
+          "total": {
+            "type": "integer",
+            "title": "Total"
+          }
+        },
+        "type": "object",
+        "required": [
+          "jobs",
+          "total"
+        ],
+        "title": "JobListResponse"
+      },
+      "JobSummary": {
+        "properties": {
+          "job_id": {
+            "type": "string",
+            "title": "Job Id"
+          },
+          "status": {
+            "type": "string",
+            "title": "Status"
+          },
+          "phase": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Phase"
+          },
+          "processed": {
+            "type": "integer",
+            "title": "Processed"
+          },
+          "total": {
+            "type": "integer",
+            "title": "Total"
+          },
+          "created_at": {
+            "type": "string",
+            "title": "Created At"
+          },
+          "updated_at": {
+            "type": "string",
+            "title": "Updated At"
+          }
+        },
+        "type": "object",
+        "required": [
+          "job_id",
+          "status",
+          "phase",
+          "processed",
+          "total",
+          "created_at",
+          "updated_at"
+        ],
+        "title": "JobSummary"
+      },
+      "LayerSpec": {
+        "properties": {
+          "layer_id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Layer Id"
+          },
+          "label": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Label"
+          },
+          "selection_id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Selection Id"
+          },
+          "visible": {
+            "type": "boolean",
+            "title": "Visible",
+            "default": true
+          },
+          "aggregation": {
+            "type": "string",
+            "const": "none",
+            "title": "Aggregation",
+            "default": "none"
+          },
+          "style": {
+            "$ref": "#/components/schemas/LayerStyle"
+          },
+          "analysis_style_overrides": {
+            "additionalProperties": {
+              "$ref": "#/components/schemas/AnalysisStyleOverride"
+            },
+            "type": "object",
+            "title": "Analysis Style Overrides"
+          }
+        },
+        "type": "object",
+        "required": [
+          "layer_id",
+          "label",
+          "selection_id"
+        ],
+        "title": "LayerSpec",
+        "description": "A data layer in the plot specification."
+      },
+      "LayerStyle": {
+        "properties": {
+          "marker_shape": {
+            "$ref": "#/components/schemas/MarkerShape",
+            "default": "circle"
+          },
+          "marker_fill": {
+            "$ref": "#/components/schemas/MarkerFill",
+            "default": "solid"
+          },
+          "marker_fill_color": {
+            "type": "string",
+            "pattern": "^#[0-9A-Fa-f]{6}$",
+            "title": "Marker Fill Color",
+            "default": "#D55E00"
+          },
+          "marker_edge_color": {
+            "type": "string",
+            "pattern": "^#[0-9A-Fa-f]{6}$",
+            "title": "Marker Edge Color",
+            "default": "#D55E00"
+          },
+          "marker_size_pt": {
+            "type": "number",
+            "maximum": 20.0,
+            "minimum": 1.0,
+            "title": "Marker Size Pt",
+            "description": "Nominal diameter in points",
+            "default": 3.5
+          },
+          "marker_edge_width_pt": {
+            "type": "number",
+            "maximum": 3.0,
+            "minimum": 0.0,
+            "title": "Marker Edge Width Pt",
+            "default": 0.35
+          },
+          "marker_alpha": {
+            "type": "number",
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Marker Alpha",
+            "description": "0=opaque, 1=transparent",
+            "default": 1.0
+          },
+          "line_color": {
+            "type": "string",
+            "pattern": "^#[0-9A-Fa-f]{6}$",
+            "title": "Line Color",
+            "default": "#D55E00"
+          },
+          "line_width_pt": {
+            "type": "number",
+            "maximum": 5.0,
+            "minimum": 0.1,
+            "title": "Line Width Pt",
+            "default": 0.8
+          },
+          "line_dash": {
+            "$ref": "#/components/schemas/LineDash",
+            "default": "solid"
+          },
+          "line_alpha": {
+            "type": "number",
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Line Alpha",
+            "description": "Independent from marker_alpha",
+            "default": 1.0
+          },
+          "connect": {
+            "type": "boolean",
+            "title": "Connect",
+            "description": "True for REE/spider curves",
+            "default": false
+          }
+        },
+        "type": "object",
+        "title": "LayerStyle",
+        "description": "Complete style for a data layer. Schema 1.1: independent marker_alpha and line_alpha."
+      },
+      "LayoutConfig": {
+        "properties": {
+          "width_mm": {
+            "type": "number",
+            "maximum": 500.0,
+            "minimum": 20.0,
+            "title": "Width Mm",
+            "default": 183.0
+          },
+          "height_mm": {
+            "type": "number",
+            "maximum": 500.0,
+            "minimum": 20.0,
+            "title": "Height Mm",
+            "default": 110.0
+          },
+          "preset": {
+            "type": "string",
+            "title": "Preset",
+            "description": "nature_main_2026|thesis_cn|custom",
+            "default": "nature_main_2026"
+          },
+          "font_family": {
+            "type": "string",
+            "title": "Font Family",
+            "default": "Arial"
+          },
+          "font_size_pt": {
+            "type": "number",
+            "maximum": 36.0,
+            "minimum": 4.0,
+            "title": "Font Size Pt",
+            "default": 7.0
+          },
+          "tick_font_size_pt": {
+            "type": "number",
+            "maximum": 36.0,
+            "minimum": 4.0,
+            "title": "Tick Font Size Pt",
+            "default": 6.0
+          },
+          "legend": {
+            "$ref": "#/components/schemas/LegendConfig"
+          },
+          "legend_show_counts": {
+            "type": "boolean",
+            "title": "Legend Show Counts",
+            "default": true
+          },
+          "annotations": {
+            "items": {
+              "$ref": "#/components/schemas/Annotation"
+            },
+            "type": "array",
+            "title": "Annotations"
+          }
+        },
+        "type": "object",
+        "title": "LayoutConfig"
+      },
+      "LegendConfig": {
+        "properties": {
+          "position": {
+            "type": "string",
+            "title": "Position",
+            "description": "right|inside|custom",
+            "default": "right"
+          },
+          "anchor_x": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 1.0,
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Anchor X"
+          },
+          "anchor_y": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 1.0,
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Anchor Y"
+          }
+        },
+        "type": "object",
+        "title": "LegendConfig"
+      },
+      "LineDash": {
+        "type": "string",
+        "enum": [
+          "solid",
+          "dash",
+          "dot",
+          "dashdot"
+        ],
+        "title": "LineDash"
+      },
+      "MarkerFill": {
+        "type": "string",
+        "enum": [
+          "solid",
+          "open"
+        ],
+        "title": "MarkerFill"
+      },
+      "MarkerShape": {
+        "type": "string",
+        "enum": [
+          "circle",
+          "square",
+          "triangle_up",
+          "triangle_down",
+          "diamond",
+          "plus",
+          "cross",
+          "star",
+          "hexagon"
+        ],
+        "title": "MarkerShape"
+      },
+      "MeasurementExpr": {
+        "properties": {
+          "kind": {
+            "type": "string",
+            "const": "measurement",
+            "title": "Kind",
+            "default": "measurement"
+          },
+          "analyte": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Analyte",
+            "description": "Element or oxide symbol, e.g. La, SiO2"
+          },
+          "chemical_form": {
+            "type": "string",
+            "enum": [
+              "element",
+              "oxide",
+              "isotope_ratio",
+              "index"
+            ],
+            "title": "Chemical Form"
+          },
+          "unit": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Unit",
+            "description": "e.g. ppm, ppb, wt%"
+          },
+          "channel": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Channel",
+            "description": "Measurement channel, e.g. La139_ppm_mean"
+          }
+        },
+        "type": "object",
+        "required": [
+          "analyte",
+          "chemical_form",
+          "unit"
+        ],
+        "title": "MeasurementExpr"
+      },
+      "NormalizeExpr-Input": {
+        "properties": {
+          "kind": {
+            "type": "string",
+            "const": "normalize",
+            "title": "Kind",
+            "default": "normalize"
+          },
+          "value": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/MeasurementExpr"
+              },
+              {
+                "$ref": "#/components/schemas/NormalizeExpr-Input"
+              },
+              {
+                "$ref": "#/components/schemas/RatioExpr-Input"
+              },
+              {
+                "$ref": "#/components/schemas/AddExpr-Input"
+              },
+              {
+                "$ref": "#/components/schemas/ConstantExpr"
+              }
+            ],
+            "title": "Value",
+            "discriminator": {
+              "propertyName": "kind",
+              "mapping": {
+                "add": "#/components/schemas/AddExpr-Input",
+                "constant": "#/components/schemas/ConstantExpr",
+                "measurement": "#/components/schemas/MeasurementExpr",
+                "normalize": "#/components/schemas/NormalizeExpr-Input",
+                "ratio": "#/components/schemas/RatioExpr-Input"
+              }
+            }
+          },
+          "reference_id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Reference Id"
+          },
+          "reference_version": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Reference Version"
+          }
+        },
+        "type": "object",
+        "required": [
+          "value",
+          "reference_id",
+          "reference_version"
+        ],
+        "title": "NormalizeExpr"
+      },
+      "NormalizeExpr-Output": {
+        "properties": {
+          "kind": {
+            "type": "string",
+            "const": "normalize",
+            "title": "Kind",
+            "default": "normalize"
+          },
+          "value": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/MeasurementExpr"
+              },
+              {
+                "$ref": "#/components/schemas/NormalizeExpr-Output"
+              },
+              {
+                "$ref": "#/components/schemas/RatioExpr-Output"
+              },
+              {
+                "$ref": "#/components/schemas/AddExpr-Output"
+              },
+              {
+                "$ref": "#/components/schemas/ConstantExpr"
+              }
+            ],
+            "title": "Value",
+            "discriminator": {
+              "propertyName": "kind",
+              "mapping": {
+                "add": "#/components/schemas/AddExpr-Output",
+                "constant": "#/components/schemas/ConstantExpr",
+                "measurement": "#/components/schemas/MeasurementExpr",
+                "normalize": "#/components/schemas/NormalizeExpr-Output",
+                "ratio": "#/components/schemas/RatioExpr-Output"
+              }
+            }
+          },
+          "reference_id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Reference Id"
+          },
+          "reference_version": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Reference Version"
+          }
+        },
+        "type": "object",
+        "required": [
+          "value",
+          "reference_id",
+          "reference_version"
+        ],
+        "title": "NormalizeExpr"
+      },
+      "OpenFolderRequest": {
+        "properties": {
+          "path": {
+            "type": "string",
+            "title": "Path"
+          }
+        },
+        "type": "object",
+        "required": [
+          "path"
+        ],
+        "title": "OpenFolderRequest"
+      },
+      "OpenFolderResponse": {
+        "properties": {
+          "path": {
+            "type": "string",
+            "title": "Path"
+          },
+          "success": {
+            "type": "boolean",
+            "title": "Success"
+          },
+          "message": {
+            "type": "string",
+            "title": "Message",
+            "default": ""
+          }
+        },
+        "type": "object",
+        "required": [
+          "path",
+          "success"
+        ],
+        "title": "OpenFolderResponse"
+      },
+      "PlotScene": {
+        "properties": {
+          "scene_id": {
+            "type": "string",
+            "title": "Scene Id"
+          },
+          "schema_version": {
+            "type": "string",
+            "enum": [
+              "1.1",
+              "1.2"
+            ],
+            "title": "Schema Version",
+            "default": "1.2"
+          },
+          "request_id": {
+            "type": "string",
+            "title": "Request Id"
+          },
+          "spec_hash": {
+            "type": "string",
+            "title": "Spec Hash"
+          },
+          "scene_hash": {
+            "type": "string",
+            "title": "Scene Hash"
+          },
+          "plot_revision": {
+            "type": "integer",
+            "title": "Plot Revision"
+          },
+          "chart_type": {
+            "$ref": "#/components/schemas/ChartType"
+          },
+          "resolved_selections": {
+            "items": {
+              "$ref": "#/components/schemas/ResolvedSelection"
+            },
+            "type": "array",
+            "title": "Resolved Selections"
+          },
+          "reference_snapshots": {
+            "items": {
+              "$ref": "#/components/schemas/ReferenceSnapshot"
+            },
+            "type": "array",
+            "title": "Reference Snapshots"
+          },
+          "variables": {
+            "$ref": "#/components/schemas/VariablesConfig-Output"
+          },
+          "axes": {
+            "additionalProperties": {
+              "$ref": "#/components/schemas/AxisScene"
+            },
+            "type": "object",
+            "title": "Axes"
+          },
+          "series": {
+            "items": {
+              "$ref": "#/components/schemas/SceneSeries"
+            },
+            "type": "array",
+            "title": "Series"
+          },
+          "diagram_geometry": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/DiagramGeometry"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "legend": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Legend"
+          },
+          "layout": {
+            "$ref": "#/components/schemas/LayoutConfig"
+          },
+          "font_manifest": {
+            "$ref": "#/components/schemas/FontManifest"
+          },
+          "warnings": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Warnings"
+          },
+          "counts": {
+            "$ref": "#/components/schemas/SceneCounts"
+          },
+          "exclusions": {
+            "items": {
+              "$ref": "#/components/schemas/Exclusion"
+            },
+            "type": "array",
+            "title": "Exclusions"
+          },
+          "software_version": {
+            "type": "string",
+            "title": "Software Version"
+          }
+        },
+        "type": "object",
+        "required": [
+          "scene_id",
+          "request_id",
+          "spec_hash",
+          "scene_hash",
+          "plot_revision",
+          "chart_type",
+          "resolved_selections",
+          "reference_snapshots",
+          "variables",
+          "axes",
+          "series",
+          "layout",
+          "font_manifest",
+          "counts",
+          "software_version"
+        ],
+        "title": "PlotScene",
+        "description": "Frozen computation result - all rendering adapters consume this.\n\nScene hash ignores request_id and creation time; same config+data yields same hash."
+      },
+      "PlotSpec": {
+        "properties": {
+          "schema_version": {
+            "type": "string",
+            "const": "1.1",
+            "title": "Schema Version",
+            "default": "1.1"
+          },
+          "plot_id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Plot Id"
+          },
+          "revision": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Revision",
+            "default": 1
+          },
+          "chart_type": {
+            "$ref": "#/components/schemas/ChartType"
+          },
+          "layers": {
+            "items": {
+              "$ref": "#/components/schemas/LayerSpec"
+            },
+            "type": "array",
+            "minItems": 1,
+            "title": "Layers"
+          },
+          "variables": {
+            "$ref": "#/components/schemas/VariablesConfig-Input"
+          },
+          "quality_policy": {
+            "$ref": "#/components/schemas/QualityPolicy"
+          },
+          "axes": {
+            "$ref": "#/components/schemas/AxesConfig"
+          },
+          "layout": {
+            "$ref": "#/components/schemas/LayoutConfig"
+          },
+          "diagram": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/TASDiagram"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "channel_policy_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Channel Policy Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "plot_id",
+          "chart_type",
+          "layers",
+          "variables"
+        ],
+        "title": "PlotSpec",
+        "description": "Plot specification - schema 1.1.\n\nThis is the mutable configuration that describes what to plot."
+      },
+      "PreviewResponse": {
+        "properties": {
+          "scan_id": {
+            "type": "string",
+            "title": "Scan Id"
+          },
+          "file_sha256": {
+            "type": "string",
+            "title": "File Sha256"
+          },
+          "sheets": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Sheets"
+          },
+          "total_rows": {
+            "type": "integer",
+            "title": "Total Rows"
+          },
+          "total_columns": {
+            "type": "integer",
+            "title": "Total Columns"
+          }
+        },
+        "type": "object",
+        "required": [
+          "scan_id",
+          "file_sha256",
+          "sheets",
+          "total_rows",
+          "total_columns"
+        ],
+        "title": "PreviewResponse"
+      },
+      "ProjectInfoResponse": {
+        "properties": {
+          "project_id": {
+            "type": "string",
+            "title": "Project Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "created_at": {
+            "type": "string",
+            "title": "Created At"
+          },
+          "geoplot_version": {
+            "type": "string",
+            "title": "Geoplot Version"
+          },
+          "schema_version": {
+            "type": "string",
+            "title": "Schema Version"
+          }
+        },
+        "type": "object",
+        "required": [
+          "project_id",
+          "name",
+          "created_at",
+          "geoplot_version",
+          "schema_version"
+        ],
+        "title": "ProjectInfoResponse"
+      },
+      "QualityPolicy": {
+        "properties": {
+          "censored": {
+            "type": "string",
+            "title": "Censored",
+            "description": "exclude|include",
+            "default": "exclude"
+          },
+          "nonpositive_log": {
+            "type": "string",
+            "title": "Nonpositive Log",
+            "description": "exclude|include",
+            "default": "exclude"
+          },
+          "missing_spider": {
+            "type": "string",
+            "title": "Missing Spider",
+            "description": "gap|drop",
+            "default": "gap"
+          },
+          "unconfirmed_unit": {
+            "type": "string",
+            "title": "Unconfirmed Unit",
+            "description": "exclude|include",
+            "default": "exclude"
+          }
+        },
+        "type": "object",
+        "title": "QualityPolicy"
+      },
+      "QueryFilter": {
+        "properties": {
+          "mission": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Mission"
+          },
+          "sample_group": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Sample Group",
+            "description": "样品名称前段标号分组（如 14049 / 036 / CE6），分类规则 sample_prefix_v1"
+          },
+          "material_type": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Material Type"
+          },
+          "mineral_group": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Mineral Group"
+          },
+          "sample_search": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Sample Search",
+            "description": "{mode: exact|parent|contains, text: str}"
+          }
+        },
+        "type": "object",
+        "title": "QueryFilter"
+      },
+      "QueryRequest": {
+        "properties": {
+          "dataset_versions": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Dataset Versions"
+          },
+          "filter": {
+            "$ref": "#/components/schemas/QueryFilter"
+          },
+          "offset": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Offset",
+            "default": 0
+          },
+          "limit": {
+            "type": "integer",
+            "maximum": 10000.0,
+            "minimum": 1.0,
+            "title": "Limit",
+            "default": 100
+          }
+        },
+        "type": "object",
+        "required": [
+          "dataset_versions"
+        ],
+        "title": "QueryRequest"
+      },
+      "RatioExpr-Input": {
+        "properties": {
+          "kind": {
+            "type": "string",
+            "const": "ratio",
+            "title": "Kind",
+            "default": "ratio"
+          },
+          "numerator": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/MeasurementExpr"
+              },
+              {
+                "$ref": "#/components/schemas/NormalizeExpr-Input"
+              },
+              {
+                "$ref": "#/components/schemas/RatioExpr-Input"
+              },
+              {
+                "$ref": "#/components/schemas/AddExpr-Input"
+              },
+              {
+                "$ref": "#/components/schemas/ConstantExpr"
+              }
+            ],
+            "title": "Numerator",
+            "discriminator": {
+              "propertyName": "kind",
+              "mapping": {
+                "add": "#/components/schemas/AddExpr-Input",
+                "constant": "#/components/schemas/ConstantExpr",
+                "measurement": "#/components/schemas/MeasurementExpr",
+                "normalize": "#/components/schemas/NormalizeExpr-Input",
+                "ratio": "#/components/schemas/RatioExpr-Input"
+              }
+            }
+          },
+          "denominator": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/MeasurementExpr"
+              },
+              {
+                "$ref": "#/components/schemas/NormalizeExpr-Input"
+              },
+              {
+                "$ref": "#/components/schemas/RatioExpr-Input"
+              },
+              {
+                "$ref": "#/components/schemas/AddExpr-Input"
+              },
+              {
+                "$ref": "#/components/schemas/ConstantExpr"
+              }
+            ],
+            "title": "Denominator",
+            "discriminator": {
+              "propertyName": "kind",
+              "mapping": {
+                "add": "#/components/schemas/AddExpr-Input",
+                "constant": "#/components/schemas/ConstantExpr",
+                "measurement": "#/components/schemas/MeasurementExpr",
+                "normalize": "#/components/schemas/NormalizeExpr-Input",
+                "ratio": "#/components/schemas/RatioExpr-Input"
+              }
+            }
+          }
+        },
+        "type": "object",
+        "required": [
+          "numerator",
+          "denominator"
+        ],
+        "title": "RatioExpr"
+      },
+      "RatioExpr-Output": {
+        "properties": {
+          "kind": {
+            "type": "string",
+            "const": "ratio",
+            "title": "Kind",
+            "default": "ratio"
+          },
+          "numerator": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/MeasurementExpr"
+              },
+              {
+                "$ref": "#/components/schemas/NormalizeExpr-Output"
+              },
+              {
+                "$ref": "#/components/schemas/RatioExpr-Output"
+              },
+              {
+                "$ref": "#/components/schemas/AddExpr-Output"
+              },
+              {
+                "$ref": "#/components/schemas/ConstantExpr"
+              }
+            ],
+            "title": "Numerator",
+            "discriminator": {
+              "propertyName": "kind",
+              "mapping": {
+                "add": "#/components/schemas/AddExpr-Output",
+                "constant": "#/components/schemas/ConstantExpr",
+                "measurement": "#/components/schemas/MeasurementExpr",
+                "normalize": "#/components/schemas/NormalizeExpr-Output",
+                "ratio": "#/components/schemas/RatioExpr-Output"
+              }
+            }
+          },
+          "denominator": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/MeasurementExpr"
+              },
+              {
+                "$ref": "#/components/schemas/NormalizeExpr-Output"
+              },
+              {
+                "$ref": "#/components/schemas/RatioExpr-Output"
+              },
+              {
+                "$ref": "#/components/schemas/AddExpr-Output"
+              },
+              {
+                "$ref": "#/components/schemas/ConstantExpr"
+              }
+            ],
+            "title": "Denominator",
+            "discriminator": {
+              "propertyName": "kind",
+              "mapping": {
+                "add": "#/components/schemas/AddExpr-Output",
+                "constant": "#/components/schemas/ConstantExpr",
+                "measurement": "#/components/schemas/MeasurementExpr",
+                "normalize": "#/components/schemas/NormalizeExpr-Output",
+                "ratio": "#/components/schemas/RatioExpr-Output"
+              }
+            }
+          }
+        },
+        "type": "object",
+        "required": [
+          "numerator",
+          "denominator"
+        ],
+        "title": "RatioExpr"
+      },
+      "ReexportBody": {
+        "properties": {
+          "export_root_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Export Root Id"
+          }
+        },
+        "type": "object",
+        "title": "ReexportBody"
+      },
+      "ReexportRequest": {
+        "properties": {
+          "source_path": {
+            "type": "string",
+            "title": "Source Path"
+          },
+          "target_path": {
+            "type": "string",
+            "title": "Target Path"
+          }
+        },
+        "type": "object",
+        "required": [
+          "source_path",
+          "target_path"
+        ],
+        "title": "ReexportRequest"
+      },
+      "ReexportResponse": {
+        "properties": {
+          "source_path": {
+            "type": "string",
+            "title": "Source Path"
+          },
+          "target_path": {
+            "type": "string",
+            "title": "Target Path"
+          },
+          "success": {
+            "type": "boolean",
+            "title": "Success"
+          },
+          "message": {
+            "type": "string",
+            "title": "Message",
+            "default": ""
+          }
+        },
+        "type": "object",
+        "required": [
+          "source_path",
+          "target_path",
+          "success"
+        ],
+        "title": "ReexportResponse"
+      },
+      "ReferenceDetail": {
+        "properties": {
+          "ref_id": {
+            "type": "string",
+            "title": "Ref Id"
+          },
+          "version": {
+            "type": "string",
+            "title": "Version"
+          },
+          "citation": {
+            "type": "string",
+            "title": "Citation"
+          },
+          "doi": {
+            "type": "string",
+            "title": "Doi"
+          },
+          "elements": {
+            "additionalProperties": {
+              "type": "number"
+            },
+            "type": "object",
+            "title": "Elements"
+          },
+          "units": {
+            "additionalProperties": {
+              "type": "string"
+            },
+            "type": "object",
+            "title": "Units"
+          },
+          "sha256": {
+            "type": "string",
+            "title": "Sha256"
+          },
+          "source_file": {
+            "type": "string",
+            "title": "Source File"
+          }
+        },
+        "type": "object",
+        "required": [
+          "ref_id",
+          "version",
+          "citation",
+          "doi",
+          "elements",
+          "units",
+          "sha256",
+          "source_file"
+        ],
+        "title": "ReferenceDetail"
+      },
+      "ReferenceSnapshot": {
+        "properties": {
+          "ref_id": {
+            "type": "string",
+            "title": "Ref Id"
+          },
+          "version": {
+            "type": "string",
+            "title": "Version"
+          },
+          "hash": {
+            "type": "string",
+            "title": "Hash"
+          },
+          "values": {
+            "additionalProperties": {
+              "type": "number"
+            },
+            "type": "object",
+            "title": "Values"
+          },
+          "units": {
+            "additionalProperties": {
+              "type": "string"
+            },
+            "type": "object",
+            "title": "Units"
+          },
+          "citation": {
+            "type": "string",
+            "title": "Citation"
+          },
+          "verification_status": {
+            "type": "string",
+            "title": "Verification Status"
+          }
+        },
+        "type": "object",
+        "required": [
+          "ref_id",
+          "version",
+          "hash",
+          "values",
+          "units",
+          "citation",
+          "verification_status"
+        ],
+        "title": "ReferenceSnapshot"
+      },
+      "RenderRequest": {
+        "properties": {
+          "figure_id": {
+            "type": "string",
+            "title": "Figure Id"
+          },
+          "format": {
+            "type": "string",
+            "title": "Format",
+            "default": "png"
+          },
+          "dpi": {
+            "type": "integer",
+            "title": "Dpi",
+            "default": 300
+          }
+        },
+        "type": "object",
+        "required": [
+          "figure_id"
+        ],
+        "title": "RenderRequest"
+      },
+      "RenderResponse": {
+        "properties": {
+          "figure_id": {
+            "type": "string",
+            "title": "Figure Id"
+          },
+          "format": {
+            "type": "string",
+            "title": "Format"
+          },
+          "path": {
+            "type": "string",
+            "title": "Path"
+          },
+          "byte_size": {
+            "type": "integer",
+            "title": "Byte Size"
+          },
+          "sha256": {
+            "type": "string",
+            "title": "Sha256"
+          }
+        },
+        "type": "object",
+        "required": [
+          "figure_id",
+          "format",
+          "path",
+          "byte_size",
+          "sha256"
+        ],
+        "title": "RenderResponse"
+      },
+      "ResolvedSelection": {
+        "properties": {
+          "selection_id": {
+            "type": "string",
+            "title": "Selection Id"
+          },
+          "selection_hash": {
+            "type": "string",
+            "title": "Selection Hash"
+          },
+          "analysis_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Analysis Ids"
+          },
+          "dataset_versions": {
+            "items": {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Dataset Versions"
+          }
+        },
+        "type": "object",
+        "required": [
+          "selection_id",
+          "selection_hash",
+          "analysis_ids",
+          "dataset_versions"
+        ],
+        "title": "ResolvedSelection"
+      },
+      "RestoreProjectResponse": {
+        "properties": {
+          "project_id": {
+            "type": "string",
+            "title": "Project Id"
+          },
+          "status": {
+            "type": "string",
+            "title": "Status",
+            "default": "restored"
+          }
+        },
+        "type": "object",
+        "required": [
+          "project_id"
+        ],
+        "title": "RestoreProjectResponse"
+      },
+      "SaveProjectRequest": {
+        "properties": {
+          "name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Name"
+          }
+        },
+        "type": "object",
+        "title": "SaveProjectRequest"
+      },
+      "ScanResponse": {
+        "properties": {
+          "scan_id": {
+            "type": "string",
+            "title": "Scan Id"
+          },
+          "file_sha256": {
+            "type": "string",
+            "title": "File Sha256"
+          },
+          "file_size": {
+            "type": "integer",
+            "title": "File Size"
+          },
+          "sheets": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Sheets"
+          },
+          "job_id": {
+            "type": "string",
+            "title": "Job Id",
+            "default": ""
+          }
+        },
+        "type": "object",
+        "required": [
+          "scan_id",
+          "file_sha256",
+          "file_size",
+          "sheets"
+        ],
+        "title": "ScanResponse"
+      },
+      "SceneCounts": {
+        "properties": {
+          "selected_analyses": {
+            "type": "integer",
+            "title": "Selected Analyses"
+          },
+          "valid_analyses": {
+            "type": "integer",
+            "title": "Valid Analyses"
+          },
+          "excluded_analyses": {
+            "type": "integer",
+            "title": "Excluded Analyses"
+          },
+          "distinct_samples": {
+            "type": "integer",
+            "title": "Distinct Samples"
+          },
+          "physical_identity_unknown": {
+            "type": "integer",
+            "title": "Physical Identity Unknown"
+          },
+          "plotted_points": {
+            "type": "integer",
+            "title": "Plotted Points"
+          },
+          "out_of_view": {
+            "type": "integer",
+            "title": "Out Of View"
+          },
+          "hidden_by_style": {
+            "type": "integer",
+            "title": "Hidden By Style"
+          }
+        },
+        "type": "object",
+        "required": [
+          "selected_analyses",
+          "valid_analyses",
+          "excluded_analyses",
+          "distinct_samples",
+          "physical_identity_unknown",
+          "plotted_points",
+          "out_of_view",
+          "hidden_by_style"
+        ],
+        "title": "SceneCounts"
+      },
+      "ScenePoint": {
+        "properties": {
+          "point_id": {
+            "type": "string",
+            "title": "Point Id"
+          },
+          "analysis_id": {
+            "type": "string",
+            "title": "Analysis Id"
+          },
+          "x": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "X"
+          },
+          "y": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Y"
+          },
+          "x_error": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "X Error"
+          },
+          "y_error": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Y Error"
+          },
+          "quality_flags": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Quality Flags"
+          },
+          "provenance": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Provenance"
+          },
+          "resolved_style": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Resolved Style"
+          }
+        },
+        "type": "object",
+        "required": [
+          "point_id",
+          "analysis_id"
+        ],
+        "title": "ScenePoint"
+      },
+      "SceneSeries": {
+        "properties": {
+          "series_id": {
+            "type": "string",
+            "title": "Series Id"
+          },
+          "layer_id": {
+            "type": "string",
+            "title": "Layer Id"
+          },
+          "analysis_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Analysis Ids"
+          },
+          "sample_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Sample Ids"
+          },
+          "label": {
+            "type": "string",
+            "title": "Label"
+          },
+          "style": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Style"
+          },
+          "points": {
+            "items": {
+              "$ref": "#/components/schemas/ScenePoint"
+            },
+            "type": "array",
+            "title": "Points"
+          },
+          "break_at_missing": {
+            "type": "boolean",
+            "title": "Break At Missing",
+            "default": true
+          }
+        },
+        "type": "object",
+        "required": [
+          "series_id",
+          "layer_id",
+          "analysis_ids",
+          "sample_ids",
+          "label",
+          "style",
+          "points"
+        ],
+        "title": "SceneSeries"
+      },
+      "SelectionCreate": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "mode": {
+            "type": "string",
+            "title": "Mode",
+            "description": "snapshot|dynamic",
+            "default": "snapshot"
+          },
+          "dataset_versions": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Dataset Versions"
+          },
+          "analysis_ids": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Analysis Ids"
+          },
+          "filter": {
+            "$ref": "#/components/schemas/QueryFilter"
+          }
+        },
+        "type": "object",
+        "required": [
+          "name",
+          "dataset_versions"
+        ],
+        "title": "SelectionCreate"
+      },
+      "SelectionResponse": {
+        "properties": {
+          "selection_id": {
+            "type": "string",
+            "title": "Selection Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "mode": {
+            "type": "string",
+            "title": "Mode"
+          },
+          "resolved_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Resolved Ids"
+          },
+          "selection_hash": {
+            "type": "string",
+            "title": "Selection Hash"
+          },
+          "total_count": {
+            "type": "integer",
+            "title": "Total Count"
+          }
+        },
+        "type": "object",
+        "required": [
+          "selection_id",
+          "name",
+          "mode",
+          "resolved_ids",
+          "selection_hash",
+          "total_count"
+        ],
+        "title": "SelectionResponse"
+      },
+      "TASDiagram": {
+        "properties": {
+          "model_id": {
+            "type": "string",
+            "title": "Model Id",
+            "default": "tas_LeMaitre"
+          },
+          "model_version": {
+            "type": "string",
+            "title": "Model Version",
+            "default": "1"
+          },
+          "mode": {
+            "type": "string",
+            "const": "reference",
+            "title": "Mode",
+            "default": "reference"
+          },
+          "oxide_basis": {
+            "type": "string",
+            "title": "Oxide Basis",
+            "description": "raw|anhydrous_100",
+            "default": "raw"
+          },
+          "oxide_set": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Oxide Set"
+          },
+          "iron_policy": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Iron Policy",
+            "description": "FeOT|FeO_Fe2O3"
+          }
+        },
+        "type": "object",
+        "title": "TASDiagram"
+      },
+      "TASLabel": {
+        "properties": {
+          "field_id": {
+            "type": "string",
+            "title": "Field Id"
+          },
+          "x": {
+            "type": "number",
+            "title": "X"
+          },
+          "y": {
+            "type": "number",
+            "title": "Y"
+          },
+          "text": {
+            "type": "string",
+            "title": "Text"
+          }
+        },
+        "type": "object",
+        "required": [
+          "field_id",
+          "x",
+          "y",
+          "text"
+        ],
+        "title": "TASLabel",
+        "description": "Label position for TAS field."
+      },
+      "TASPolygon": {
+        "properties": {
+          "field_id": {
+            "type": "string",
+            "title": "Field Id"
+          },
+          "label": {
+            "type": "string",
+            "title": "Label"
+          },
+          "vertices": {
+            "items": {
+              "items": {
+                "type": "number"
+              },
+              "type": "array"
+            },
+            "type": "array",
+            "title": "Vertices"
+          }
+        },
+        "type": "object",
+        "required": [
+          "field_id",
+          "label",
+          "vertices"
+        ],
+        "title": "TASPolygon",
+        "description": "Single TAS field polygon."
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      },
+      "VariablesConfig-Input": {
+        "properties": {
+          "x": {
+            "anyOf": [
+              {
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/MeasurementExpr"
+                  },
+                  {
+                    "$ref": "#/components/schemas/NormalizeExpr-Input"
+                  },
+                  {
+                    "$ref": "#/components/schemas/RatioExpr-Input"
+                  },
+                  {
+                    "$ref": "#/components/schemas/AddExpr-Input"
+                  },
+                  {
+                    "$ref": "#/components/schemas/ConstantExpr"
+                  }
+                ],
+                "discriminator": {
+                  "propertyName": "kind",
+                  "mapping": {
+                    "add": "#/components/schemas/AddExpr-Input",
+                    "constant": "#/components/schemas/ConstantExpr",
+                    "measurement": "#/components/schemas/MeasurementExpr",
+                    "normalize": "#/components/schemas/NormalizeExpr-Input",
+                    "ratio": "#/components/schemas/RatioExpr-Input"
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "X"
+          },
+          "y": {
+            "anyOf": [
+              {
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/MeasurementExpr"
+                  },
+                  {
+                    "$ref": "#/components/schemas/NormalizeExpr-Input"
+                  },
+                  {
+                    "$ref": "#/components/schemas/RatioExpr-Input"
+                  },
+                  {
+                    "$ref": "#/components/schemas/AddExpr-Input"
+                  },
+                  {
+                    "$ref": "#/components/schemas/ConstantExpr"
+                  }
+                ],
+                "discriminator": {
+                  "propertyName": "kind",
+                  "mapping": {
+                    "add": "#/components/schemas/AddExpr-Input",
+                    "constant": "#/components/schemas/ConstantExpr",
+                    "measurement": "#/components/schemas/MeasurementExpr",
+                    "normalize": "#/components/schemas/NormalizeExpr-Input",
+                    "ratio": "#/components/schemas/RatioExpr-Input"
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Y"
+          },
+          "elements": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Elements"
+          },
+          "value_mode": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Value Mode",
+            "description": "raw|normalized"
+          },
+          "reference_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Reference Id"
+          },
+          "reference_version": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Reference Version"
+          }
+        },
+        "type": "object",
+        "title": "VariablesConfig",
+        "description": "Variables configuration - differs by chart type."
+      },
+      "VariablesConfig-Output": {
+        "properties": {
+          "x": {
+            "anyOf": [
+              {
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/MeasurementExpr"
+                  },
+                  {
+                    "$ref": "#/components/schemas/NormalizeExpr-Output"
+                  },
+                  {
+                    "$ref": "#/components/schemas/RatioExpr-Output"
+                  },
+                  {
+                    "$ref": "#/components/schemas/AddExpr-Output"
+                  },
+                  {
+                    "$ref": "#/components/schemas/ConstantExpr"
+                  }
+                ],
+                "discriminator": {
+                  "propertyName": "kind",
+                  "mapping": {
+                    "add": "#/components/schemas/AddExpr-Output",
+                    "constant": "#/components/schemas/ConstantExpr",
+                    "measurement": "#/components/schemas/MeasurementExpr",
+                    "normalize": "#/components/schemas/NormalizeExpr-Output",
+                    "ratio": "#/components/schemas/RatioExpr-Output"
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "X"
+          },
+          "y": {
+            "anyOf": [
+              {
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/MeasurementExpr"
+                  },
+                  {
+                    "$ref": "#/components/schemas/NormalizeExpr-Output"
+                  },
+                  {
+                    "$ref": "#/components/schemas/RatioExpr-Output"
+                  },
+                  {
+                    "$ref": "#/components/schemas/AddExpr-Output"
+                  },
+                  {
+                    "$ref": "#/components/schemas/ConstantExpr"
+                  }
+                ],
+                "discriminator": {
+                  "propertyName": "kind",
+                  "mapping": {
+                    "add": "#/components/schemas/AddExpr-Output",
+                    "constant": "#/components/schemas/ConstantExpr",
+                    "measurement": "#/components/schemas/MeasurementExpr",
+                    "normalize": "#/components/schemas/NormalizeExpr-Output",
+                    "ratio": "#/components/schemas/RatioExpr-Output"
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Y"
+          },
+          "elements": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Elements"
+          },
+          "value_mode": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Value Mode",
+            "description": "raw|normalized"
+          },
+          "reference_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Reference Id"
+          },
+          "reference_version": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Reference Version"
+          }
+        },
+        "type": "object",
+        "title": "VariablesConfig",
+        "description": "Variables configuration - differs by chart type."
+      }
+    }
+  }
+}

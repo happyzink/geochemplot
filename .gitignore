@@ -1,0 +1,106 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# Node
+node_modules/
+frontend/dist/
+
+# Data - original workbook and runtime data
+*.xlsx
+~$*.xlsx
+data/
+*.db
+*.sqlite
+
+# AstroMat - excluded from scope
+astromat_export*/
+*.zip
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Environment
+.env
+.env.local
+
+# PyInstaller
+launcher/build/
+launcher/dist/
+
+# Acceptance evidence (large files)
+docs/progress/acceptance/figures/
+docs/progress/acceptance/exports/
+
+# Temporary
+tmp/
+temp/
+
+# Build cache
+frontend/.vite/
+
+# 字体下载临时副本（正式字体在 backend/app/renderers/fonts/）
+backend/.tmp_font.otf
+
+# AI 工具本地副本（skills/agents 镜像，不入库）
+.agents/
+.claude/
+.codeartsdoer/
+.codebuddy/
+.lingma/
+.qoder/
+.trae/
+.zcode/
+
+# 副本项目与审计产物
+GeoPlot-Lite/
+.review/
+
+# 根目录报告/交接文档
+/BACKEND_COMPLETE.md
+/BACKEND_PROGRESS.md
+/BACKEND_READY_FOR_FRONTEND.md
+/BACKEND_REAL_STATUS.md
+/HANDOFF_TO_TRAE.md
+/PROMPT_FOR_TRAE.md
+/R14_DATABASE_FIX.md
+/VERIFICATION_SCHEMA12.md
+/Qoder与Trae报告真实性核查_2026-10-29.md
+/项目独立审查_2026-10-30.md
+/GeoPlot_绘图工具完成情况说明_2026-10-29.md
+
+# 进度报告（保留 CONTRACT_READY.json 契约门禁文件）
+docs/progress/*.md
+docs/progress/evidence/
+docs/progress/pyrolite-rework/
+
+# docs 下的报告/交接/状态文档
+/docs/geochem-plotter/09_协作顺序与交接记录.md
+/docs/geochem-plotter/12_任务书自我核查与修订报告_v2.md
+/docs/geochem-plotter/19_pyrolite返工完成报告.md
+/docs/geochem-plotter/20_qr06完成报告.md
+/docs/geochem-plotter/21_状态更新.md
+
+# 根目录临时脚本与生成物
+/test_*.py
+/verify_ree_norm.py
+/check_apollo_coverage.py
+/generate_demo_plots.py
+/generate_synthetic_lunar.py
+/escape.geoplot
+/test_outputs/
+/demo_plots/
+
+# E2E 运行产物
+frontend/tests/e2e/artifacts/
+frontend/tests/e2e/report/

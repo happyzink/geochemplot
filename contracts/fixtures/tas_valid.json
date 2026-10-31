@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.1",
+  "plot_id": "fixture_tas_001",
+  "revision": 1,
+  "chart_type": "tas",
+  "layers": [
+    {
+      "layer_id": "whole_rock",
+      "label": "Whole rock",
+      "selection_id": "sel_wr",
+      "visible": true,
+      "aggregation": "none",
+      "style": {
+        "marker_shape": "circle",
+        "marker_fill": "solid",
+        "marker_fill_color": "#D55E00",
+        "marker_edge_color": "#D55E00",
+        "marker_size_pt": 3.5,
+        "marker_edge_width_pt": 0.35,
+        "marker_alpha": 1.0,
+        "line_color": "#D55E00",
+        "line_width_pt": 0.8,
+        "line_dash": "solid",
+        "line_alpha": 1.0,
+        "connect": false
+      },
+      "analysis_style_overrides": {}
+    }
+  ],
+  "variables": {
+    "x": null,
+    "y": null,
+    "elements": null,
+    "value_mode": null,
+    "reference_id": null,
+    "reference_version": null
+  },
+  "quality_policy": {
+    "censored": "exclude",
+    "nonpositive_log": "exclude",
+    "missing_spider": "gap",
+    "unconfirmed_unit": "exclude"
+  },
+  "axes": {
+    "x": {
+      "scale": "linear",
+      "range_mode": "auto",
+      "min": null,
+      "max": null,
+      "reversed": false,
+      "tick_mode": "auto",
+      "tick_step": null,
+      "log_exponent_step": 1,
+      "number_format": "auto",
+      "decimal_places": 1,
+      "significant_digits": 3,
+      "title_override": "SiO\u2082 (wt%)",
+      "title_font_size_pt": 7.0,
+      "tick_font_size_pt": 6.0,
+      "major_grid": false,
+      "minor_ticks": false,
+      "tick_direction": "out",
+      "category_order": null,
+      "visible_categories": null
+    },
+    "y": {
+      "scale": "linear",
+      "range_mode": "auto",
+      "min": null,
+      "max": null,
+      "reversed": false,
+      "tick_mode": "auto",
+      "tick_step": null,
+      "log_exponent_step": 1,
+      "number_format": "auto",
+      "decimal_places": 1,
+      "significant_digits": 3,
+      "title_override": "Na\u2082O + K\u2082O (wt%)",
+      "title_font_size_pt": 7.0,
+      "tick_font_size_pt": 6.0,
+      "major_grid": false,
+      "minor_ticks": false,
+      "tick_direction": "out",
+      "category_order": null,
+      "visible_categories": null
+    }
+  },
+  "layout": {
+    "width_mm": 183.0,
+    "height_mm": 110.0,
+    "preset": "nature_main_2026",
+    "font_family": "Arial",
+    "font_size_pt": 7.0,
+    "tick_font_size_pt": 6.0,
+    "legend": {"position": "right", "anchor_x": null, "anchor_y": null},
+    "legend_show_counts": true,
+    "annotations": []
+  },
+  "diagram": {
+    "model_id": "tas_LeMaitre",
+    "model_version": "1",
+    "mode": "reference",
+    "oxide_basis": "raw",
+    "oxide_set": ["SiO2", "Na2O", "K2O"],
+    "iron_policy": null
+  },
+  "channel_policy_id": null
+}
