@@ -1,39 +1,60 @@
-"""PyInstaller spec for GeoPlot Launcher."""
-import sys
+"""PyInstaller spec：单文件 GeoPlot.exe（后端 + 前端 dist + 中文字体 + 参考数据）。
+
+构建：pyinstaller packaging/geoplot.spec --noconfirm --distpath release --workpath build_tmp
+"""
 from pathlib import Path
 
-block_cipher = None
+import PyInstaller  # noqa: F401  (确保 spec 在打包环境内执行)
+
+ROOT = Path(SPECPATH).resolve().parent
+BACKEND = ROOT / "backend"
+FRONTEND_DIST = ROOT / "frontend" / "dist"
+
+if not (FRONTEND_DIST / "index.html").is_file():
+    raise SystemExit(f"缺少前端构建产物：{FRONTEND_DIST}（先运行 npm run build）")
+
+datas = [
+    (str(BACKEND / "app" / "resources"), "app/resources"),
+    (str(BACKEND / "app" / "renderers" / "fonts"), "app/renderers/fonts"),
+    (str(FRONTEND_DIST), "web"),
+]
+
+hiddenimports = [
+    "uvicorn.logging",
+    "uvicorn.loops",
+    "uvicorn.loops.auto",
+    "uvicorn.protocols",
+    "uvicorn.protocols.http",
+    "uvicorn.protocols.http.auto",
+    "uvicorn.protocols.websockets",
+    "uvicorn.protocols.websockets.auto",
+    "uvicorn.lifespan",
+    "uvicorn.lifespan.on",
+    "app.api.routes_directory",
+    "app.api.routes_datasets",
+    "app.api.routes_jobs",
+    "sqlalchemy.dialects.sqlite",
+    "sqlalchemy.dialects.sqlite.pysqlite",
+    "matplotlib.backends.backend_agg",
+    "matplotlib.backends.backend_pdf",
+    "matplotlib.backends.backend_svg",
+    "openpyxl",
+]
 
 a = Analysis(
-    ['launcher/main.py'],
-    pathex=['backend'],
+    [str(ROOT / "packaging" / "app_entry.py")],
+    pathex=[str(BACKEND)],
     binaries=[],
-    datas=[
-        ('backend/app/resources', 'app/resources'),
-    ],
-    hiddenimports=[
-        'uvicorn.logging',
-        'uvicorn.loops',
-        'uvicorn.loops.auto',
-        'uvicorn.protocols',
-        'uvicorn.protocols.http',
-        'uvicorn.protocols.http.auto',
-        'uvicorn.protocols.websockets',
-        'uvicorn.protocols.websockets.auto',
-        'uvicorn.lifespan',
-        'uvicorn.lifespan.on',
-    ],
+    datas=datas,
+    hiddenimports=hiddenimports,
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],
     excludes=[],
-    win_no_prefer_redirects=False,
-    win_private_assemblies=False,
-    cipher=block_cipher,
     noarchive=False,
 )
 
-pyz = PYZ(a.pure, a.zipped_data, cipher=block_cipher)
+pyz = PYZ(a.pure, a.zipped_data)
 
 exe = EXE(
     pyz,
@@ -42,18 +63,16 @@ exe = EXE(
     a.zipfiles,
     a.datas,
     [],
-    name='GeoPlotLauncher',
+    name="GeoPlot",
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
-    upx=True,
-    upx_exclude=[],
+    upx=False,
     runtime_tmpdir=None,
-    console=False,
+    console=True,
     disable_windowed_traceback=False,
     argv_emulation=False,
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
-    icon=None,
 )

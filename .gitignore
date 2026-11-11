@@ -38,6 +38,11 @@ Thumbs.db
 launcher/build/
 launcher/dist/
 
+# 桌面版打包产物与构建环境（GeoPlot.exe 通过 packaging/geoplot.spec 重建）
+build_tmp/
+.venv-build/
+release/
+
 # Acceptance evidence (large files)
 docs/progress/acceptance/figures/
 docs/progress/acceptance/exports/

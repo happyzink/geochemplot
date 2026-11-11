@@ -1,6 +1,7 @@
 """GeoPlot FastAPI application"""
 from __future__ import annotations
 
+import sys
 import uuid
 from datetime import datetime, timezone
 from pathlib import Path
@@ -132,6 +133,48 @@ def get_database() -> Database:
     return _db
 
 
+def _resolve_web_dir() -> Optional[Path]:
+    """前端构建产物目录：打包后随 exe 分发（web/），开发态用 frontend/dist。"""
+    import os
+    override = os.environ.get("GEOPLOT_WEB_DIR")
+    if override:
+        return Path(override)
+    if getattr(sys, "frozen", False):
+        return Path(getattr(sys, "_MEIPASS", Path(sys.executable).parent)) / "web"
+    return Path(__file__).resolve().parent.parent.parent / "frontend" / "dist"
+
+
+def _mount_web_app() -> None:
+    """把前端 SPA 挂到根路径（API 路由先注册，故优先匹配）。
+
+    必须在所有 API 路由 include 之后调用，避免静态路由抢占 /api。
+    """
+    from fastapi.responses import FileResponse
+    from fastapi.staticfiles import StaticFiles
+
+    web_dir = _resolve_web_dir()
+    if web_dir is None or not (web_dir / "index.html").is_file():
+        return
+
+    assets_dir = web_dir / "assets"
+    if assets_dir.is_dir():
+        app.mount("/assets", StaticFiles(directory=str(assets_dir)), name="assets")
+
+    @app.get("/", include_in_schema=False)
+    async def _web_root():
+        return FileResponse(web_dir / "index.html")
+
+    @app.get("/{full_path:path}", include_in_schema=False)
+    async def _web_fallback(full_path: str):
+        # 未命中的 /api、/health、文档路径保持 404，其余交给前端路由。
+        if full_path.startswith(("api/", "health", "docs", "openapi.json")):
+            return JSONResponse({"detail": "Not Found"}, status_code=404)
+        candidate = web_dir / full_path
+        if candidate.is_file() and web_dir.resolve() in candidate.resolve().parents:
+            return FileResponse(candidate)
+        return FileResponse(web_dir / "index.html")
+
+
 @app.on_event("startup")
 async def startup_event():
     db = get_database()
@@ -142,3 +185,4 @@ async def startup_event():
         for analyte, value in ref.elements.items():
             unit = ref.units.get(analyte, "ppm")
             db.insert_reference_value(ref_id, ref.version, analyte, value, unit)
+    _mount_web_app()
