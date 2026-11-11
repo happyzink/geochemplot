@@ -2,7 +2,7 @@
   "status": "ready",
   "schema_version": "1.2",
   "schema_sha256": "95aaba92d22c7111e4fc37cb7e9b0998eefbef133c34066e404423bd4415e33e",
-  "plot_scene_schema_sha256": "95f56c1aaab9548581480ca0a8c465023b3a37a0755f70e8ab48b6892ae31c9a",
+  "plot_scene_schema_sha256": "fb1fab3c980d8a444dc38170f2d9960dbe5ac5219b2c93d979f08e36505e0ffc",
   "openapi_sha256": "f2fee92666db212f690ffda6708ce054a0503984ca5e7901206c805b05bb7588",
   "fixture_manifest_sha256": "a1d1f64f153a76694f21527cb8355438365ccb882009cee3151dfbeefae491ad",
   "fixture_hashes": {

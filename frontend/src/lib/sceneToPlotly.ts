@@ -8,20 +8,20 @@
  */
 
 import { SceneContractError } from './api/http';
-import type { LayerStyle, LegendSpec, PlotScene } from './generated/types';
+import type { DiagramGeometry, LayerStyle, LegendConfig, PlotScene, TASLabel, TASPolygon } from './generated/types';
 
 /**
  * 图例解析：schema 1.2 顶层 legend 为自由对象，真实 Scene 的图例真值在
  * layout.legend + layout.legend_show_counts（scene-1.2 fixture 实测）。
  * 只做取值合并，不重算样式。
  */
-export function resolveLegend(scene: PlotScene): LegendSpec & { show_counts: boolean } {
+export function resolveLegend(scene: PlotScene): LegendConfig & { show_counts: boolean } {
   const fallback = scene.layout.legend;
   return {
     position: scene.legend.position ?? fallback.position ?? 'right',
     anchor_x: scene.legend.anchor_x ?? fallback.anchor_x ?? null,
     anchor_y: scene.legend.anchor_y ?? fallback.anchor_y ?? null,
-    show_counts: scene.legend.show_counts ?? scene.layout.legend_show_counts ?? false,
+    show_counts: scene.layout.legend_show_counts ?? false,
   };
 }
 
@@ -60,28 +60,6 @@ const DASH_MAP: Record<LayerStyle['line_dash'], string> = {
 const MM_TO_PX = 96 / 25.4;
 /** pt → CSS px（96 dpi）。 */
 const PT_TO_PX = 96 / 72;
-
-interface TasPolygon {
-  field_id: string;
-  label: string;
-  vertices: Array<[number, number]>;
-}
-
-interface TasLabel {
-  field_id: string;
-  x: number;
-  y: number;
-  text: string;
-}
-
-interface DiagramGeometry {
-  model_id: string;
-  model_version: string;
-  source_hash?: string | null;
-  polygons?: TasPolygon[];
-  labels?: TasLabel[];
-  segments?: Array<Array<[number, number]>>;
-}
 
 function hexToRgba(hex: string, alpha: number): string {
   const value = hex.replace('#', '');
@@ -291,13 +269,13 @@ function geometryTraces(
   scene: PlotScene,
   pxPt: number,
 ): { traces: unknown[]; annotations: Array<Record<string, unknown>> } {
-  const geometry = scene.diagram_geometry as unknown as DiagramGeometry | null;
+  const geometry = scene.diagram_geometry;
   if (!geometry) return { traces: [], annotations: [] };
 
   const traces: unknown[] = [];
-  const polygons = geometry.polygons ?? [];
+  const polygons = geometry.polygons;
   for (const polygon of polygons) {
-    const vertices = (polygon.vertices ?? []).filter(
+    const vertices = polygon.vertices.filter(
       (vertex): vertex is [number, number] =>
         Array.isArray(vertex) && vertex.length === 2 && Number.isFinite(vertex[0]) && Number.isFinite(vertex[1]),
     );
@@ -316,12 +294,11 @@ function geometryTraces(
     });
   }
 
-  const segments = geometry.segments ?? [];
-  if (!polygons.some((polygon) => (polygon.vertices ?? []).length >= 3) && segments.length) {
+  const segments = geometry.segments;
+  if (!polygons.some((polygon) => polygon.vertices.length >= 3) && segments.length) {
     const x: Array<number | null> = [];
     const y: Array<number | null> = [];
     for (const segment of segments) {
-      if (segment.length < 2) continue;
       if (x.length) {
         x.push(null);
         y.push(null);
@@ -344,7 +321,7 @@ function geometryTraces(
     }
   }
 
-  const annotations = (geometry.labels ?? [])
+  const annotations = geometry.labels
     .filter((label) => Number.isFinite(label.x) && Number.isFinite(label.y))
     .map((label) => ({
       text: label.text,

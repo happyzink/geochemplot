@@ -15,6 +15,7 @@ from .style import (
     AxisFormat,
     LayerSpec,
     LayoutConfig,
+    LegendConfig,
     QualityPolicy,
     TASDiagram,
     VariablesConfig,
@@ -206,7 +207,7 @@ class PlotScene(BaseModel):
     series: list[SceneSeries]
 
     diagram_geometry: Optional[DiagramGeometry] = None
-    legend: dict[str, Any] = Field(default_factory=dict)
+    legend: LegendConfig = Field(default_factory=LegendConfig, description="R12：固定结构 LegendConfig，图例真值在 layout.legend")
     layout: LayoutConfig
     font_manifest: FontManifest
 

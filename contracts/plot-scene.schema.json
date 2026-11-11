@@ -1347,9 +1347,8 @@
       "default": null
     },
     "legend": {
-      "additionalProperties": true,
-      "title": "Legend",
-      "type": "object"
+      "$ref": "#/$defs/LegendConfig",
+      "description": "R12：固定结构 LegendConfig，图例真值在 layout.legend"
     },
     "layout": {
       "$ref": "#/$defs/LayoutConfig"

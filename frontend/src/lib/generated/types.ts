@@ -96,6 +96,13 @@ export interface LegendSpec {
   anchor_y: number | null;
 }
 
+/** R12 冻结结构 PlotScene.legend / LayoutSpec.legend 共用。与 LegendSpec 字段一致。 */
+export interface LegendConfig {
+  position: LegendPosition | null;
+  anchor_x: number | null;
+  anchor_y: number | null;
+}
+
 export interface LayoutSpec {
   width_mm: number;
   height_mm: number;
@@ -254,6 +261,39 @@ export interface FontManifest {
   substituted_with: string | null;
 }
 
+/** TAS 单个分区多边形（schema 1.2 DiagramGeometry.polygons 元素）。 */
+export interface TASPolygon {
+  field_id: string;
+  label: string;
+  vertices: Array<[number, number]>;
+}
+
+/** TAS 分区标签位置（schema 1.2 DiagramGeometry.labels 元素）。 */
+export interface TASLabel {
+  field_id: string;
+  x: number;
+  y: number;
+  text: string;
+}
+
+/**
+ * 专用图型冻结几何（R11/R12）。
+ * 仅消费 Scene 内的冻结副本——渲染端不回读磁盘 manifest。
+ * polygons 为空时 segments 作为回退；legacy boundary_coordinates 始终为空数组。
+ */
+export interface DiagramGeometry {
+  model_id: string;
+  model_version: string;
+  source_hash?: string | null;
+  polygons: TASPolygon[];
+  labels: TASLabel[];
+  /** 去重无向线段，固定结构 [[[x1,y1],[x2,y2]], ...] */
+  segments: Array<[[number, number], [number, number]]>;
+  /** legacy 字段，冻结后始终为空数组，禁止顶点链 */
+  boundary_coordinates: Array<[number, number]>;
+  region_labels: Record<string, Array<[number, number]>>;
+}
+
 export interface PlotScene {
   scene_id: string;
   schema_version: SchemaVersion;
@@ -273,9 +313,9 @@ export interface PlotScene {
   variables: PlotVariables;
   axes: { x: SceneAxis; y: SceneAxis };
   series: SceneSeries[];
-  diagram_geometry: Record<string, unknown> | null;
-  /** schema 1.2 为自由对象；真实 fixture 为空对象，图例真值在 layout.legend。 */
-  legend: Partial<LegendSpec> & { show_counts?: boolean };
+  diagram_geometry: DiagramGeometry | null;
+  /** R12 冻结结构，与后端 PlotScene.legend (LegendConfig) 对齐。fixture 里为空 {}。 */
+  legend: LegendConfig;
   layout: LayoutSpec;
   font_manifest: FontManifest;
   warnings: string[];

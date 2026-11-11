@@ -596,7 +596,7 @@ export function buildScene(input: SceneBuildInput): PlotScene {
     axes: { x: xAxis, y: yAxis },
     series,
     diagram_geometry: null,
-    legend: { ...spec.layout.legend, show_counts: spec.layout.legend_show_counts },
+    legend: { position: spec.layout.legend.position, anchor_x: spec.layout.legend.anchor_x, anchor_y: spec.layout.legend.anchor_y },
     layout: spec.layout,
     font_manifest: { primary: spec.layout.font_family, fallback: [spec.layout.font_family, 'Arial', 'sans-serif'], available: true, substituted_with: null },
     warnings,
