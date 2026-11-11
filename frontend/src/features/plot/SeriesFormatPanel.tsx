@@ -110,7 +110,11 @@ export function SeriesFormatPanel() {
       {target.scope === 'selected' && analysisIds.length === 0 && (
         <div className="banner warn" style={{ marginBottom: 10 }}>当前没有勾选分析；请先在图或表格中勾选，或使用“当前层”。</div>
       )}
-      <StyleEditor style={draft} onChange={(patch) => setDraft({ ...draft, ...patch })} />
+      <StyleEditor
+        style={draft}
+        onChange={(patch) => setDraft({ ...draft, ...patch })}
+        showLine={spec.chart_type === 'ree' || spec.chart_type === 'spider'}
+      />
       <p className="small muted" style={{ marginTop: 8 }}>
         当前层/全部层写入图层基础样式；选中分析写入单点 overrides，不会改动其他测点。所有值进入 PlotSpec 与 Scene。
       </p>

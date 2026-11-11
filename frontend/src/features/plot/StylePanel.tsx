@@ -63,7 +63,11 @@ export function StylePanel() {
         </div>
       )}
 
-      <StyleEditor style={layer.style} onChange={(patch) => updateLayerStyle(layer.layer_id, patch)} />
+      <StyleEditor
+        style={layer.style}
+        onChange={(patch) => updateLayerStyle(layer.layer_id, patch)}
+        showLine={spec.chart_type === 'ree' || spec.chart_type === 'spider'}
+      />
 
       <div className="divider" />
       <p className="small muted">

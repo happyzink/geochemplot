@@ -399,7 +399,8 @@ export function buildPlotly(scene: PlotScene, options: BuildOptions): PlotlyBund
           : Math.max(0, style.marker_edge_width_pt) * pxPt,
       },
     };
-    const showLines = isCurve || style.connect;
+    // 连线只对曲线图（REE/蜘蛛）有意义；散点/TAS 下 style.connect 残留会把不同样品连成折线
+    const showLines = isCurve;
     const trace: Record<string, unknown> = {
       type: 'scatter',
       mode: showLines ? 'lines+markers' : 'markers',

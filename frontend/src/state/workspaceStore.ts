@@ -608,6 +608,7 @@ export const useWorkspace = create<WorkspaceState>((set, get) => ({
       spec.variables.y = spec.variables.y ?? measurement('SiO2', 'wt%', 'oxide');
       if (spec.axes.y.scale === 'log10') spec.axes.y.scale = 'linear';
       spec.diagram = null;
+      spec.layers = spec.layers.map((l) => ({ ...l, style: { ...l.style, connect: false } }));
     } else if (type === 'ree') {
       spec.variables.elements = [...REE_ELEMENTS];
       spec.variables.value_mode = 'normalized';
@@ -632,6 +633,7 @@ export const useWorkspace = create<WorkspaceState>((set, get) => ({
       spec.axes.x = defaultAxis('linear');
       spec.axes.y = defaultAxis('linear');
       spec.diagram = { model_id: 'tas_LeMaitre', model_version: '1', mode: 'reference', oxide_basis: 'raw', oxide_set: ['SiO2', 'Na2O', 'K2O'], iron_policy: null };
+      spec.layers = spec.layers.map((l) => ({ ...l, style: { ...l.style, connect: false } }));
     }
     set({ chartType: type });
     get().commitSpec(spec, `切换到${type}图`);
